@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+    - runningAs:
+        username: ${EPA_SCHEMA_OWNER_USERNAME}
+
+  - changeSet:
+      author: drsteini
+      id: "grant.select.tables.${WQX_SCHEMA_NAME}.to.wqp_core"
+      changes:
+        - sql:
+            sql: alter default privileges in schema ${WQX_SCHEMA_NAME} grant select on tables to ${WQP_SCHEMA_OWNER_USERNAME};
+        - rollback: alter default privileges in schema ${WQX_SCHEMA_NAME} revoke select on tables from ${WQP_SCHEMA_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "grant.usage.${WQX_SCHEMA_NAME}.to.${WQP_SCHEMA_OWNER_USERNAME}"
+      changes:
+        - sql:
+            sql: grant usage on schema ${WQX_SCHEMA_NAME} to ${WQP_SCHEMA_OWNER_USERNAME};
+        - rollback: revoke usage on schema ${WQX_SCHEMA_NAME} from ${WQP_SCHEMA_OWNER_USERNAME};

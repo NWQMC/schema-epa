@@ -1,0 +1,5172 @@
+databaseChangeLog:
+- objectQuotingStrategy: QUOTE_ALL_OBJECTS
+- changeSet:
+    id: 1560431414947-1
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACMED_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_UID
+            type: INTEGER
+        - column:
+            name: AMSUB_UID
+            type: INTEGER
+        - column:
+            name: HCMTH_UID
+            type: INTEGER
+        - column:
+            name: HRDAT_UID
+            type: INTEGER
+        - column:
+            name: MLOC_UID
+            type: numeric(20)
+        - column:
+            name: MSUNT_UID_DEPTH_HEIGHT
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_DEPTH_HEIGHT_TOP
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_DEPTH_HEIGHT_BOTTOM
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: RELDPTH_UID
+            type: INTEGER
+        - column:
+            name: TMZONE_UID_START_TIME
+            type: INTEGER
+        - column:
+            name: TMZONE_UID_END_TIME
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_ID
+            type: VARCHAR(35)
+        - column:
+            name: ACT_COMMENTS
+            type: VARCHAR(4000)
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACT_START_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACT_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACT_END_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACT_DEPTH_HEIGHT
+            type: VARCHAR(12)
+        - column:
+            name: ACT_DEPTH_HEIGHT_TOP
+            type: VARCHAR(12)
+        - column:
+            name: ACT_DEPTH_HEIGHT_BOTTOM
+            type: VARCHAR(12)
+        - column:
+            name: ACT_DEPTH_ALTITUDE_REF_POINT
+            type: VARCHAR(125)
+        - column:
+            name: ACT_LOC_LATITUDE
+            type: numeric(38, 10)
+        - column:
+            name: ACT_LOC_LONGITUDE
+            type: numeric(38, 10)
+        - column:
+            name: ACT_LOC_SOURCE_MAP_SCALE
+            type: INTEGER
+        - column:
+            name: CONCOL_UID
+            type: INTEGER
+        - column:
+            name: CONTYP_UID
+            type: INTEGER
+        - column:
+            name: SCEQP_UID
+            type: INTEGER
+        - column:
+            name: THPRSV_UID
+            type: INTEGER
+        - column:
+            name: ACT_SAM_CHEMICAL_PRESERVATIVE
+            type: VARCHAR(250)
+        - column:
+            name: ACT_SAM_COLLECT_METH_ID
+            type: VARCHAR(20)
+        - column:
+            name: ACT_SAM_COLLECT_METH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_COLLECT_METH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_COLLECT_METH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: ACT_SAM_COLLECT_METH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_COLLECT_EQUIP_COMMENTS
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_PREP_METH_ID
+            type: VARCHAR(20)
+        - column:
+            name: ACT_SAM_PREP_METH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_PREP_METH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_PREP_METH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: ACT_SAM_PREP_METH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_TRANSPORT_STORAGE_DESC
+            type: VARCHAR(1999)
+        - column:
+            name: ASMBLG_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_BOAT_SPEED
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_COLLECTION_DURATION
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_CURRENT_SPEED
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_HORIZONTAL_ACCURACY
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_NET_MESH_SIZE
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_NET_SURFACE_AREA
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_REACH_LENGTH
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_REACH_WIDTH
+            type: INTEGER
+        - column:
+            name: NETTYP_UID
+            type: INTEGER
+        - column:
+            name: TTTYP_UID
+            type: INTEGER
+        - column:
+            name: ACT_BOAT_SPEED
+            type: VARCHAR(12)
+        - column:
+            name: ACT_COLLECTION_DURATION
+            type: VARCHAR(12)
+        - column:
+            name: ACT_CURRENT_SPEED
+            type: VARCHAR(12)
+        - column:
+            name: ACT_HORIZONTAL_ACCURACY
+            type: VARCHAR(12)
+        - column:
+            name: ACT_NET_MESH_SIZE
+            type: VARCHAR(12)
+        - column:
+            name: ACT_NET_SURFACE_AREA
+            type: VARCHAR(12)
+        - column:
+            name: ACT_PASS_COUNT
+            type: INTEGER
+        - column:
+            name: ACT_REACH_LENGTH
+            type: VARCHAR(12)
+        - column:
+            name: ACT_REACH_WIDTH
+            type: VARCHAR(12)
+        - column:
+            name: ACT_SAM_COMPNT_NAME
+            type: VARCHAR(15)
+        - column:
+            name: ACT_SAM_COMPNT_PLACE_IN_SERIES
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ACT_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ACTIVITY
+- changeSet:
+    id: 1560431414947-2
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACORG_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: ACORG_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ACORG_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ACTIVITY_CONDUCTING_ORG
+- changeSet:
+    id: 1560431414947-3
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACTGRP_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: AGTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTGRP_ID
+            type: VARCHAR(35)
+        - column:
+            name: ACTGRP_NAME
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTGRP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ACTGRP_TRANS_ID
+            type: VARCHAR(100)
+        - column:
+            name: ACTGRP_START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACTGRP_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: ACTIVITY_GROUP
+- changeSet:
+    id: 1560431414947-4
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACTGRP_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: AGDET_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: AGDET_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ACTIVITY_GROUP_DETAIL
+- changeSet:
+    id: 1560431414947-5
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: AGTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: AGTYP_NAME
+            type: VARCHAR(50)
+        - column:
+            name: AGTYP_DESC
+            type: VARCHAR(500)
+        - column:
+            constraints:
+              nullable: false
+            name: AGTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ACTIVITY_GROUP_TYPE
+- changeSet:
+    id: 1560431414947-6
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACMED_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ACMED_NAME
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACMED_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ACMED_DESC
+            type: VARCHAR(500)
+        tableName: ACTIVITY_MEDIA
+- changeSet:
+    id: 1560431414947-7
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: AMSUB_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: AMSUB_NAME
+            type: VARCHAR(45)
+        - column:
+            constraints:
+              nullable: false
+            name: AMSUB_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: AMSUB_DESC
+            type: VARCHAR(500)
+        tableName: ACTIVITY_MEDIA_SUBDIVISION
+- changeSet:
+    id: 1560431414947-8
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACTMET_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: METTYP_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_VALUE
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ACTMET_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTMET_SCORE
+            type: VARCHAR(10)
+        - column:
+            name: ACTMET_VALUE
+            type: VARCHAR(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTMET_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ACTMET_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ACTIVITY_METRIC
+- changeSet:
+    id: 1560431414947-9
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACTMET_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: BHIDX_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: AMIDX_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: AMIDX_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ACTIVITY_METRIC_INDEX
+- changeSet:
+    id: 1560431414947-10
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: PRJ_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTPRJ_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ACTPRJ_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ACTIVITY_PROJECT
+- changeSet:
+    id: 1560431414947-11
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_CD
+            type: VARCHAR(70)
+        - column:
+            name: ACTYP_DESC
+            type: VARCHAR(400)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_ANL_MTH_REQ_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_MON_LOC_REQ_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: ACTYP_ABBREV
+            type: VARCHAR(6)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ACTIVITY_TYPE
+- changeSet:
+    id: 1560431414947-12
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ADDTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ADDTYP_NAME
+            type: VARCHAR(8)
+        - column:
+            name: ADDTYP_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: ADDTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ADDRESS_TYPE
+- changeSet:
+    id: 1560431414947-13
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ALSTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ALSTYP_NAME
+            type: VARCHAR(60)
+        - column:
+            constraints:
+              nullable: false
+            name: ALSTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ALIAS_TYPE
+- changeSet:
+    id: 1560431414947-14
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ANLMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: AMCTX_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ANLMTH_ID
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ANLMTH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ANLMTH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ANLMTH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: ANLMTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ANLMTH_URL
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ANALYTICAL_METHOD
+- changeSet:
+    id: 1560431414947-15
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: AMCTX_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: AMCTX_CD
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: AMCTX_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: AMCTX_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ANALYTICAL_METHOD_CONTEXT
+- changeSet:
+    id: 1560431414947-16
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ASMBLG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ASMBLG_NAME
+            type: VARCHAR(50)
+        - column:
+            name: ASMBLG_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: ASMBLG_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ASSEMBLAGE
+- changeSet:
+    id: 1560431414947-17
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: AOFLD_UID
+            type: numeric(12)
+        - column:
+            name: AOFLD_UID_PARENT
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: AOFLD_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: AOFLD_RELATIVE_PATH
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: AOFLD_LEVEL
+            type: SMALLINT
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        tableName: ATTACHED_OBJECT_FOLDER
+- changeSet:
+    id: 1560431414947-18
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: AUDTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: AUDTYP_NAME
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: AUDTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: AUDIT_TYPE
+- changeSet:
+    id: 1560431414947-19
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: BHIDX_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: IDXTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: BHIDX_ID
+            type: VARCHAR(35)
+        - column:
+            name: BHIDX_CALCULATED_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: BHIDX_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            name: BHIDX_QUALIFIER_CD
+            type: VARCHAR(5)
+        - column:
+            constraints:
+              nullable: false
+            name: BHIDX_SCORE
+            type: VARCHAR(10)
+        - column:
+            constraints:
+              nullable: false
+            name: BHIDX_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: BHIDX_TRANS_ID
+            type: VARCHAR(100)
+        tableName: BIOLOGICAL_HABITAT_INDEX
+- changeSet:
+    id: 1560431414947-20
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: BIOINT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: BIOINT_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: BIOINT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: BIOINT_DESC
+            type: VARCHAR(500)
+        tableName: BIOLOGICAL_INTENT
+- changeSet:
+    id: 1560431414947-21
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CELFRM_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CELFRM_NAME
+            type: VARCHAR(11)
+        - column:
+            name: CELFRM_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: CELFRM_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CELL_FORM
+- changeSet:
+    id: 1560431414947-22
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CELSHP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CELSHP_NAME
+            type: VARCHAR(18)
+        - column:
+            name: CELSHP_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: CELSHP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CELL_SHAPE
+- changeSet:
+    id: 1560431414947-23
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_NAME
+            type: VARCHAR(120)
+        - column:
+            name: CHR_SRS_ID
+            type: numeric(12)
+        - column:
+            name: CHR_STORET_ID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_SAMPLE_FRACTION_REQ_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_PICK_LIST_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: CHR_CAS_NUMBER
+            type: VARCHAR(12)
+        - column:
+            name: CHR_DESCRIPTION
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: CHRGRP_UID
+            type: INTEGER
+        - column:
+            name: DVSTA_UID
+            type: INTEGER
+        tableName: CHARACTERISTIC
+- changeSet:
+    id: 1560431414947-24
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHRALS_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ALSTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CHRALS_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            name: DVSTA_UID
+            type: INTEGER
+        - column:
+            name: CHRALS_DESCRIPTION
+            type: VARCHAR(400)
+        - column:
+            constraints:
+              nullable: false
+            name: CHRALS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CHARACTERISTIC_ALIAS
+- changeSet:
+    id: 1560431414947-25
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHRGRP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CHRGRP_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: CHRGRP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CHARACTERISTIC_GROUP
+- changeSet:
+    id: 1560431414947-26
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CPLVAL_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CPLVAL_CD
+            type: VARCHAR(12)
+        - column:
+            name: CPLVAL_DESC
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: CPLVAL_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CHARACTERISTIC_PICK_LIST_VALUE
+- changeSet:
+    id: 1560431414947-27
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ANLMTH_UID
+            type: INTEGER
+        tableName: CHAR_ANALYTICAL_METHOD
+- changeSet:
+    id: 1560431414947-28
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: DQLTYP_UID
+            type: INTEGER
+        tableName: CHAR_DETECT_QUANT_LIMIT_TYPE
+- changeSet:
+    id: 1560431414947-29
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MSUNT_UID
+            type: INTEGER
+        tableName: CHAR_MEASUREMENT_UNIT
+- changeSet:
+    id: 1560431414947-30
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MTHSPC_UID
+            type: INTEGER
+        tableName: CHAR_METH_SPECIATION
+- changeSet:
+    id: 1560431414947-31
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SMFRC_UID
+            type: INTEGER
+        tableName: CHAR_SAMPLE_FRACTION
+- changeSet:
+    id: 1560431414947-32
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CITATN_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: CITATN_ID
+            type: VARCHAR(255)
+        - column:
+            name: CITATN_CREATOR
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: CITATN_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: CITATN_PUBLISHER
+            type: VARCHAR(60)
+        - column:
+            name: CITATN_SUBJECT
+            type: VARCHAR(4000)
+        - column:
+            constraints:
+              nullable: false
+            name: CITATN_TITLE
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: CITATN_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CITATION
+- changeSet:
+    id: 1560431414947-33
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CFG_CD
+            type: VARCHAR(50)
+        - column:
+            name: CFG_DESC
+            type: VARCHAR(250)
+        - column:
+            constraints:
+              nullable: false
+            name: CFG_VALUE
+            type: VARCHAR(2000)
+        - column:
+            constraints:
+              nullable: false
+            name: CFG_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: CFG_CONTEXT
+            type: VARCHAR(100)
+        tableName: CONFIG
+- changeSet:
+    id: 1560431414947-34
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CONCOL_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CONCOL_NAME
+            type: VARCHAR(15)
+        - column:
+            name: CONCOL_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: CONCOL_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CONTAINER_COLOR
+- changeSet:
+    id: 1560431414947-35
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CONTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CONTYP_NAME
+            type: VARCHAR(35)
+        - column:
+            name: CONTYP_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: CONTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: CONTAINER_TYPE
+- changeSet:
+    id: 1560431414947-36
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CNTRY_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CNTRY_CD
+            type: VARCHAR(2)
+        - column:
+            constraints:
+              nullable: false
+            name: CNTRY_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: CNTRY_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: cntry_uid
+            type: INTEGER
+        - column:
+            name: cntry_cd
+            type: VARCHAR(2)
+        - column:
+            name: cntry_name
+            type: VARCHAR(35)
+        - column:
+            name: cntry_last_change_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: usr_uid_last_change
+            type: INTEGER
+        tableName: COUNTRY
+- changeSet:
+    id: 1560431414947-37
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CNTY_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ST_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CNTY_NAME
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: CNTY_FIPS_CD
+            type: VARCHAR(3)
+        - column:
+            constraints:
+              nullable: false
+            name: CNTY_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: cnty_uid
+            type: INTEGER
+        - column:
+            name: st_uid
+            type: INTEGER
+        - column:
+            name: cnty_name
+            type: VARCHAR(50)
+        - column:
+            name: cnty_fips_cd
+            type: VARCHAR(3)
+        - column:
+            name: cnty_last_change_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: usr_uid_last_change
+            type: INTEGER
+        tableName: COUNTY
+- changeSet:
+    id: 1560431414947-38
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: DQLTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: DQLTYP_NAME
+            type: VARCHAR(35)
+        - column:
+            name: DQLTYP_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: DQLTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: DETECTION_QUANT_LIMIT_TYPE
+- changeSet:
+    id: 1560431414947-39
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: DVSTA_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: DVSTA_NAME
+            type: VARCHAR(35)
+        tableName: DOMAIN_VALUE_STATUS
+- changeSet:
+    id: 1560431414947-40
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: EATYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: EATYP_NAME
+            type: VARCHAR(20)
+        - column:
+            name: EATYP_DESC
+            type: VARCHAR(500)
+        - column:
+            constraints:
+              nullable: false
+            name: EATYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: ELECTRONIC_ADDRESS_TYPE
+- changeSet:
+    id: 1560431414947-41
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: EVSTA_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: EVSTA_NAME
+            type: VARCHAR(35)
+        tableName: ELEMENT_VALUE_STATUS
+- changeSet:
+    id: 1560431414947-42
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ER_UID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ER_CD
+            type: VARCHAR(2)
+        - column:
+            constraints:
+              nullable: false
+            name: ER_NAME
+            type: VARCHAR(256)
+        tableName: EPA_REGION
+- changeSet:
+    id: 1560431414947-43
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PK_ISN
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MAPPING_NAME
+            type: VARCHAR(100)
+        - column:
+            constraints:
+              nullable: false
+            name: ETL_MAPPING_STATUS
+            type: VARCHAR(30)
+        - column:
+            name: ETL_ID
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: START_ETL_RUN_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: END_ETL_RUN_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_ETL_START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_ETL_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: OVERRIDE_LOAD_FLAG
+            type: VARCHAR(1)
+        - column:
+            name: OVERRIDE_LOAD_FROM_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: OVERRIDE_LOAD_TO_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: ETL_EXECUTION_STATUS
+- changeSet:
+    id: 1560431414947-44
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TABLE_NAME
+            type: VARCHAR(100)
+        - column:
+            constraints:
+              nullable: false
+            name: PK_UID
+            type: numeric(20)
+        - column:
+            name: PARENT_PK_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: ETL_MANUAL_LOAD
+- changeSet:
+    id: 1560431414947-45
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            name: TRIP_ID
+            type: VARCHAR(256)
+        - column:
+            name: TRIP_NAME
+            type: VARCHAR(256)
+        - column:
+            name: PRJ_ID
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: REFRESH_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: ETL_PRJ_TRIP_STG
+- changeSet:
+    id: 1560431414947-46
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: FCDSC_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: FCTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: FCDSC_NAME
+            type: VARCHAR(50)
+        - column:
+            name: FCDSC_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: FCDSC_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: FREQUENCY_CLASS_DESCRIPTOR
+- changeSet:
+    id: 1560431414947-47
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: FCTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: FCTYP_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: FCTYP_UNIT_REQUIRED_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: FCTYP_BOUNDS_REQUIRED_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: FCTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: FREQUENCY_CLASS_TYPE
+- changeSet:
+    id: 1560431414947-48
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: HABIT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: HABIT_NAME
+            type: VARCHAR(15)
+        - column:
+            constraints:
+              nullable: false
+            name: HABIT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: HABIT_DESC
+            type: VARCHAR(500)
+        tableName: HABIT
+- changeSet:
+    id: 1560431414947-49
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: HCMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: HCMTH_NAME
+            type: VARCHAR(70)
+        - column:
+            name: HCMTH_DESC
+            type: VARCHAR(150)
+        - column:
+            constraints:
+              nullable: false
+            name: HCMTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: HORIZONTAL_COLLECTION_METHOD
+- changeSet:
+    id: 1560431414947-50
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: HRDAT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: HRDAT_NAME
+            type: VARCHAR(6)
+        - column:
+            constraints:
+              nullable: false
+            name: HRDAT_DESC
+            type: VARCHAR(45)
+        - column:
+            constraints:
+              nullable: false
+            name: HRDAT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: HORIZONTAL_REFERENCE_DATUM
+- changeSet:
+    id: 1560431414947-51
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: IDXTYP_UID
+            type: INTEGER
+        - column:
+            name: CITATN_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: IDXTYP_ID
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: IDXTYP_CONTEXT
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: IDXTYP_NAME
+            type: VARCHAR(50)
+        - column:
+            name: IDXTYP_SCALE
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: IDXTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: INDEX_TYPE
+- changeSet:
+    id: 1560431414947-52
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHRALS_UID
+            type: INTEGER
+        - column:
+            name: CHRALS_NAME
+            type: VARCHAR(120)
+        - column:
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            name: SMFRC_UID
+            type: INTEGER
+        - column:
+            name: MTHSPC_UID
+            type: INTEGER
+        - column:
+            name: ANLMTH_UID
+            type: INTEGER
+        - column:
+            name: RDQLMT_UID
+            type: numeric(20)
+        - column:
+            name: RESSTA_UID
+            type: INTEGER
+        - column:
+            name: CHRALS_FROMTO
+            type: VARCHAR(256)
+        - column:
+            name: CHRTAXGRP_UID
+            type: INTEGER
+        - column:
+            name: CHRTAXALSTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CHRALS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: KEVIN_CHARTAXON_ALIAS
+- changeSet:
+    id: 1560431414947-53
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHRTAXALSTYP_UID
+            type: INTEGER
+        - column:
+            name: CHRTAXALSTYP_NAME
+            type: VARCHAR(60)
+        - column:
+            name: CHRTAXALSTYP_DESCRIPTION
+            type: VARCHAR(256)
+        - column:
+            name: CHRTAXALSTYP_STATUS
+            type: VARCHAR(20)
+        tableName: KEVIN_CHARTAXON_ALIAS_TYPE
+- changeSet:
+    id: 1560431414947-54
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CHRTAXGRP_UID
+            type: INTEGER
+        - column:
+            name: CHRTAXGRP_NAME
+            type: VARCHAR(60)
+        - column:
+            name: CHRTAXGRP_DESCRIPTION
+            type: VARCHAR(256)
+        - column:
+            name: CHRTAXGRP_CONTEXT
+            type: VARCHAR(20)
+        tableName: KEVIN_CHARTAXON_GROUP
+- changeSet:
+    id: 1560431414947-55
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TXRNK_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TAX_EXTRNL_ID
+            type: numeric(12)
+        - column:
+            name: TAX_STORET_ID
+            type: numeric(12)
+        - column:
+            name: TAX_SRS_ID
+            type: numeric(12)
+        - column:
+            name: TAX_RETIRED_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TAX_RETIRED_EXTRNL_ID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: TAX_DESCRIPTION
+            type: VARCHAR(1000)
+        - column:
+            name: TAX_EXTRNL_ID_PARENT
+            type: numeric(12)
+        - column:
+            name: TAX_UID_KINGDOM
+            type: INTEGER
+        - column:
+            name: TAX_UID_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: TAXGRP_UID
+            type: INTEGER
+        - column:
+            name: DVSTA_UID
+            type: INTEGER
+        - column:
+            name: PHYLUM
+            type: VARCHAR(120)
+        - column:
+            name: SUBPHYLUM
+            type: VARCHAR(120)
+        - column:
+            name: DIVISION
+            type: VARCHAR(120)
+        - column:
+            name: SUPERCLASS
+            type: VARCHAR(120)
+        - column:
+            name: CLASS
+            type: VARCHAR(120)
+        - column:
+            name: SUBCLASS
+            type: VARCHAR(120)
+        - column:
+            name: INFRACLASS
+            type: VARCHAR(120)
+        - column:
+            name: SUPERORDER
+            type: VARCHAR(120)
+        - column:
+            name: INFRAORDER
+            type: VARCHAR(120)
+        - column:
+            name: SUPERFAMILY
+            type: VARCHAR(120)
+        - column:
+            name: FAMILY
+            type: VARCHAR(120)
+        - column:
+            name: SUBFAMILY
+            type: VARCHAR(120)
+        - column:
+            name: TRIBE
+            type: VARCHAR(120)
+        - column:
+            name: GENUS
+            type: VARCHAR(120)
+        - column:
+            name: SECTION
+            type: VARCHAR(120)
+        - column:
+            name: SPECIES
+            type: VARCHAR(120)
+        - column:
+            name: SUBSPECIES
+            type: VARCHAR(120)
+        - column:
+            name: VARIETY
+            type: VARCHAR(120)
+        - column:
+            name: FORM
+            type: VARCHAR(120)
+        - column:
+            name: INFRAPHYLUM
+            type: VARCHAR(120)
+        - column:
+            name: SUPERDIVISION
+            type: VARCHAR(120)
+        - column:
+            name: SUBDIVISION
+            type: VARCHAR(120)
+        - column:
+            name: INFRADIVISION
+            type: VARCHAR(120)
+        - column:
+            name: PARVDIVISION
+            type: VARCHAR(120)
+        - column:
+            name: SUBORDER
+            type: VARCHAR(120)
+        - column:
+            name: SUBSECTION
+            type: VARCHAR(120)
+        - column:
+            name: SUBTRIBE
+            type: VARCHAR(120)
+        - column:
+            name: SUBGENUS
+            type: VARCHAR(120)
+        - column:
+            name: SUBVARIETY
+            type: VARCHAR(120)
+        tableName: KEVIN_TAXONCHAR
+- changeSet:
+    id: 1560431414947-56
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TAXALS_UID
+            type: INTEGER
+        - column:
+            name: TAXALS_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            name: BIOINT_UID
+            type: INTEGER
+        - column:
+            name: ASMBLG_UID
+            type: INTEGER
+        - column:
+            name: RESSTA_UID
+            type: INTEGER
+        - column:
+            name: TAXALS_FROMTO
+            type: VARCHAR(256)
+        - column:
+            name: CHRTAXGRP_UID
+            type: INTEGER
+        - column:
+            name: CHRTAXALSTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TAXALS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: KEVIN_TAXONCHAR_ALIAS
+- changeSet:
+    id: 1560431414947-57
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: LAB_SAMPLE_PREPARATION_METHOD_pkey
+            name: LSPMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: LSPMTH_ID
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: LSPMTH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: LSPMTH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: LSPMTH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: LSPMTH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: LSPMTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: LAB_SAMPLE_PREPARATION_METHOD
+- changeSet:
+    id: 1560431414947-58
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: LTAUD_UID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: AUDTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TBL_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: REF_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: REF_ID
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: LTAUD_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: LOOKUP_TABLE_AUDIT
+- changeSet:
+    id: 1560431414947-59
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: LTAUDET_UID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: LTAUD_UID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: LTAUDET_COL_NAME
+            type: VARCHAR(30)
+        - column:
+            name: LTAUDET_COL_OLD_VALUE
+            type: VARCHAR(4000)
+        - column:
+            name: LTAUDET_COL_NEW_VALUE
+            type: VARCHAR(4000)
+        tableName: LOOKUP_TABLE_AUDIT_UPD_DETAIL
+- changeSet:
+    id: 1560431414947-60
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MSUNT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MSUNT_CD
+            type: VARCHAR(12)
+        - column:
+            name: MSUNT_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: MSUNT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MSUNT_TARGET_CD
+            type: VARCHAR(12)
+        - column:
+            name: CONVERSION_FACTOR
+            type: numeric(38, 10)
+        tableName: MEASUREMENT_UNIT
+- changeSet:
+    id: 1560431414947-61
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MTHSPC_UID
+            type: INTEGER
+        - column:
+            name: MTHSPC_NAME
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: MTHSPC_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MTHSPC_DESC
+            type: VARCHAR(500)
+        tableName: METHOD_SPECIATION
+- changeSet:
+    id: 1560431414947-62
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: METTYP_UID
+            type: INTEGER
+        - column:
+            name: CITATN_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MTCTX_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: METTYP_ID
+            type: VARCHAR(35)
+        - column:
+            name: METTYP_FORMULA_DESC
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: METTYP_NAME
+            type: VARCHAR(50)
+        - column:
+            name: METTYP_SCALE
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: METTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: METRIC_TYPE
+- changeSet:
+    id: 1560431414947-63
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MTCTX_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: MTCTX_CD
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: MTCTX_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: MTCTX_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: METRIC_TYPE_CONTEXT
+- changeSet:
+    id: 1560431414947-64
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_UID
+            type: numeric(20)
+        - column:
+            name: CNTY_UID
+            type: INTEGER
+        - column:
+            name: CNTRY_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: HCMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: HRDAT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MLTYP_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_VERTICAL_MEASURE
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ST_UID
+            type: INTEGER
+        - column:
+            name: VCMTH_UID
+            type: INTEGER
+        - column:
+            name: VRDAT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_ID
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_NAME
+            type: VARCHAR(255)
+        - column:
+            name: MLOC_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: MLOC_HUC_8
+            type: VARCHAR(8)
+        - column:
+            name: MLOC_HUC_12
+            type: VARCHAR(12)
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_LATITUDE
+            type: numeric(38, 10)
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_LONGITUDE
+            type: numeric(38, 10)
+        - column:
+            name: MLOC_SOURCE_MAP_SCALE
+            type: INTEGER
+        - column:
+            name: MLOC_TRIBAL_LAND_YN
+            type: VARCHAR(1)
+        - column:
+            name: MLOC_TRIBAL_LAND_NAME
+            type: VARCHAR(200)
+        - column:
+            name: MLOC_VERTICAL_MEASURE
+            type: VARCHAR(12)
+        - column:
+            name: MSUNT_UID_HORIZONTAL_ACCURACY
+            type: INTEGER
+        - column:
+            name: MLOC_HORIZONTAL_ACCURACY
+            type: VARCHAR(12)
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MLOC_TRANS_ID
+            type: VARCHAR(100)
+        tableName: MONITORING_LOCATION
+- changeSet:
+    id: 1560431414947-65
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: MLALT_ID
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: MLALT_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: MLALT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MLALT_TRANS_ID
+            type: VARCHAR(100)
+        tableName: MONITORING_LOCATION_ALTERNATE
+- changeSet:
+    id: 1560431414947-66
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MLTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MLTYP_NAME
+            type: VARCHAR(45)
+        - column:
+            constraints:
+              nullable: false
+            name: MLTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MLTYP_DESC
+            type: VARCHAR(500)
+        tableName: MONITORING_LOCATION_TYPE
+- changeSet:
+    id: 1560431414947-67
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: PRJ_UID
+            type: numeric(20)
+        - column:
+            name: CITATN_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MSUNT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: RLTYP_UID
+            type: INTEGER
+        - column:
+            name: MLWT_CATEGORY
+            type: VARCHAR(50)
+        - column:
+            name: MLWT_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            name: MLWT_REF_LOC_START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: MLWT_REF_LOC_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: MLWT_STATUS
+            type: VARCHAR(15)
+        - column:
+            name: MLWT_STRATUM
+            type: VARCHAR(15)
+        - column:
+            constraints:
+              nullable: false
+            name: MLWT_WEIGHTING_FACTOR
+            type: VARCHAR(12)
+        - column:
+            constraints:
+              nullable: false
+            name: MLWT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MLWT_TRANS_ID
+            type: VARCHAR(100)
+        tableName: MONITORING_LOCATION_WEIGHT
+- changeSet:
+    id: 1560431414947-68
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: NETTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SCETYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: NETTYP_NAME
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: NETTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: NETTYP_DESC
+            type: VARCHAR(500)
+        tableName: NET_TYPE
+- changeSet:
+    id: 1560431414947-69
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MAPPING_ID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: MAPPING_NAME
+            type: VARCHAR(100)
+        - column:
+            name: LAST_ETL_RUN_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ETL_MAPPING_STATUS
+            type: VARCHAR(30)
+        - column:
+            name: ETL_ID
+            type: VARCHAR(256)
+        - column:
+            name: END_ETL_RUN_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: LAST_ETL_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: OLD_ETL_EXECUTION_STATUS
+- changeSet:
+    id: 1560431414947-70
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: TRB_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_ID
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ORG_DESC
+            type: VARCHAR(500)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ORG_TYPE
+            type: VARCHAR(30)
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ORG_TRANS_ID
+            type: VARCHAR(100)
+        - column:
+            name: ORG_IN_SYNC_WITH_TEST_YN
+            type: VARCHAR(1)
+        tableName: ORGANIZATION
+- changeSet:
+    id: 1560431414947-71
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ORG_TYPE
+            type: VARCHAR(30)
+        tableName: ORGANIZATION_TYPE
+- changeSet:
+    id: 1560431414947-72
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ORGADD_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ADDTYP_UID
+            type: INTEGER
+        - column:
+            name: CNTRY_UID
+            type: INTEGER
+        - column:
+            name: CNTY_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ST_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORGADD_ADDRESS
+            type: VARCHAR(50)
+        - column:
+            name: ORGADD_ADDRESS_SUPPLEMENTAL
+            type: VARCHAR(120)
+        - column:
+            name: ORGADD_LOCALITY_NAME
+            type: VARCHAR(30)
+        - column:
+            name: ORGADD_POSTAL_CD
+            type: VARCHAR(10)
+        - column:
+            constraints:
+              nullable: false
+            name: ORGADD_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ORGADD_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ORG_ADDRESS
+- changeSet:
+    id: 1560431414947-73
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ORGEA_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: EATYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORGEA_TEXT
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: ORGEA_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ORGEA_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ORG_ELECTRONIC_ADDRESS
+- changeSet:
+    id: 1560431414947-74
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ORGPH_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: PHTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORGPH_NUM
+            type: VARCHAR(15)
+        - column:
+            name: ORGPH_EXT
+            type: VARCHAR(6)
+        - column:
+            constraints:
+              nullable: false
+            name: ORGPH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ORGPH_TRANS_ID
+            type: VARCHAR(100)
+        tableName: ORG_PHONE
+- changeSet:
+    id: 1560431414947-75
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PARAMETER
+            type: VARCHAR(256)
+        - column:
+            name: VALUE
+            type: VARCHAR(256)
+        tableName: OW_APPLICATION_STATUS
+- changeSet:
+    id: 1560431414947-76
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PHTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: PHTYP_NAME
+            type: VARCHAR(6)
+        - column:
+            name: PHTYP_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: PHTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: PHONE_TYPE
+- changeSet:
+    id: 1560431414947-77
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PRJ_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: PRJ_ID
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: PRJ_NAME
+            type: VARCHAR(120)
+        - column:
+            name: PRJ_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: SDTYP_UID
+            type: INTEGER
+        - column:
+            name: PRJ_QAPP_APPROVAL_AGENCY_NAME
+            type: VARCHAR(50)
+        - column:
+            name: PRJ_QAPP_APPROVED_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: PRJ_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: PRJ_TRANS_ID
+            type: VARCHAR(100)
+        tableName: PROJECT
+- changeSet:
+    id: 1560431414947-78
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RLTYP_UID
+            type: INTEGER
+        - column:
+            name: RLTYP_CD
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RLTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RLTYP_DESC
+            type: VARCHAR(500)
+        tableName: REFERENCE_LOCATION_TYPE
+- changeSet:
+    id: 1560431414947-79
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RELDPTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RELDPTH_NAME
+            type: VARCHAR(15)
+        - column:
+            constraints:
+              nullable: false
+            name: RELDPTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RELDPTH_DESC
+            type: VARCHAR(500)
+        - column:
+            constraints:
+              nullable: false
+            name: RELDPTH_ABBREV
+            type: VARCHAR(3)
+        tableName: RELATIVE_DEPTH
+- changeSet:
+    id: 1560431414947-80
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ACT_UID
+            type: numeric(20)
+        - column:
+            name: ANLMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CHR_UID
+            type: INTEGER
+        - column:
+            name: CPLVAL_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_DEPTH_HEIGHT
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_MEASURE
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: RDCND_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RESSTA_UID
+            type: INTEGER
+        - column:
+            name: RLCOM_UID
+            type: INTEGER
+        - column:
+            name: RMQLF_UID
+            type: INTEGER
+        - column:
+            name: RSBAS_UID
+            type: INTEGER
+        - column:
+            name: RTIMB_UID
+            type: INTEGER
+        - column:
+            name: RTMPB_UID
+            type: INTEGER
+        - column:
+            name: RVTYP_UID
+            type: INTEGER
+        - column:
+            name: RWBAS_UID
+            type: INTEGER
+        - column:
+            name: SMFRC_UID
+            type: INTEGER
+        - column:
+            name: TMZONE_UID_LAB_ANALYSIS_START
+            type: INTEGER
+        - column:
+            name: TMZONE_UID_LAB_ANALYSIS_END
+            type: INTEGER
+        - column:
+            name: RES_COMMENTS
+            type: VARCHAR(4000)
+        - column:
+            name: RES_DATA_LOGGER_LINE
+            type: VARCHAR(15)
+        - column:
+            name: RES_DEPTH_HEIGHT
+            type: VARCHAR(12)
+        - column:
+            name: RES_DEPTH_ALTITUDE_REF_POINT
+            type: VARCHAR(125)
+        - column:
+            name: RES_LAB_ANALYSIS_START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RES_LAB_ANALYSIS_START_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RES_LAB_ANALYSIS_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RES_LAB_ANALYSIS_END_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RES_LAB_NAME
+            type: VARCHAR(60)
+        - column:
+            name: RES_MEASURE
+            type: VARCHAR(60)
+        - column:
+            name: RES_MEASURE_BIAS
+            type: VARCHAR(60)
+        - column:
+            name: RES_MEASURE_CONF_INTERVAL
+            type: VARCHAR(15)
+        - column:
+            name: RES_MEASURE_PRECISION
+            type: VARCHAR(60)
+        - column:
+            name: RES_MEASURE_LOWER_CONF_LIMIT
+            type: VARCHAR(15)
+        - column:
+            name: RES_MEASURE_UPPER_CONF_LIMIT
+            type: VARCHAR(15)
+        - column:
+            name: RES_PARTICLE_SIZE_BASIS
+            type: VARCHAR(40)
+        - column:
+            name: BIOINT_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID_GROUP_SUMMARY_CT_WT
+            type: INTEGER
+        - column:
+            name: MTHSPC_UID
+            type: INTEGER
+        - column:
+            name: STANT_UID
+            type: INTEGER
+        - column:
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            name: RES_BIO_INDIVIDUAL_ID
+            type: VARCHAR(4)
+        - column:
+            name: RES_LAB_ACCRED_AUTHORITY
+            type: VARCHAR(20)
+        - column:
+            name: RES_LAB_ACCRED_YN
+            type: VARCHAR(1)
+        - column:
+            name: RES_GROUP_SUMMARY_CT_WT
+            type: VARCHAR(12)
+        - column:
+            name: RES_SAMPLING_POINT_NAME
+            type: VARCHAR(12)
+        - column:
+            name: RES_SPECIES_ID
+            type: VARCHAR(120)
+        - column:
+            name: RES_TAXONOMIST_ACCRED_AUTHORTY
+            type: VARCHAR(20)
+        - column:
+            name: RES_TAXONOMIST_ACCRED_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: RES_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT
+- changeSet:
+    id: 1560431414947-81
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RDCND_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RDCND_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: RDCND_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RDCND_DESC
+            type: VARCHAR(500)
+        tableName: RESULT_DETECTION_CONDITION
+- changeSet:
+    id: 1560431414947-82
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RDQLMT_UID
+            type: numeric(20)
+        - column:
+            name: DQLTYP_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            name: RDQLMT_MEASURE
+            type: VARCHAR(12)
+        - column:
+            constraints:
+              nullable: false
+            name: RDQLMT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RTDET_TRANS_ID
+            type: VARCHAR(100)
+        tableName: RESULT_DETECT_QUANT_LIMIT
+- changeSet:
+    id: 1560431414947-83
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RFCLS_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: FCDSC_UID
+            type: INTEGER
+        - column:
+            name: MSUNT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            name: FCDSC_LOWER_BOUND
+            type: INTEGER
+        - column:
+            name: FCDSC_UPPER_BOUND
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RFCLS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RFCLS_TRANS_ID
+            type: VARCHAR(100)
+        tableName: RESULT_FREQUENCY_CLASS
+- changeSet:
+    id: 1560431414947-84
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RLCOM_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RLCOM_CD
+            type: VARCHAR(3)
+        - column:
+            name: RLCOM_DESC
+            type: VARCHAR(100)
+        - column:
+            constraints:
+              nullable: false
+            name: RLCOM_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_LAB_COMMENT
+- changeSet:
+    id: 1560431414947-85
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RLSPRP_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            name: TMZONE_UID_START_TIME
+            type: INTEGER
+        - column:
+            name: TMZONE_UID_END_TIME
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RLSPRP_METHOD_ID
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RLSPRP_METHOD_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: RLSPRP_METHOD_NAME
+            type: VARCHAR(120)
+        - column:
+            name: RLSPRP_METHOD_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: RLSPRP_METHOD_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: RLSPRP_START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RLSPRP_START_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RLSPRP_END_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RLSPRP_END_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: RLSPRP_DILUTION_FACTOR
+            type: VARCHAR(10)
+        - column:
+            constraints:
+              nullable: false
+            name: RLSPRP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RLSPRP_TRANS_ID
+            type: VARCHAR(100)
+        tableName: RESULT_LAB_SAMPLE_PREP
+- changeSet:
+    id: 1560431414947-86
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RMQLF_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RMQLF_CD
+            type: VARCHAR(5)
+        - column:
+            name: RMQLF_DESC
+            type: VARCHAR(300)
+        - column:
+            constraints:
+              nullable: false
+            name: RMQLF_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_MEASURE_QUALIFIER
+- changeSet:
+    id: 1560431414947-87
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RSBAS_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RSBAS_CD
+            type: VARCHAR(25)
+        - column:
+            name: RSBAS_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: RSBAS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_STATISTICAL_BASE
+- changeSet:
+    id: 1560431414947-88
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RESSTA_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RESSTA_NAME
+            type: VARCHAR(12)
+        - column:
+            name: RESSTA_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: RESSTA_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_STATUS
+- changeSet:
+    id: 1560431414947-89
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            name: CELFRM_UID
+            type: INTEGER
+        - column:
+            name: CELSHP_UID
+            type: INTEGER
+        - column:
+            name: CITATN_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: VOLT_UID
+            type: INTEGER
+        - column:
+            name: RTDET_POLLUTION_TOLERANCE
+            type: VARCHAR(4)
+        - column:
+            name: RTDET_POLLUTION_TOLERNCE_SCALE
+            type: VARCHAR(50)
+        - column:
+            name: RTDET_TROPHIC_LEVEL
+            type: VARCHAR(4)
+        - column:
+            constraints:
+              nullable: false
+            name: RTDET_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RTDET_TRANS_ID
+            type: VARCHAR(100)
+        tableName: RESULT_TAXON_DETAIL
+- changeSet:
+    id: 1560431414947-90
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RTFGRP_FUNCTIONAL_FEEDING_GRP
+            type: VARCHAR(6)
+        - column:
+            constraints:
+              nullable: false
+            name: RTFGRP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RTFGRP_TRANS_ID
+            type: VARCHAR(100)
+        tableName: RESULT_TAXON_FEEDING_GROUP
+- changeSet:
+    id: 1560431414947-91
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RES_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: HABIT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: RTHAB_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RTHAB_TRANS_ID
+            type: VARCHAR(100)
+        tableName: RESULT_TAXON_HABIT
+- changeSet:
+    id: 1560431414947-92
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RTMPB_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RTMPB_NAME
+            type: VARCHAR(12)
+        - column:
+            name: RTMPB_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: RTMPB_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_TEMPERATURE_BASIS
+- changeSet:
+    id: 1560431414947-93
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RTIMB_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RTIMB_NAME
+            type: VARCHAR(12)
+        - column:
+            name: RTIMB_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: RTIMB_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_TIME_BASIS
+- changeSet:
+    id: 1560431414947-94
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RVTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RVTYP_NAME
+            type: VARCHAR(20)
+        - column:
+            name: RVTYP_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: RVTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_VALUE_TYPE
+- changeSet:
+    id: 1560431414947-95
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: RWBAS_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: RWBAS_NAME
+            type: VARCHAR(15)
+        - column:
+            name: RWBAS_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: RWBAS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: RESULT_WEIGHT_BASIS
+- changeSet:
+    id: 1560431414947-96
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: SCEQP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SCETYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SCEQP_NAME
+            type: VARCHAR(40)
+        - column:
+            constraints:
+              nullable: false
+            name: SCEQP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: SCEQP_DESC
+            type: VARCHAR(500)
+        - column:
+            name: SCEQP_ABBREV
+            type: VARCHAR(6)
+        tableName: SAMPLE_COLLECTION_EQUIP
+- changeSet:
+    id: 1560431414947-97
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: SCETYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SCETYP_NAME
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: SCETYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: SCETYP_DESC
+            type: VARCHAR(500)
+        tableName: SAMPLE_COLLECTION_EQUIP_TYPE
+- changeSet:
+    id: 1560431414947-98
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: SAMPLE_COLLECTION_METHOD_pkey
+            name: SCMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SCMTH_ID
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: SCMTH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: SCMTH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: SCMTH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: SCMTH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: SCMTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: SAMPLE_COLLECTION_METHOD
+- changeSet:
+    id: 1560431414947-99
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: SMFRC_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SMFRC_NAME
+            type: VARCHAR(25)
+        - column:
+            name: SMFRC_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: SMFRC_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: SAMPLE_FRACTION
+- changeSet:
+    id: 1560431414947-100
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: SAMPLE_PREPARATION_METHOD_pkey
+            name: SPMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SPMTH_ID
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: SPMTH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: SPMTH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: SPMTH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: SPMTH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: SPMTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: SAMPLE_PREPARATION_METHOD
+- changeSet:
+    id: 1560431414947-101
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: STANT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: STANT_NAME
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: STANT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: STANT_DESC
+            type: VARCHAR(500)
+        tableName: SAMPLE_TISSUE_ANATOMY
+- changeSet:
+    id: 1560431414947-102
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: SDTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: SDTYP_CD
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: SDTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: SDTYP_DESC
+            type: VARCHAR(500)
+        tableName: SAMPLING_DESIGN_TYPE
+- changeSet:
+    id: 1560431414947-103
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: ST_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: CNTRY_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ST_CD
+            type: VARCHAR(2)
+        - column:
+            constraints:
+              nullable: false
+            name: ST_NAME
+            type: VARCHAR(35)
+        - column:
+            name: ST_FIPS_CD
+            type: SMALLINT
+        - column:
+            constraints:
+              nullable: false
+            name: ST_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ER_UID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: st_uid
+            type: INTEGER
+        - column:
+            name: cntry_uid
+            type: INTEGER
+        - column:
+            name: st_cd
+            type: VARCHAR(2)
+        - column:
+            name: st_name
+            type: VARCHAR(35)
+        - column:
+            name: st_fips_cd
+            type: SMALLINT
+        - column:
+            name: st_last_change_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: er_uid
+            type: numeric(12)
+        - column:
+            name: usr_uid_last_change
+            type: INTEGER
+        tableName: STATE
+- changeSet:
+    id: 1560431414947-104
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TBL_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TBL_NAME
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: TBLTYP_UID
+            type: INTEGER
+        - column:
+            name: TBL_FRIENDLY_NAME
+            type: VARCHAR(50)
+        tableName: TABLE_LIST
+- changeSet:
+    id: 1560431414947-105
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TBLTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TBLTYP_NAME
+            type: VARCHAR(35)
+        tableName: TABLE_TYPE
+- changeSet:
+    id: 1560431414947-106
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TXRNK_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TAX_EXTRNL_ID
+            type: numeric(12)
+        - column:
+            name: TAX_STORET_ID
+            type: numeric(12)
+        - column:
+            name: TAX_SRS_ID
+            type: numeric(12)
+        - column:
+            name: TAX_RETIRED_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TAX_RETIRED_EXTRNL_ID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: TAX_DESCRIPTION
+            type: VARCHAR(1000)
+        - column:
+            name: TAX_EXTRNL_ID_PARENT
+            type: numeric(12)
+        - column:
+            name: TAX_UID_KINGDOM
+            type: INTEGER
+        - column:
+            name: TAX_UID_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: TAXGRP_UID
+            type: INTEGER
+        - column:
+            name: DVSTA_UID
+            type: INTEGER
+        tableName: TAXON
+- changeSet:
+    id: 1560431414947-107
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TAXALS_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ALSTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TAXALS_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            name: DVSTA_UID
+            type: INTEGER
+        - column:
+            name: TAXALS_DESCRIPTION
+            type: VARCHAR(400)
+        - column:
+            name: TAXALS_UID_PARENT
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TAXALS_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TAXON_ALIAS
+- changeSet:
+    id: 1560431414947-108
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TAXGRP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TAXGRP_NAME
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: TAXGRP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TAXON_GROUP
+- changeSet:
+    id: 1560431414947-109
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TXRNK_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TXRNK_NAME
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: TXRNK_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TAXON_RANK
+- changeSet:
+    id: 1560431414947-110
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: THPRSV_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: THPRSV_NAME
+            type: VARCHAR(25)
+        - column:
+            name: THPRSV_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: THPRSV_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: THERMAL_PRESERVATIVE
+- changeSet:
+    id: 1560431414947-111
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TMZONE_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TMZONE_CD
+            type: VARCHAR(5)
+        - column:
+            constraints:
+              nullable: false
+            name: TMZONE_NAME
+            type: VARCHAR(80)
+        - column:
+            constraints:
+              nullable: false
+            name: TMZONE_OFFSET
+            type: numeric(4, 2)
+        - column:
+            constraints:
+              nullable: false
+            name: TMZONE_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TIME_ZONE
+- changeSet:
+    id: 1560431414947-112
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TRB_UID
+            type: INTEGER
+        - column:
+            name: TRB_CD
+            type: VARCHAR(3)
+        - column:
+            name: TRB_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TRB_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: TRB_EXTRNL_ID
+            type: numeric(12)
+        - column:
+            name: TRB_STATE_CD
+            type: VARCHAR(3)
+        - column:
+            name: TRB_STATE_NAME
+            type: VARCHAR(60)
+        - column:
+            name: TRB_REGIONNUM
+            type: INTEGER
+        - column:
+            name: TRB_REGION_NAME
+            type: VARCHAR(60)
+        tableName: TMP_TRIBE
+- changeSet:
+    id: 1560431414947-113
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TTTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TTTYP_NAME
+            type: VARCHAR(15)
+        - column:
+            constraints:
+              nullable: false
+            name: TTTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: TTTYP_DESC
+            type: VARCHAR(500)
+        tableName: TOXICITY_TEST_TYPE
+- changeSet:
+    id: 1560431414947-114
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: TRHEAD_ID
+            type: VARCHAR(40)
+        - column:
+            constraints:
+              nullable: false
+            name: TRHEAD_AUTHOR
+            type: VARCHAR(100)
+        - column:
+            name: TRHEAD_COMMENT
+            type: VARCHAR(1000)
+        - column:
+            constraints:
+              nullable: false
+            name: TRHEAD_CONTACT_INFO
+            type: VARCHAR(300)
+        - column:
+            constraints:
+              nullable: false
+            name: TRHEAD_CREATION_TIME
+            type: VARCHAR(37)
+        - column:
+            constraints:
+              nullable: false
+            name: TRHEAD_OPERATION
+            type: VARCHAR(20)
+        - column:
+            constraints:
+              nullable: false
+            name: TRHEAD_ORG_NAME
+            type: VARCHAR(100)
+        - column:
+            name: TRHEAD_SCHEMA_REF
+            type: VARCHAR(40)
+        - column:
+            constraints:
+              nullable: false
+            name: TRHEAD_TITLE
+            type: VARCHAR(100)
+        tableName: TRANSACTION_HEADER
+- changeSet:
+    id: 1560431414947-115
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_UID
+            type: numeric(12)
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRSTA_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRTYP_UID
+            type: INTEGER
+        - column:
+            name: USR_UID
+            type: INTEGER
+        - column:
+            name: TRLOG_TRANS_ID
+            type: VARCHAR(40)
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_RECEIVED_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: TRLOG_START_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: TRLOG_END_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: TRLOG_PERCENT_COMPLETE
+            type: numeric(5, 2)
+        - column:
+            name: TRLOG_XML_FILE_SIZE
+            type: numeric(12)
+        - column:
+            name: TRLOG_ATTACHMENTS_SIZE
+            type: numeric(12)
+        - column:
+            name: TRLOG_ATTACHMENTS_COUNT
+            type: INTEGER
+        - column:
+            name: TRLOG_OTHER
+            type: VARCHAR(500)
+        tableName: TRANSACTION_LOG
+- changeSet:
+    id: 1560431414947-116
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TLAUD_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: AUDTYP_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: REF_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: TBL_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_UID
+            type: numeric(20)
+        - column:
+            name: REF_ID
+            type: VARCHAR(35)
+        - column:
+            constraints:
+              nullable: false
+            name: TLAUD_SUCCESS_YN
+            type: VARCHAR(1)
+        tableName: TRANSACTION_LOG_AUDIT
+- changeSet:
+    id: 1560431414947-117
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: AUDTYP_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: TBL_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: TLASUM_SUCCESS_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: TLASUM_COUNT
+            type: numeric(10)
+        tableName: TRANSACTION_LOG_AUDIT_SUMMARY
+- changeSet:
+    id: 1560431414947-118
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TLDET_UID
+            type: numeric(20)
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: TLDTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRLOG_UID
+            type: numeric(20)
+        - column:
+            name: TLDET_MSG
+            type: VARCHAR(1000)
+        - column:
+            name: TLDET_SOURCE
+            type: VARCHAR(100)
+        - column:
+            name: TLDET_CONTEXT
+            type: VARCHAR(500)
+        tableName: TRANSACTION_LOG_DETAIL
+- changeSet:
+    id: 1560431414947-119
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TLDTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TLDTYP_NAME
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: TLDTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: TRANSACTION_LOG_DETAIL_TYPE
+- changeSet:
+    id: 1560431414947-120
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TRSTA_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRSTA_NAME
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: TRSTA_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: TRANSACTION_STATUS
+- changeSet:
+    id: 1560431414947-121
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TRTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRTYP_NAME
+            type: VARCHAR(30)
+        - column:
+            constraints:
+              nullable: false
+            name: TRTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        tableName: TRANSACTION_TYPE
+- changeSet:
+    id: 1560431414947-122
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TRB_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: TRB_CD
+            type: VARCHAR(3)
+        - column:
+            constraints:
+              nullable: false
+            name: TRB_NAME
+            type: VARCHAR(120)
+        - column:
+            constraints:
+              nullable: false
+            name: TRB_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TRIBE
+- changeSet:
+    id: 1560431414947-123
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: USER_ACCESS_pkey
+            name: USR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: USER_ACCESS_pkey
+            name: UADOM_UID
+            type: INTEGER
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: USER_ACCESS_pkey
+            name: REF_UID
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: UATYP_UID
+            type: INTEGER
+        - column:
+            name: USRACC_IN_SYNC_WITH_TEST_YN
+            type: VARCHAR(1)
+        tableName: USER_ACCESS
+- changeSet:
+    id: 1560431414947-124
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: UADOM_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: UADOM_NAME
+            type: VARCHAR(30)
+        tableName: USER_ACCESS_DOMAIN
+- changeSet:
+    id: 1560431414947-125
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: UATYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: UATYP_NAME
+            type: VARCHAR(50)
+        tableName: USER_ACCESS_TYPE
+- changeSet:
+    id: 1560431414947-126
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: USER_ACCESS_TYPE_BY_DOMAIN_pkey
+            name: UADOM_UID
+            type: INTEGER
+        - column:
+            constraints:
+              primaryKey: true
+              primaryKeyName: USER_ACCESS_TYPE_BY_DOMAIN_pkey
+            name: UATYP_UID
+            type: INTEGER
+        tableName: USER_ACCESS_TYPE_BY_DOMAIN
+- changeSet:
+    id: 1560431414947-127
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: USR_NAAS_ID
+            type: VARCHAR(100)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_ACTIVE_YN
+            type: VARCHAR(1)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_LOGIN_NAME
+            type: VARCHAR(35)
+        - column:
+            name: USR_PASSWORD
+            type: VARCHAR(25)
+        - column:
+            constraints:
+              nullable: false
+            name: USR_FULL_NAME
+            type: VARCHAR(40)
+        - column:
+            name: USR_ORGANIZATION_NAME
+            type: VARCHAR(100)
+        - column:
+            name: USR_ADDRESS
+            type: VARCHAR(50)
+        - column:
+            name: USR_CITY
+            type: VARCHAR(35)
+        - column:
+            name: USR_STATE
+            type: VARCHAR(2)
+        - column:
+            name: USR_POSTAL_CD
+            type: VARCHAR(10)
+        - column:
+            name: USR_COUNTRY
+            type: VARCHAR(30)
+        - column:
+            name: USR_PHONE
+            type: VARCHAR(14)
+        - column:
+            name: USR_EMAIL
+            type: VARCHAR(50)
+        - column:
+            name: USR_LAST_LOGIN_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_LAST_LOGIN_IP_ADDRESS
+            type: VARCHAR(40)
+        - column:
+            name: USR_LAST_SESSION_MACHINE_NAME
+            type: VARCHAR(100)
+        - column:
+            name: USR_LAST_SESSION_EXPIRE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_IN_SYNC_WITH_TEST_YN
+            type: VARCHAR(1)
+        - column:
+            name: USR_ID
+            type: VARCHAR(88)
+        tableName: USER_LIST
+- changeSet:
+    id: 1560431414947-128
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: VCMTH_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: VCMTH_NAME
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: VCMTH_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: VCMTH_DESC
+            type: VARCHAR(500)
+        tableName: VERTICAL_COLLECTION_METHOD
+- changeSet:
+    id: 1560431414947-129
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: VRDAT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: VRDAT_NAME
+            type: VARCHAR(10)
+        - column:
+            constraints:
+              nullable: false
+            name: VRDAT_DESC
+            type: VARCHAR(45)
+        - column:
+            constraints:
+              nullable: false
+            name: VRDAT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: VERTICAL_REFERENCE_DATUM
+- changeSet:
+    id: 1560431414947-130
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: VOLT_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: VOLT_NAME
+            type: VARCHAR(25)
+        - column:
+            name: VOLT_DESC
+            type: VARCHAR(200)
+        - column:
+            constraints:
+              nullable: false
+            name: VOLT_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: VOLTINISM
+- changeSet:
+    id: 1560431414947-131
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: MLOC_UID
+            type: numeric(20)
+        - column:
+            name: MSUNT_UID_HOLE_DEPTH
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            constraints:
+              nullable: false
+            name: WELTYP_UID
+            type: INTEGER
+        - column:
+            name: WFTYP_UID
+            type: INTEGER
+        - column:
+            name: WELL_AQUIFER_NAME
+            type: VARCHAR(120)
+        - column:
+            name: WELL_HOLE_DEPTH
+            type: VARCHAR(12)
+        - column:
+            constraints:
+              nullable: false
+            name: WELL_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: WELL_TRANS_ID
+            type: VARCHAR(100)
+        tableName: WELL
+- changeSet:
+    id: 1560431414947-132
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: WFTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: WFTYP_NAME
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: WFTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: WFTYP_DESC
+            type: VARCHAR(500)
+        tableName: WELL_FORMATION_TYPE
+- changeSet:
+    id: 1560431414947-133
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: WELTYP_UID
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: WELTYP_NAME
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: WELTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            constraints:
+              nullable: false
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: WELTYP_DESC
+            type: VARCHAR(500)
+        tableName: WELL_TYPE

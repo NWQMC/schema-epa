@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+    - runningAs:
+        username: postgres
+
+  - changeSet:
+      author: drsteini
+      id: "create.project.db.owner.role.${EPA_DB_OWNER_USERNAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_roles where rolname = '${EPA_DB_OWNER_USERNAME}';
+      changes:
+        - sql: create role ${EPA_DB_OWNER_USERNAME} with login password '${EPA_DB_OWNER_PASSWORD}';
+        - rollback: drop role if exists ${EPA_DB_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "grant.${EPA_DB_OWNER_USERNAME}.to.postgres"
+      changes:
+        - sql: grant ${EPA_DB_OWNER_USERNAME} to postgres;
+        - rollback: revoke ${EPA_DB_OWNER_USERNAME} from postgres;
+
+  - changeSet:
+      author: drsteini
+      id: "create.project.database.${EPA_DATABASE_NAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_database where datname = '${EPA_DATABASE_NAME}';
+      runInTransaction: false
+      changes:
+        - sql: create database ${EPA_DATABASE_NAME} with owner = ${EPA_DB_OWNER_USERNAME};
+        - rollback: drop database if exists ${EPA_DATABASE_NAME};
+
+#  - changeSet:
+#      author: drsteini
+#      id: "create.project.owner.role.${WQP_SCHEMA_OWNER_USERNAME}"
+#      preConditions:
+#        - onFail: MARK_RAN
+#        - onError: HALT
+#        - sqlCheck:
+#            expectedResult: 0
+#            sql: select count(*) from pg_roles where rolname = '${WQP_SCHEMA_OWNER_USERNAME}';
+#      changes:
+#        - sql: create role ${WQP_SCHEMA_OWNER_USERNAME} with login password '${WQP_SCHEMA_OWNER_PASSWORD}';
+#        - rollback: drop role if exists ${WQP_SCHEMA_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "create.project.owner.role.${EPA_SCHEMA_OWNER_USERNAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_roles where rolname = '${EPA_SCHEMA_OWNER_USERNAME}';
+      changes:
+        - sql: create role ${EPA_SCHEMA_OWNER_USERNAME} with login password '${EPA_SCHEMA_OWNER_PASSWORD}';
+        - rollback: drop role if exists ${EPA_SCHEMA_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "grant.${EPA_SCHEMA_OWNER_USERNAME}.to.postgres"
+      changes:
+        - sql: grant ${EPA_SCHEMA_OWNER_USERNAME} to postgres;
+        - rollback: revoke ${EPA_SCHEMA_OWNER_USERNAME} from postgres;
+
+  - changeSet:
+      author: drsteini
+      id: "alter.role.${EPA_SCHEMA_OWNER_USERNAME}.search_path"
+      changes:
+        - sql: alter role "${EPA_SCHEMA_OWNER_USERNAME}" set search_path = "$user", ${WQX_SCHEMA_NAME}, ${STORETW_SCHEMA_NAME}, ${WQP_SCHEMA_NAME}, public, tiger;
+        - rollback: alter role "${EPA_SCHEMA_OWNER_USERNAME}" reset search_path;

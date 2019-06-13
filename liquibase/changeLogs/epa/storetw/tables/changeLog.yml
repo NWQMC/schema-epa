@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+    - runningAs:
+        username: ${EPA_SCHEMA_OWNER_USERNAME}
+
+  - include:
+      file: "activityNoSource/changeLog.yml"
+      relativeToChangelogFile: true
+
+  - include:
+      file: "resultNoSource/changeLog.yml"
+      relativeToChangelogFile: true
+
+  - include:
+      file: "stationNoSource/changeLog.yml"
+      relativeToChangelogFile: true

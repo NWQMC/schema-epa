@@ -1,0 +1,71 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+    - runningAs:
+        username: postgres
+
+  - changeSet:
+      author: drsteini
+      id: "create.extension.tablefunc"
+      changes:
+        - sql: create extension if not exists tablefunc;
+        - rollback: drop extension if exists tablefunc;
+
+  - changeSet:
+      author: drsteini
+      id: "create.project.schema_${WQX_SCHEMA_NAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_namespace where nspname = '${WQX_SCHEMA_NAME}';
+      changes:
+        - sql: create schema ${WQX_SCHEMA_NAME} authorization ${EPA_SCHEMA_OWNER_USERNAME};
+        - rollback: drop schema if exists ${WQX_SCHEMA_NAME} cascade;
+
+  - changeSet:
+      author: drsteini
+      id: "create.project.schema_${STORETW_SCHEMA_NAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_namespace where nspname = '${STORETW_SCHEMA_NAME}';
+      changes:
+        - sql: create schema ${STORETW_SCHEMA_NAME} authorization ${EPA_SCHEMA_OWNER_USERNAME};
+        - rollback: drop schema if exists ${STORETW_SCHEMA_NAME} cascade;
+
+  - changeSet:
+      author: drsteini
+      id: "grant.usage.${NWIS_SCHEMA_NAME}.to.${EPA_SCHEMA_OWNER_USERNAME}"
+      changes:
+        - sql:
+            sql: grant usage on schema ${NWIS_SCHEMA_NAME} to ${EPA_SCHEMA_OWNER_USERNAME};
+        - rollback: revoke usage on schema ${NWIS_SCHEMA_NAME} from ${EPA_SCHEMA_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "grant.select.${NWIS_SCHEMA_NAME}.country.to.${EPA_SCHEMA_OWNER_USERNAME}.with.grant"
+      changes:
+        - sql:
+            sql: grant select on ${NWIS_SCHEMA_NAME}.country to ${EPA_SCHEMA_OWNER_USERNAME} with grant option;
+        - rollback: revoke select on ${NWIS_SCHEMA_NAME}.country from ${EPA_SCHEMA_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "grant.select.${NWIS_SCHEMA_NAME}.county.to.${EPA_SCHEMA_OWNER_USERNAME}.with.grant"
+      changes:
+        - sql:
+            sql: grant select on ${NWIS_SCHEMA_NAME}.county to ${EPA_SCHEMA_OWNER_USERNAME} with grant option;
+        - rollback: revoke select on ${NWIS_SCHEMA_NAME}.county from ${EPA_SCHEMA_OWNER_USERNAME};
+
+  - changeSet:
+      author: drsteini
+      id: "grant.select.${NWIS_SCHEMA_NAME}.state.to.${EPA_SCHEMA_OWNER_USERNAME}.with.grant"
+      changes:
+        - sql:
+            sql: grant select on ${NWIS_SCHEMA_NAME}.state to ${EPA_SCHEMA_OWNER_USERNAME} with grant option;
+        - rollback: revoke select on ${NWIS_SCHEMA_NAME}.state from ${EPA_SCHEMA_OWNER_USERNAME};

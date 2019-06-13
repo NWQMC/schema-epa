@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+    - runningAs:
+        username: ${EPA_SCHEMA_OWNER_USERNAME}
+
+  - include:
+      file: "nemiWqpToEpaCrosswalk/changeLog.yml"
+      relativeToChangelogFile: true
+
+  - include:
+      file: "generated/changeLog.yml"
+      relativeToChangelogFile: true

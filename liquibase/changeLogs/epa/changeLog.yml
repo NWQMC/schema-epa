@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+    - runningAs:
+        username: ${EPA_SCHEMA_OWNER_USERNAME}
+
+  - include:
+      file: "wqx/changeLog.yml"
+      relativeToChangelogFile: true
+
+  - include:
+      file: "storetw/changeLog.yml"
+      relativeToChangelogFile: true
