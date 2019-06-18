@@ -1382,21 +1382,6 @@ databaseChangeLog:
               nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
-        - column:
-            name: cntry_uid
-            type: INTEGER
-        - column:
-            name: cntry_cd
-            type: VARCHAR(2)
-        - column:
-            name: cntry_name
-            type: VARCHAR(35)
-        - column:
-            name: cntry_last_change_date
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            name: usr_uid_last_change
-            type: INTEGER
         tableName: COUNTRY
 - changeSet:
     id: 1560431414947-37
@@ -1433,24 +1418,6 @@ databaseChangeLog:
             constraints:
               nullable: false
             name: USR_UID_LAST_CHANGE
-            type: INTEGER
-        - column:
-            name: cnty_uid
-            type: INTEGER
-        - column:
-            name: st_uid
-            type: INTEGER
-        - column:
-            name: cnty_name
-            type: VARCHAR(50)
-        - column:
-            name: cnty_fips_cd
-            type: VARCHAR(3)
-        - column:
-            name: cnty_last_change_date
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            name: usr_uid_last_change
             type: INTEGER
         tableName: COUNTY
 - changeSet:
@@ -4112,30 +4079,6 @@ databaseChangeLog:
             constraints:
               nullable: false
             name: USR_UID_LAST_CHANGE
-            type: INTEGER
-        - column:
-            name: st_uid
-            type: INTEGER
-        - column:
-            name: cntry_uid
-            type: INTEGER
-        - column:
-            name: st_cd
-            type: VARCHAR(2)
-        - column:
-            name: st_name
-            type: VARCHAR(35)
-        - column:
-            name: st_fips_cd
-            type: SMALLINT
-        - column:
-            name: st_last_change_date
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            name: er_uid
-            type: numeric(12)
-        - column:
-            name: usr_uid_last_change
             type: INTEGER
         tableName: STATE
 - changeSet:
