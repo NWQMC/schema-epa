@@ -20,12 +20,12 @@ the following (shown are example values):
 ```
 POSTGRES_PASSWORD=<changeMe>
 
-EPA_DATABASE_ADDRESS=<ars_database_host>
-EPA_DATABASE_NAME=<ars_db>
+EPA_DATABASE_ADDRESS=<epa_database_host>
+EPA_DATABASE_NAME=<epa_db>
 EPA_DB_OWNER_USERNAME=<wqp_core>
 EPA_DB_OWNER_PASSWORD=<changeMe>
 
-EPA_SCHEMA_OWNER_USERNAME=<ars_owner>
+EPA_SCHEMA_OWNER_USERNAME=<epa_owner>
 EPA_SCHEMA_OWNER_PASSWORD=<changeMe>
 
 WQX_SCHEMA_NAME=<wqx>
