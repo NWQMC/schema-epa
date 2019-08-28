@@ -6,13 +6,9 @@ databaseChangeLog:
         username: ${EPA_SCHEMA_OWNER_USERNAME}
 
   - include:
-      file: "wqx/changeLog.yml"
+      file: "grants/changeLog.yml"
       relativeToChangelogFile: true
 
   - include:
-      file: "wqxDump/changeLog.yml"
-      relativeToChangelogFile: true
-
-  - include:
-      file: "storetw/changeLog.yml"
+      file: "tables/changeLog.yml"
       relativeToChangelogFile: true

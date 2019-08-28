@@ -6,5 +6,5 @@ databaseChangeLog:
         username: ${EPA_SCHEMA_OWNER_USERNAME}
 
   - include:
-      file: "nemiWqpToEpaCrosswalk/changeLog.yml"
+      file: "generated/changeLog.yml"
       relativeToChangelogFile: true
