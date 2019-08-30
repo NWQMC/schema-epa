@@ -3,9 +3,12 @@ returns void
 language plpgsql
 as $$
 begin
-   raise notice '%', 
-   (select 'drop table ' string_agg(quote_ident(schemaname) || '.' || quote_ident(tablename), ', ') || ' cascade'
-       from pg_tables
-      where schemaname = 'wqx_dump');
+   EXECUTE
+  (SELECT 'drop table '
+       || string_agg(quote_ident(schemaname) || '.' || quote_ident(tablename), ', ')
+       || ' cascade'
+   FROM   pg_tables
+   WHERE  schemaname = 'wqx_dump'
+   );
 end
 $$
