@@ -808,7 +808,7 @@ databaseChangeLog:
             type: VARCHAR(6)
         - column:
             name: ATOBJ_CONTENT
-            type: BLOB
+            type: bytea
         - column:
             name: ATOBJ_LAST_CHANGE_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
