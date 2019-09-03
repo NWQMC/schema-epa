@@ -39,6 +39,7 @@ services:
       - WQP_SCHEMA_NAME=${WQP_SCHEMA_NAME}
       - WQP_SCHEMA_OWNER_USERNAME=${WQP_SCHEMA_OWNER_USERNAME}
       - WQP_SCHEMA_OWNER_PASSWORD=${WQP_SCHEMA_OWNER_PASSWORD}
+      - CONTEXTS=${CONTEXTS}
     volumes:
       - ./liquibase/changeLogs:/home/java/workspace/epa
       - ./liquibase/scripts:/docker-entrypoint-initdb.d

@@ -8,6 +8,7 @@ ${LIQUIBASE_HOME}/liquibase \
 	--url=jdbc:postgresql://${EPA_DATABASE_ADDRESS}:5432/${EPA_DATABASE_NAME} \
 	--username=${EPA_SCHEMA_OWNER_USERNAME} \
 	--password=${EPA_SCHEMA_OWNER_PASSWORD} \
+	--contexts=${CONTEXTS} \
 	--logLevel=debug \
 	--liquibaseCatalogName=${WQX_SCHEMA_NAME} \
 	--liquibaseSchemaName=${WQX_SCHEMA_NAME} \
