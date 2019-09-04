@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+
+  - changeSet:
+      author: drsteini
+      id: "create.function.drop_tables"
+      changes:
+        - sqlFile:
+            path: droptables.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+        - rollback: drop function if exists drop_tables();

@@ -27,6 +27,19 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.project.schema_${WQX_DUMP_SCHEMA_NAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_namespace where nspname = '${WQX_DUMP_SCHEMA_NAME}';
+      changes:
+        - sql: create schema ${WQX_DUMP_SCHEMA_NAME} authorization ${EPA_SCHEMA_OWNER_USERNAME};
+        - rollback: drop schema if exists ${WQX_DUMP_SCHEMA_NAME} cascade;
+
+  - changeSet:
+      author: drsteini
       id: "create.project.schema_${STORETW_SCHEMA_NAME}"
       preConditions:
         - onFail: MARK_RAN
@@ -41,6 +54,12 @@ databaseChangeLog:
   - changeSet:
       author: drsteini
       id: "grant.usage.${NWIS_SCHEMA_NAME}.to.${EPA_SCHEMA_OWNER_USERNAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 1
+            sql: select count(*) from pg_namespace where nspname = '${NWIS_SCHEMA_NAME}';
       changes:
         - sql:
             sql: grant usage on schema ${NWIS_SCHEMA_NAME} to ${EPA_SCHEMA_OWNER_USERNAME};
@@ -49,6 +68,12 @@ databaseChangeLog:
   - changeSet:
       author: drsteini
       id: "grant.select.${NWIS_SCHEMA_NAME}.country.to.${EPA_SCHEMA_OWNER_USERNAME}.with.grant"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - tableExists:
+            schemaName: ${NWIS_SCHEMA_NAME}
+            tableName: country
       changes:
         - sql:
             sql: grant select on ${NWIS_SCHEMA_NAME}.country to ${EPA_SCHEMA_OWNER_USERNAME} with grant option;
@@ -57,6 +82,12 @@ databaseChangeLog:
   - changeSet:
       author: drsteini
       id: "grant.select.${NWIS_SCHEMA_NAME}.county.to.${EPA_SCHEMA_OWNER_USERNAME}.with.grant"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - tableExists:
+            schemaName: ${NWIS_SCHEMA_NAME}
+            tableName: county
       changes:
         - sql:
             sql: grant select on ${NWIS_SCHEMA_NAME}.county to ${EPA_SCHEMA_OWNER_USERNAME} with grant option;
@@ -65,6 +96,12 @@ databaseChangeLog:
   - changeSet:
       author: drsteini
       id: "grant.select.${NWIS_SCHEMA_NAME}.state.to.${EPA_SCHEMA_OWNER_USERNAME}.with.grant"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - tableExists:
+            schemaName: ${NWIS_SCHEMA_NAME}
+            tableName: state
       changes:
         - sql:
             sql: grant select on ${NWIS_SCHEMA_NAME}.state to ${EPA_SCHEMA_OWNER_USERNAME} with grant option;

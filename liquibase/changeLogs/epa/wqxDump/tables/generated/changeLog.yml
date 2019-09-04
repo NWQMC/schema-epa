@@ -228,6 +228,7 @@ databaseChangeLog:
             name: ACT_TRANS_ID
             type: VARCHAR(100)
         tableName: ACTIVITY
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-2
     author: drsteini (generated)
@@ -261,6 +262,7 @@ databaseChangeLog:
             name: ACORG_TRANS_ID
             type: VARCHAR(100)
         tableName: ACTIVITY_CONDUCTING_ORG
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-3
     author: drsteini (generated)
@@ -308,6 +310,7 @@ databaseChangeLog:
             name: ACTGRP_END_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: ACTIVITY_GROUP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-4
     author: drsteini (generated)
@@ -341,6 +344,7 @@ databaseChangeLog:
             name: AGDET_TRANS_ID
             type: VARCHAR(100)
         tableName: ACTIVITY_GROUP_DETAIL
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-5
     author: drsteini (generated)
@@ -371,6 +375,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ACTIVITY_GROUP_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-6
     author: drsteini (generated)
@@ -401,6 +406,7 @@ databaseChangeLog:
             name: ACMED_DESC
             type: VARCHAR(500)
         tableName: ACTIVITY_MEDIA
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-7
     author: drsteini (generated)
@@ -431,6 +437,7 @@ databaseChangeLog:
             name: AMSUB_DESC
             type: VARCHAR(500)
         tableName: ACTIVITY_MEDIA_SUBDIVISION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-8
     author: drsteini (generated)
@@ -483,6 +490,7 @@ databaseChangeLog:
             name: ACTMET_TRANS_ID
             type: VARCHAR(100)
         tableName: ACTIVITY_METRIC
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-9
     author: drsteini (generated)
@@ -516,6 +524,7 @@ databaseChangeLog:
             name: AMIDX_TRANS_ID
             type: VARCHAR(100)
         tableName: ACTIVITY_METRIC_INDEX
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-10
     author: drsteini (generated)
@@ -549,6 +558,7 @@ databaseChangeLog:
             name: ACTPRJ_TRANS_ID
             type: VARCHAR(100)
         tableName: ACTIVITY_PROJECT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-11
     author: drsteini (generated)
@@ -594,6 +604,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ACTIVITY_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-12
     author: drsteini (generated)
@@ -624,6 +635,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ADDRESS_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-13
     author: drsteini (generated)
@@ -651,6 +663,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ALIAS_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-14
     author: drsteini (generated)
@@ -700,6 +713,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ANALYTICAL_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-15
     author: drsteini (generated)
@@ -735,6 +749,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ANALYTICAL_METHOD_CONTEXT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-16
     author: drsteini (generated)
@@ -765,6 +780,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ASSEMBLAGE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-17
     author: drsteini (generated)
@@ -772,32 +788,53 @@ databaseChangeLog:
     - createTable:
         columns:
         - column:
+            name: ATOBJ_UID
+            type: numeric(20)
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
             constraints:
-              nullable: false
+            name: REF_UID
+            type: numeric(20)
+        - column:
+            name: TBL_UID
+            type: INTEGER
+        - column:
+            name: ATOBJ_FILE_NAME
+            type: VARCHAR(256)
+        - column:
+            name: ATOBJ_TYPE
+            type: VARCHAR(6)
+        - column:
+            name: ATOBJ_CONTENT
+            type: bytea
+        - column:
+            name: ATOBJ_LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: ATOBJ_TRANS_ID
+            type: VARCHAR(100)
+        - column:
             name: AOFLD_UID
             type: numeric(12)
         - column:
-            name: AOFLD_UID_PARENT
-            type: numeric(12)
+            name: ATOBJ_DESC
+            type: VARCHAR(4000)
         - column:
-            constraints:
-              nullable: false
-            name: AOFLD_NAME
-            type: VARCHAR(35)
+            name: ATOBJ_CONTENT_IN_DATABASE_YN
+            type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
-            name: AOFLD_RELATIVE_PATH
-            type: VARCHAR(256)
+            name: ATOBJ_CREATE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
         - column:
-            constraints:
-              nullable: false
-            name: AOFLD_LEVEL
-            type: SMALLINT
-        - column:
-            name: ORG_UID
+            name: USR_UID_CREATE
             type: INTEGER
-        tableName: ATTACHED_OBJECT_FOLDER
+        tableName: ATTACHED_OBJECT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-18
     author: drsteini (generated)
@@ -820,6 +857,7 @@ databaseChangeLog:
             name: AUDTYP_LAST_CHANGE_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: AUDIT_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-19
     author: drsteini (generated)
@@ -877,6 +915,7 @@ databaseChangeLog:
             name: BHIDX_TRANS_ID
             type: VARCHAR(100)
         tableName: BIOLOGICAL_HABITAT_INDEX
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-20
     author: drsteini (generated)
@@ -907,6 +946,7 @@ databaseChangeLog:
             name: BIOINT_DESC
             type: VARCHAR(500)
         tableName: BIOLOGICAL_INTENT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-21
     author: drsteini (generated)
@@ -937,6 +977,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CELL_FORM
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-22
     author: drsteini (generated)
@@ -967,6 +1008,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CELL_SHAPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-23
     author: drsteini (generated)
@@ -1022,6 +1064,7 @@ databaseChangeLog:
             name: DVSTA_UID
             type: INTEGER
         tableName: CHARACTERISTIC
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-24
     author: drsteini (generated)
@@ -1065,6 +1108,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CHARACTERISTIC_ALIAS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-25
     author: drsteini (generated)
@@ -1092,6 +1136,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CHARACTERISTIC_GROUP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-26
     author: drsteini (generated)
@@ -1127,6 +1172,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CHARACTERISTIC_PICK_LIST_VALUE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-27
     author: drsteini (generated)
@@ -1144,6 +1190,7 @@ databaseChangeLog:
             name: ANLMTH_UID
             type: INTEGER
         tableName: CHAR_ANALYTICAL_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-28
     author: drsteini (generated)
@@ -1161,6 +1208,7 @@ databaseChangeLog:
             name: DQLTYP_UID
             type: INTEGER
         tableName: CHAR_DETECT_QUANT_LIMIT_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-29
     author: drsteini (generated)
@@ -1178,6 +1226,7 @@ databaseChangeLog:
             name: MSUNT_UID
             type: INTEGER
         tableName: CHAR_MEASUREMENT_UNIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-30
     author: drsteini (generated)
@@ -1195,6 +1244,7 @@ databaseChangeLog:
             name: MTHSPC_UID
             type: INTEGER
         tableName: CHAR_METH_SPECIATION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-31
     author: drsteini (generated)
@@ -1212,6 +1262,7 @@ databaseChangeLog:
             name: SMFRC_UID
             type: INTEGER
         tableName: CHAR_SAMPLE_FRACTION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-32
     author: drsteini (generated)
@@ -1263,6 +1314,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CITATION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-33
     author: drsteini (generated)
@@ -1291,6 +1343,7 @@ databaseChangeLog:
             name: CFG_CONTEXT
             type: VARCHAR(100)
         tableName: CONFIG
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-34
     author: drsteini (generated)
@@ -1321,6 +1374,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CONTAINER_COLOR
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-35
     author: drsteini (generated)
@@ -1351,6 +1405,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CONTAINER_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-36
     author: drsteini (generated)
@@ -1383,6 +1438,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: COUNTRY
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-37
     author: drsteini (generated)
@@ -1420,6 +1476,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: COUNTY
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-38
     author: drsteini (generated)
@@ -1450,6 +1507,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: DETECTION_QUANT_LIMIT_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-39
     author: drsteini (generated)
@@ -1467,6 +1525,7 @@ databaseChangeLog:
             name: DVSTA_NAME
             type: VARCHAR(35)
         tableName: DOMAIN_VALUE_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-40
     author: drsteini (generated)
@@ -1497,6 +1556,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ELECTRONIC_ADDRESS_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-41
     author: drsteini (generated)
@@ -1514,6 +1574,7 @@ databaseChangeLog:
             name: EVSTA_NAME
             type: VARCHAR(35)
         tableName: ELEMENT_VALUE_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-42
     author: drsteini (generated)
@@ -1534,6 +1595,7 @@ databaseChangeLog:
             name: ER_NAME
             type: VARCHAR(256)
         tableName: EPA_REGION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-43
     author: drsteini (generated)
@@ -1590,6 +1652,7 @@ databaseChangeLog:
             name: OVERRIDE_LOAD_TO_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: ETL_EXECUTION_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-44
     author: drsteini (generated)
@@ -1615,6 +1678,7 @@ databaseChangeLog:
             name: LAST_CHANGE_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: ETL_MANUAL_LOAD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-45
     author: drsteini (generated)
@@ -1641,6 +1705,7 @@ databaseChangeLog:
             name: REFRESH_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: ETL_PRJ_TRIP_STG
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-46
     author: drsteini (generated)
@@ -1676,6 +1741,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: FREQUENCY_CLASS_DESCRIPTOR
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-47
     author: drsteini (generated)
@@ -1713,6 +1779,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: FREQUENCY_CLASS_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-48
     author: drsteini (generated)
@@ -1743,6 +1810,7 @@ databaseChangeLog:
             name: HABIT_DESC
             type: VARCHAR(500)
         tableName: HABIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-49
     author: drsteini (generated)
@@ -1773,6 +1841,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: HORIZONTAL_COLLECTION_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-50
     author: drsteini (generated)
@@ -1805,6 +1874,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: HORIZONTAL_REFERENCE_DATUM
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-51
     author: drsteini (generated)
@@ -1851,6 +1921,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: INDEX_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-52
     author: drsteini (generated)
@@ -1903,6 +1974,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: KEVIN_CHARTAXON_ALIAS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-53
     author: drsteini (generated)
@@ -1924,6 +1996,7 @@ databaseChangeLog:
             name: CHRTAXALSTYP_STATUS
             type: VARCHAR(20)
         tableName: KEVIN_CHARTAXON_ALIAS_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-54
     author: drsteini (generated)
@@ -1945,6 +2018,7 @@ databaseChangeLog:
             name: CHRTAXGRP_CONTEXT
             type: VARCHAR(20)
         tableName: KEVIN_CHARTAXON_GROUP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-55
     author: drsteini (generated)
@@ -2097,6 +2171,7 @@ databaseChangeLog:
             name: SUBVARIETY
             type: VARCHAR(120)
         tableName: KEVIN_TAXONCHAR
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-56
     author: drsteini (generated)
@@ -2143,6 +2218,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: KEVIN_TAXONCHAR_ALIAS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-57
     author: drsteini (generated)
@@ -2192,6 +2268,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: LAB_SAMPLE_PREPARATION_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-58
     author: drsteini (generated)
@@ -2229,6 +2306,7 @@ databaseChangeLog:
             name: LTAUD_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: LOOKUP_TABLE_AUDIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-59
     author: drsteini (generated)
@@ -2257,6 +2335,7 @@ databaseChangeLog:
             name: LTAUDET_COL_NEW_VALUE
             type: VARCHAR(4000)
         tableName: LOOKUP_TABLE_AUDIT_UPD_DETAIL
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-60
     author: drsteini (generated)
@@ -2293,6 +2372,7 @@ databaseChangeLog:
             name: CONVERSION_FACTOR
             type: numeric(38, 10)
         tableName: MEASUREMENT_UNIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-61
     author: drsteini (generated)
@@ -2321,6 +2401,7 @@ databaseChangeLog:
             name: MTHSPC_DESC
             type: VARCHAR(500)
         tableName: METHOD_SPECIATION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-62
     author: drsteini (generated)
@@ -2370,6 +2451,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: METRIC_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-63
     author: drsteini (generated)
@@ -2405,6 +2487,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: METRIC_TYPE_CONTEXT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-64
     author: drsteini (generated)
@@ -2513,6 +2596,7 @@ databaseChangeLog:
             name: MLOC_TRANS_ID
             type: VARCHAR(100)
         tableName: MONITORING_LOCATION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-65
     author: drsteini (generated)
@@ -2551,6 +2635,7 @@ databaseChangeLog:
             name: MLALT_TRANS_ID
             type: VARCHAR(100)
         tableName: MONITORING_LOCATION_ALTERNATE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-66
     author: drsteini (generated)
@@ -2581,6 +2666,7 @@ databaseChangeLog:
             name: MLTYP_DESC
             type: VARCHAR(500)
         tableName: MONITORING_LOCATION_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-67
     author: drsteini (generated)
@@ -2648,6 +2734,7 @@ databaseChangeLog:
             name: MLWT_TRANS_ID
             type: VARCHAR(100)
         tableName: MONITORING_LOCATION_WEIGHT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-68
     author: drsteini (generated)
@@ -2683,6 +2770,7 @@ databaseChangeLog:
             name: NETTYP_DESC
             type: VARCHAR(500)
         tableName: NET_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-69
     author: drsteini (generated)
@@ -2715,6 +2803,7 @@ databaseChangeLog:
             name: LAST_ETL_END_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: OLD_ETL_EXECUTION_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-70
     author: drsteini (generated)
@@ -2760,6 +2849,7 @@ databaseChangeLog:
             name: ORG_IN_SYNC_WITH_TEST_YN
             type: VARCHAR(1)
         tableName: ORGANIZATION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-71
     author: drsteini (generated)
@@ -2770,6 +2860,7 @@ databaseChangeLog:
             name: ORG_TYPE
             type: VARCHAR(30)
         tableName: ORGANIZATION_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-72
     author: drsteini (generated)
@@ -2826,6 +2917,7 @@ databaseChangeLog:
             name: ORGADD_TRANS_ID
             type: VARCHAR(100)
         tableName: ORG_ADDRESS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-73
     author: drsteini (generated)
@@ -2864,6 +2956,7 @@ databaseChangeLog:
             name: ORGEA_TRANS_ID
             type: VARCHAR(100)
         tableName: ORG_ELECTRONIC_ADDRESS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-74
     author: drsteini (generated)
@@ -2905,6 +2998,7 @@ databaseChangeLog:
             name: ORGPH_TRANS_ID
             type: VARCHAR(100)
         tableName: ORG_PHONE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-75
     author: drsteini (generated)
@@ -2918,6 +3012,7 @@ databaseChangeLog:
             name: VALUE
             type: VARCHAR(256)
         tableName: OW_APPLICATION_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-76
     author: drsteini (generated)
@@ -2948,6 +3043,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: PHONE_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-77
     author: drsteini (generated)
@@ -2998,6 +3094,7 @@ databaseChangeLog:
             name: PRJ_TRANS_ID
             type: VARCHAR(100)
         tableName: PROJECT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-78
     author: drsteini (generated)
@@ -3026,6 +3123,7 @@ databaseChangeLog:
             name: RLTYP_DESC
             type: VARCHAR(500)
         tableName: REFERENCE_LOCATION_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-79
     author: drsteini (generated)
@@ -3061,6 +3159,7 @@ databaseChangeLog:
             name: RELDPTH_ABBREV
             type: VARCHAR(3)
         tableName: RELATIVE_DEPTH
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-80
     author: drsteini (generated)
@@ -3233,6 +3332,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-81
     author: drsteini (generated)
@@ -3263,6 +3363,7 @@ databaseChangeLog:
             name: RDCND_DESC
             type: VARCHAR(500)
         tableName: RESULT_DETECTION_CONDITION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-82
     author: drsteini (generated)
@@ -3305,6 +3406,7 @@ databaseChangeLog:
             name: RTDET_TRANS_ID
             type: VARCHAR(100)
         tableName: RESULT_DETECT_QUANT_LIMIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-83
     author: drsteini (generated)
@@ -3352,6 +3454,7 @@ databaseChangeLog:
             name: RFCLS_TRANS_ID
             type: VARCHAR(100)
         tableName: RESULT_FREQUENCY_CLASS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-84
     author: drsteini (generated)
@@ -3382,6 +3485,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_LAB_COMMENT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-85
     author: drsteini (generated)
@@ -3457,6 +3561,7 @@ databaseChangeLog:
             name: RLSPRP_TRANS_ID
             type: VARCHAR(100)
         tableName: RESULT_LAB_SAMPLE_PREP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-86
     author: drsteini (generated)
@@ -3487,6 +3592,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_MEASURE_QUALIFIER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-87
     author: drsteini (generated)
@@ -3517,6 +3623,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_STATISTICAL_BASE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-88
     author: drsteini (generated)
@@ -3547,6 +3654,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-89
     author: drsteini (generated)
@@ -3596,6 +3704,7 @@ databaseChangeLog:
             name: RTDET_TRANS_ID
             type: VARCHAR(100)
         tableName: RESULT_TAXON_DETAIL
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-90
     author: drsteini (generated)
@@ -3629,6 +3738,7 @@ databaseChangeLog:
             name: RTFGRP_TRANS_ID
             type: VARCHAR(100)
         tableName: RESULT_TAXON_FEEDING_GROUP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-91
     author: drsteini (generated)
@@ -3662,6 +3772,7 @@ databaseChangeLog:
             name: RTHAB_TRANS_ID
             type: VARCHAR(100)
         tableName: RESULT_TAXON_HABIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-92
     author: drsteini (generated)
@@ -3692,6 +3803,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_TEMPERATURE_BASIS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-93
     author: drsteini (generated)
@@ -3722,6 +3834,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_TIME_BASIS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-94
     author: drsteini (generated)
@@ -3752,6 +3865,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_VALUE_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-95
     author: drsteini (generated)
@@ -3782,6 +3896,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_WEIGHT_BASIS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-96
     author: drsteini (generated)
@@ -3820,6 +3935,7 @@ databaseChangeLog:
             name: SCEQP_ABBREV
             type: VARCHAR(6)
         tableName: SAMPLE_COLLECTION_EQUIP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-97
     author: drsteini (generated)
@@ -3850,6 +3966,7 @@ databaseChangeLog:
             name: SCETYP_DESC
             type: VARCHAR(500)
         tableName: SAMPLE_COLLECTION_EQUIP_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-98
     author: drsteini (generated)
@@ -3899,6 +4016,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: SAMPLE_COLLECTION_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-99
     author: drsteini (generated)
@@ -3929,6 +4047,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: SAMPLE_FRACTION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-100
     author: drsteini (generated)
@@ -3978,6 +4097,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: SAMPLE_PREPARATION_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-101
     author: drsteini (generated)
@@ -4008,6 +4128,7 @@ databaseChangeLog:
             name: STANT_DESC
             type: VARCHAR(500)
         tableName: SAMPLE_TISSUE_ANATOMY
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-102
     author: drsteini (generated)
@@ -4038,6 +4159,7 @@ databaseChangeLog:
             name: SDTYP_DESC
             type: VARCHAR(500)
         tableName: SAMPLING_DESIGN_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-103
     author: drsteini (generated)
@@ -4081,6 +4203,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: STATE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-104
     author: drsteini (generated)
@@ -4106,6 +4229,7 @@ databaseChangeLog:
             name: TBL_FRIENDLY_NAME
             type: VARCHAR(50)
         tableName: TABLE_LIST
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-105
     author: drsteini (generated)
@@ -4123,6 +4247,7 @@ databaseChangeLog:
             name: TBLTYP_NAME
             type: VARCHAR(35)
         tableName: TABLE_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-106
     author: drsteini (generated)
@@ -4188,6 +4313,7 @@ databaseChangeLog:
             name: DVSTA_UID
             type: INTEGER
         tableName: TAXON
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-107
     author: drsteini (generated)
@@ -4234,6 +4360,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TAXON_ALIAS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-108
     author: drsteini (generated)
@@ -4261,6 +4388,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TAXON_GROUP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-109
     author: drsteini (generated)
@@ -4288,6 +4416,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TAXON_RANK
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-110
     author: drsteini (generated)
@@ -4318,6 +4447,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: THERMAL_PRESERVATIVE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-111
     author: drsteini (generated)
@@ -4355,6 +4485,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TIME_ZONE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-112
     author: drsteini (generated)
@@ -4392,6 +4523,7 @@ databaseChangeLog:
             name: TRB_REGION_NAME
             type: VARCHAR(60)
         tableName: TMP_TRIBE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-113
     author: drsteini (generated)
@@ -4422,6 +4554,7 @@ databaseChangeLog:
             name: TTTYP_DESC
             type: VARCHAR(500)
         tableName: TOXICITY_TEST_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-114
     author: drsteini (generated)
@@ -4478,6 +4611,7 @@ databaseChangeLog:
             name: TRHEAD_TITLE
             type: VARCHAR(100)
         tableName: TRANSACTION_HEADER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-115
     author: drsteini (generated)
@@ -4540,6 +4674,7 @@ databaseChangeLog:
             name: TRLOG_OTHER
             type: VARCHAR(500)
         tableName: TRANSACTION_LOG
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-116
     author: drsteini (generated)
@@ -4581,6 +4716,7 @@ databaseChangeLog:
             name: TLAUD_SUCCESS_YN
             type: VARCHAR(1)
         tableName: TRANSACTION_LOG_AUDIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-117
     author: drsteini (generated)
@@ -4616,6 +4752,7 @@ databaseChangeLog:
             name: TLASUM_COUNT
             type: numeric(10)
         tableName: TRANSACTION_LOG_AUDIT_SUMMARY
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-118
     author: drsteini (generated)
@@ -4650,6 +4787,7 @@ databaseChangeLog:
             name: TLDET_CONTEXT
             type: VARCHAR(500)
         tableName: TRANSACTION_LOG_DETAIL
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-119
     author: drsteini (generated)
@@ -4672,6 +4810,7 @@ databaseChangeLog:
             name: TLDTYP_LAST_CHANGE_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: TRANSACTION_LOG_DETAIL_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-120
     author: drsteini (generated)
@@ -4694,6 +4833,7 @@ databaseChangeLog:
             name: TRSTA_LAST_CHANGE_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: TRANSACTION_STATUS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-121
     author: drsteini (generated)
@@ -4716,6 +4856,7 @@ databaseChangeLog:
             name: TRTYP_LAST_CHANGE_DATE
             type: TIMESTAMP WITHOUT TIME ZONE
         tableName: TRANSACTION_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-122
     author: drsteini (generated)
@@ -4748,6 +4889,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TRIBE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-123
     author: drsteini (generated)
@@ -4781,6 +4923,7 @@ databaseChangeLog:
             name: USRACC_IN_SYNC_WITH_TEST_YN
             type: VARCHAR(1)
         tableName: USER_ACCESS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-124
     author: drsteini (generated)
@@ -4798,6 +4941,7 @@ databaseChangeLog:
             name: UADOM_NAME
             type: VARCHAR(30)
         tableName: USER_ACCESS_DOMAIN
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-125
     author: drsteini (generated)
@@ -4815,6 +4959,7 @@ databaseChangeLog:
             name: UATYP_NAME
             type: VARCHAR(50)
         tableName: USER_ACCESS_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-126
     author: drsteini (generated)
@@ -4834,6 +4979,7 @@ databaseChangeLog:
             name: UATYP_UID
             type: INTEGER
         tableName: USER_ACCESS_TYPE_BY_DOMAIN
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-127
     author: drsteini (generated)
@@ -4916,6 +5062,7 @@ databaseChangeLog:
             name: USR_ID
             type: VARCHAR(88)
         tableName: USER_LIST
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-128
     author: drsteini (generated)
@@ -4946,6 +5093,7 @@ databaseChangeLog:
             name: VCMTH_DESC
             type: VARCHAR(500)
         tableName: VERTICAL_COLLECTION_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-129
     author: drsteini (generated)
@@ -4978,6 +5126,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: VERTICAL_REFERENCE_DATUM
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-130
     author: drsteini (generated)
@@ -5008,6 +5157,7 @@ databaseChangeLog:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: VOLTINISM
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-131
     author: drsteini (generated)
@@ -5053,6 +5203,7 @@ databaseChangeLog:
             name: WELL_TRANS_ID
             type: VARCHAR(100)
         tableName: WELL
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-132
     author: drsteini (generated)
@@ -5083,6 +5234,7 @@ databaseChangeLog:
             name: WFTYP_DESC
             type: VARCHAR(500)
         tableName: WELL_FORMATION_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
     id: 1560431414947-133
     author: drsteini (generated)
@@ -5113,3 +5265,4 @@ databaseChangeLog:
             name: WELTYP_DESC
             type: VARCHAR(500)
         tableName: WELL_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
