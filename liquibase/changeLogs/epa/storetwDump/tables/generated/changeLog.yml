@@ -1,0 +1,1423 @@
+databaseChangeLog:
+- objectQuotingStrategy: QUOTE_ALL_OBJECTS
+- changeSet:
+    id: 1571742777994-1
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: FK_PROJECT
+            type: numeric(12)
+        - column:
+            name: FK_RESULT
+            type: numeric(12)
+        tableName: BIOLOGICAL_RESULT_PROJECT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-2
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTIVITY_INTENT
+            type: VARCHAR(256)
+        tableName: DI_ACTIVITY_INTENT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-3
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            name: MATRIX_CODE
+            type: VARCHAR(4)
+        - column:
+            name: MATRIX_NAME
+            type: VARCHAR(256)
+        - column:
+            name: MATRIX_DESCRIPTION
+            type: VARCHAR(120)
+        tableName: DI_ACTIVITY_MATRIX
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-4
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            name: ACTIVITY_MEDIUM
+            type: VARCHAR(20)
+        tableName: DI_ACTIVITY_MEDIUM
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-5
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            name: SEARCH_NAME
+            type: VARCHAR(256)
+        - column:
+            name: DISPLAY_NAME
+            type: VARCHAR(256)
+        - column:
+            name: CHARACTERISTIC_GROUP_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: TYPE_CODE
+            type: VARCHAR(1)
+        - column:
+            name: REGISTRY_NAME
+            type: VARCHAR(256)
+        - column:
+            name: SRS_ID
+            type: numeric(12)
+        - column:
+            name: CAS_NUMBER
+            type: VARCHAR(256)
+        - column:
+            name: ITIS_NUMBER
+            type: VARCHAR(256)
+        - column:
+            name: CHARTYPE
+            type: VARCHAR(256)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: DESCRIPTION
+            type: VARCHAR(1000)
+        - column:
+            name: WQX_CHR_UID
+            type: numeric(12)
+        - column:
+            name: FK_CHARGRPTYPE
+            type: numeric(12)
+        - column:
+            name: FK_CHARTYPE
+            type: numeric(12)
+        - column:
+            name: ITIS_PARENT
+            type: VARCHAR(256)
+        - column:
+            name: KINGDOM_NAME
+            type: VARCHAR(256)
+        - column:
+            name: RANK_NAME
+            type: VARCHAR(256)
+        - column:
+            name: RANK_NUMBER
+            type: numeric(12)
+        tableName: DI_CHARACTERISTIC
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-6
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ACTIVITY_COMMUNITY
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_COMMUNITY_DESC
+            type: VARCHAR(4000)
+        tableName: DI_COMMUNITY_SAMPLED
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-7
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            name: FK_GEO_STATE
+            type: numeric(12)
+        - column:
+            name: FIPS_COUNTY_CODE
+            type: VARCHAR(3)
+        - column:
+            name: COUNTY_NAME
+            type: VARCHAR(256)
+        tableName: DI_GEO_COUNTY
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-8
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: FIPS_STATE_CODE
+            type: VARCHAR(4)
+        - column:
+            name: STATE_POSTAL_CODE
+            type: VARCHAR(2)
+        - column:
+            name: STATE_NAME
+            type: VARCHAR(256)
+        - column:
+            name: COUNTRY_CODE
+            type: VARCHAR(2)
+        - column:
+            name: COUNTRY_NAME
+            type: VARCHAR(256)
+        - column:
+            name: EPA_REGION_CODE
+            type: VARCHAR(2)
+        - column:
+            name: EPA_REGION_NAME
+            type: VARCHAR(256)
+        tableName: DI_GEO_STATE
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-9
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ORGANIZATION_ID
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: ORGANIZATION_NAME
+            type: VARCHAR(256)
+        - column:
+            name: ORGANIZATION_IS_NUMBER
+            type: numeric(20)
+        - column:
+            name: ORGANIZATION_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: ORGANIZATION_DESCRIPTION
+            type: VARCHAR(500)
+        - column:
+            name: PARENT_ORG
+            type: VARCHAR(256)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: SOURCE_SYSTEM
+            type: VARCHAR(256)
+        - column:
+            name: TRIBAL_CODE
+            type: VARCHAR(256)
+        - column:
+            name: FK_EPAREGION
+            type: numeric(12)
+        tableName: DI_ORG
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-10
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PK_ISN
+            type: numeric(38, 10)
+        - column:
+            name: TSMPROJ_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSMPROJ_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: PROJECT_CD
+            type: VARCHAR(256)
+        - column:
+            name: PROJECT_NAME
+            type: VARCHAR(256)
+        - column:
+            name: START_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: PLANNED_DURATION
+            type: VARCHAR(256)
+        - column:
+            name: LAST_USERID
+            type: VARCHAR(100)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: FK_ORG
+            type: numeric(12)
+        - column:
+            name: PURPOSE
+            type: VARCHAR(4000)
+        - column:
+            name: STUDY_AREA
+            type: VARCHAR(4000)
+        - column:
+            name: PROJECT_DESIGN
+            type: VARCHAR(4000)
+        - column:
+            name: OBTAIN_PLAN
+            type: VARCHAR(4000)
+        - column:
+            name: QUALITY_ASSURANCE
+            type: VARCHAR(4000)
+        - column:
+            name: QUALITY_OBJECTIVES
+            type: VARCHAR(4000)
+        - column:
+            name: BLOB_TITLE
+            type: VARCHAR(256)
+        - column:
+            name: BLOB_ID
+            type: VARCHAR(256)
+        - column:
+            name: PROJECT_DESCRIPTION
+            type: VARCHAR(4000)
+        - column:
+            name: SOURCE_SYSTEM
+            type: VARCHAR(256)
+        - column:
+            name: SOURCE_UID
+            type: numeric(20)
+        - column:
+            name: QA_APPROVAL_AGENCY
+            type: VARCHAR(256)
+        - column:
+            name: FK_QA_AGENCY
+            type: numeric(38, 10)
+        - column:
+            name: QA_APPROVED
+            type: VARCHAR(256)
+        - column:
+            name: SAMPLING_DESIGN_TYPE_CD
+            type: VARCHAR(256)
+        - column:
+            name: PROJECT_POR_START
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: PROJECT_POR_END
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: LAST_TRANSACTION_ID
+            type: VARCHAR(100)
+        tableName: DI_PROJECT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-11
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: TSMBLOB_IS_NUMBER
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: TSMBLOB_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            constraints:
+              nullable: false
+            name: BLOB_CONTENT
+            type: BYTEA
+        - column:
+            constraints:
+              nullable: false
+            name: TABLE_NAME
+            type: VARCHAR(256)
+        - column:
+            name: TSMPROJ_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSMPROJ_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: TSRRSULT_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSRRSULT_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: TSMSTATN_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSMSTATN_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: TSRSTVST_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSRSTVST_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: TSRCITN_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSRCITN_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: TSROPPRD_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSROPPRD_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: D_USERID_CODE
+            type: VARCHAR(8)
+        - column:
+            name: D_LAST_UPDATE_TS
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: TSRFDACT_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: TSRFDACT_ORG_ID
+            type: VARCHAR(256)
+        - column:
+            name: BLOB_TYPE
+            type: VARCHAR(6)
+        - column:
+            name: BLOB_TITLE
+            type: VARCHAR(256)
+        - column:
+            name: ORGANIZATION_IS_NUMBER
+            type: numeric(20)
+        - column:
+            name: SOURCE_SYSTEM
+            type: VARCHAR(256)
+        - column:
+            name: SOURCE_UID
+            type: numeric(20)
+        - column:
+            name: SOURCE_TABLE_UID
+            type: numeric(20)
+        - column:
+            name: LAST_USERID
+            type: VARCHAR(100)
+        - column:
+            name: LAST_TRANSACTION_ID
+            type: VARCHAR(100)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: FK_DATE_LC
+            type: numeric(12)
+        tableName: FA_BLOB
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-12
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: PK_ISN
+            type: numeric(38, 10)
+        - column:
+            name: ORGANIZATION_ID
+            type: VARCHAR(256)
+        - column:
+            name: ORGANIZATION_IS_NUMBER
+            type: numeric(20)
+        - column:
+            name: STATION_ID
+            type: VARCHAR(256)
+        - column:
+            name: STATION_NAME
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_START_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACT_START_TIME_ZONE
+            type: VARCHAR(256)
+        - column:
+            name: TRIP_ID
+            type: VARCHAR(256)
+        - column:
+            name: TRIP_NAME
+            type: VARCHAR(256)
+        - column:
+            name: STATION_VISIT_ID
+            type: VARCHAR(3)
+        - column:
+            name: CHARACTERISTIC_GROUP_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: CHARACTERISTIC_NAME
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_VALUE
+            type: numeric(38, 10)
+        - column:
+            name: RESULT_UNIT
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_VALUE_TEXT
+            type: VARCHAR(256)
+        - column:
+            name: SAMPLE_FRACTION_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_VALUE_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: STATISTIC_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_VALUE_STATUS
+            type: VARCHAR(12)
+        - column:
+            name: WEIGHT_BASIS_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: TEMPERATURE_BASIS_LEVEL
+            type: VARCHAR(256)
+        - column:
+            name: DURATION_BASIS
+            type: VARCHAR(256)
+        - column:
+            name: ANALYTICAL_PROCEDURE_SOURCE
+            type: VARCHAR(256)
+        - column:
+            name: ANALYTICAL_PROCEDURE_ID
+            type: VARCHAR(256)
+        - column:
+            name: LAB_ID
+            type: VARCHAR(8)
+        - column:
+            name: LAB_NAME
+            type: VARCHAR(60)
+        - column:
+            name: LAB_CERTIFIED
+            type: VARCHAR(1)
+        - column:
+            name: LAB_BATCH_ID
+            type: VARCHAR(12)
+        - column:
+            name: ANALYSIS_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ANALYSIS_TIME_ZONE
+            type: VARCHAR(256)
+        - column:
+            name: LOWER_QUANTITATION_LIMIT
+            type: VARCHAR(30)
+        - column:
+            name: UPPER_QUANTITATION_LIMIT
+            type: VARCHAR(30)
+        - column:
+            name: DETECTION_LIMIT
+            type: VARCHAR(25)
+        - column:
+            name: DETECTION_LIMIT_UNIT
+            type: VARCHAR(12)
+        - column:
+            name: DETECTION_LIMIT_DESCRIPTION
+            type: VARCHAR(256)
+        - column:
+            name: LAB_REMARK
+            type: VARCHAR(256)
+        - column:
+            name: DISTANCE_MEASURE_FROM
+            type: VARCHAR(20)
+        - column:
+            name: DISTANCE_MEASURE_TO
+            type: VARCHAR(20)
+        - column:
+            name: PARTICLE_SIZE
+            type: VARCHAR(40)
+        - column:
+            name: REPLICATE_ANALYSIS_COUNT
+            type: numeric(38, 10)
+        - column:
+            name: PRECISION
+            type: VARCHAR(256)
+        - column:
+            name: CONFIDENCE_LEVEL
+            type: VARCHAR(256)
+        - column:
+            name: DILUTION_INDICATOR
+            type: VARCHAR(1)
+        - column:
+            name: RECOVERY_INDICATOR
+            type: VARCHAR(1)
+        - column:
+            name: CORRECTION_INDICATOR
+            type: VARCHAR(1)
+        - column:
+            name: STN_LATITUDE
+            type: numeric(38, 10)
+        - column:
+            name: STN_LONGITUDE
+            type: numeric(38, 10)
+        - column:
+            name: STN_HDATUM
+            type: VARCHAR(12)
+        - column:
+            name: STN_STD_LATITUDE
+            type: numeric(38, 10)
+        - column:
+            name: STN_STD_LONGITUDE
+            type: numeric(38, 10)
+        - column:
+            name: STN_STD_HDATUM
+            type: VARCHAR(12)
+        - column:
+            name: HYDROLOGIC_UNIT_CODE
+            type: VARCHAR(8)
+        - column:
+            name: GENERATED_HUC
+            type: VARCHAR(8)
+        - column:
+            name: RESULT_IS_NUMBER
+            type: numeric(38, 10)
+        - column:
+            name: ACTIVITY_MEDIUM
+            type: VARCHAR(20)
+        - column:
+            name: FK_STATION
+            type: numeric(12)
+        - column:
+            name: FK_ORG
+            type: numeric(12)
+        - column:
+            name: FK_DB_CAT
+            type: numeric(12)
+        - column:
+            name: FK_GEN_DB_CAT
+            type: numeric(12)
+        - column:
+            name: FK_GEO_COUNTY
+            type: numeric(12)
+        - column:
+            name: FK_GEO_STATE
+            type: numeric(12)
+        - column:
+            name: FK_DATE_ACT_START
+            type: numeric(12)
+        - column:
+            name: FK_ACT_MEDIUM
+            type: numeric(12)
+        - column:
+            name: FK_ACT_MATRIX
+            type: numeric(12)
+        - column:
+            name: ACTIVITY_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: FK_CHAR
+            type: numeric(12)
+        - column:
+            name: FK_UNIT_CONVERSION
+            type: numeric(12)
+        - column:
+            name: ACTIVITY_ID
+            type: VARCHAR(256)
+        - column:
+            name: REPLICATE_NUMBER
+            type: SMALLINT
+        - column:
+            name: ACTIVITY_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_CATEGORY
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_INTENT
+            type: VARCHAR(35)
+        - column:
+            name: LOCATION_POINT_TYPE
+            type: VARCHAR(16)
+        - column:
+            name: POINT_SEQUENCE_NUMBER
+            type: INTEGER
+        - column:
+            name: WELL_NUMBER
+            type: VARCHAR(35)
+        - column:
+            name: PIPE_NUMBER
+            type: VARCHAR(15)
+        - column:
+            name: ACTIVITY_STOP_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ACT_STOP_TIME_ZONE
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_REL_DEPTH
+            type: VARCHAR(15)
+        - column:
+            name: ACTIVITY_DEPTH
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_DEPTH_UNIT
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_UPPER_DEPTH
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_LOWER_DEPTH
+            type: VARCHAR(256)
+        - column:
+            name: UPR_LWR_DEPTH_UNIT
+            type: VARCHAR(256)
+        - column:
+            name: FIELD_PROCEDURE_ID
+            type: VARCHAR(256)
+        - column:
+            name: GEAR_CONFIG_ID
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_LATITUDE
+            type: numeric(38, 10)
+        - column:
+            name: ACTIVITY_LONGITUDE
+            type: numeric(38, 10)
+        - column:
+            name: ACT_STD_LATITUDE
+            type: numeric(38, 10)
+        - column:
+            name: ACT_STD_LONGITUDE
+            type: numeric(38, 10)
+        - column:
+            name: ACT_STD_HDATUM
+            type: VARCHAR(12)
+        - column:
+            name: STD_VALUE
+            type: numeric(38, 10)
+        - column:
+            name: STD_UNIT
+            type: VARCHAR(256)
+        - column:
+            name: FK_ACT_MAD_HDATUM
+            type: numeric(12)
+        - column:
+            name: FK_ACT_MAD_HMETHOD
+            type: numeric(12)
+        - column:
+            name: ACTIVITY_ISN
+            type: numeric(38, 10)
+        - column:
+            name: VISIT_START_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: VISIT_START_TIME_ZONE
+            type: VARCHAR(3)
+        - column:
+            name: VISIT_STOP_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: VISIT_STOP_TIME_ZONE
+            type: VARCHAR(3)
+        - column:
+            name: ACTIVITY_MATRIX
+            type: VARCHAR(256)
+        - column:
+            name: FIELD_SET
+            type: VARCHAR(130)
+        - column:
+            name: POINT_NAME
+            type: VARCHAR(30)
+        - column:
+            name: SGO_INDICATOR
+            type: VARCHAR(1)
+        - column:
+            name: MAP_SCALE
+            type: VARCHAR(20)
+        - column:
+            name: FIELD_GEAR_ID
+            type: VARCHAR(256)
+        - column:
+            name: BIAS
+            type: VARCHAR(256)
+        - column:
+            name: CONF_LVL_CORR_BIAS
+            type: VARCHAR(1)
+        - column:
+            name: RESULT_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            name: TEXT_RESULT
+            type: VARCHAR(4000)
+        - column:
+            name: CAS_NUMBER
+            type: VARCHAR(500)
+        - column:
+            name: EPA_REG_NUMBER
+            type: VARCHAR(500)
+        - column:
+            name: ITIS_NUMBER
+            type: VARCHAR(500)
+        - column:
+            name: CONTAINER_DESC
+            type: VARCHAR(256)
+        - column:
+            name: TEMP_PRESERVN_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: PRESRV_STRGE_PRCDR
+            type: VARCHAR(256)
+        - column:
+            name: PORTABLE_DATA_LOGGER
+            type: VARCHAR(34)
+        - column:
+            name: FK_STN_ACT_PT
+            type: numeric(12)
+        - column:
+            name: FK_STATN_TYPES
+            type: numeric(12)
+        - column:
+            name: LAST_USERID
+            type: VARCHAR(100)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: BLOB_ID
+            type: VARCHAR(25)
+        - column:
+            name: BLOB_TITLE
+            type: VARCHAR(256)
+        - column:
+            name: ACT_BLOB_ID
+            type: VARCHAR(25)
+        - column:
+            name: ACT_BLOB_TITLE
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            name: ACTIVITY_DEPTH_REF_POINT
+            type: VARCHAR(256)
+        - column:
+            name: PROJECT_ID
+            type: VARCHAR(4000)
+        - column:
+            name: TRIBAL_WATER_QUALITY_MEASURE
+            type: VARCHAR(1)
+        - column:
+            name: RESULT_MEAS_QUAL_CODE
+            type: VARCHAR(256)
+        - column:
+            name: ACTIVITY_COND_ORG_TEXT
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_DEPTH_MEAS_VALUE
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_DEPTH_MEAS_UNIT_CODE
+            type: VARCHAR(256)
+        - column:
+            name: RESULT_DEPTH_ALT_REF_PT_TXT
+            type: VARCHAR(256)
+        - column:
+            name: ANALYTICAL_METHOD_LIST_AGENCY
+            type: VARCHAR(256)
+        - column:
+            name: ANALYTICAL_METHOD_LIST_VER
+            type: VARCHAR(256)
+        - column:
+            name: SMPRP_TRANSPORT_STORAGE_DESC
+            type: VARCHAR(1999)
+        - column:
+            name: SOURCE_SYSTEM
+            type: VARCHAR(256)
+        - column:
+            name: SOURCE_UID
+            type: numeric(20)
+        - column:
+            name: ETL_ID
+            type: VARCHAR(256)
+        - column:
+            name: HORIZONTAL_ACCURACY_MEASURE
+            type: VARCHAR(256)
+        - column:
+            name: LAB_ACCRED_AUTHORITY
+            type: VARCHAR(256)
+        - column:
+            name: METHOD_SPECIATION
+            type: VARCHAR(256)
+        - column:
+            name: LAB_SAMP_PRP_METHOD_ID
+            type: VARCHAR(4000)
+        - column:
+            name: LAB_SAMP_PRP_START_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: LAB_SAMP_PRP_START_TMZONE
+            type: VARCHAR(256)
+        - column:
+            name: LAB_SAMP_PRP_END_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: LAB_SAMP_PRP_END_TMZONE
+            type: VARCHAR(256)
+        - column:
+            name: LAB_SAMP_PRP_DILUTION_FACTOR
+            type: VARCHAR(1024)
+        - column:
+            name: SAMPLING_POINT_NAME
+            type: VARCHAR(256)
+        - column:
+            name: LAST_TRANSACTION_ID
+            type: VARCHAR(256)
+        - column:
+            name: FK_DATE_LC
+            type: numeric(12)
+        - column:
+            name: ALL_RESULT_DETECTION_LIMIT
+            type: VARCHAR(4000)
+        - column:
+            name: CONFIDENCE_INTERVAL
+            type: VARCHAR(256)
+        - column:
+            name: FK_GEN_GEO_STATE
+            type: numeric(12)
+        - column:
+            name: FK_GEN_GEO_COUNTY
+            type: numeric(12)
+        - column:
+            name: FK_METHOD
+            type: numeric(12)
+        - column:
+            name: FK_CHARGRPTYPE
+            type: numeric(12)
+        - column:
+            name: FK_CHARTYPE
+            type: numeric(12)
+        - column:
+            name: ANALYSIS_END_DATE_TIME
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: ANALYSIS_END_TIME_ZONE
+            type: VARCHAR(256)
+        - column:
+            name: FIELD_PREP_PROCEDURE_ID
+            type: VARCHAR(256)
+        - column:
+            name: FK_DATE_ACT_STOP
+            type: numeric(12)
+        tableName: FA_REGULAR_RESULT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-13
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: STATION_ID
+            type: VARCHAR(256)
+        - column:
+            name: STATION_NAME
+            type: VARCHAR(256)
+        - column:
+            name: ORGANIZATION_ID
+            type: VARCHAR(256)
+        - column:
+            name: LOCATION_POINT_TYPE
+            type: VARCHAR(16)
+        - column:
+            name: POINT_SEQUENCE_NUMBER
+            type: SMALLINT
+        - column:
+            name: WELL_NUMBER
+            type: VARCHAR(35)
+        - column:
+            name: PIPE_NUMBER
+            type: VARCHAR(15)
+        - column:
+            name: LATITUDE
+            type: numeric(9, 7)
+        - column:
+            name: LONGITUDE
+            type: numeric(10, 7)
+        - column:
+            name: MAP_SCALE
+            type: VARCHAR(20)
+        - column:
+            name: ELEVATION
+            type: VARCHAR(15)
+        - column:
+            name: HYDROLOGIC_UNIT_CODE
+            type: VARCHAR(8)
+        - column:
+            name: GENERATED_HUC
+            type: VARCHAR(8)
+        - column:
+            name: RF1_SEGMENT_CODE
+            type: VARCHAR(3)
+        - column:
+            name: RF1_SEGMENT_NAME
+            type: VARCHAR(30)
+        - column:
+            name: RF1_MILEAGE
+            type: numeric(5, 2)
+        - column:
+            name: ON_REACH_IND
+            type: VARCHAR(1)
+        - column:
+            name: NRCS_WATERSHED_ID
+            type: VARCHAR(8)
+        - column:
+            name: OTHER_ESTUARY_NAME
+            type: VARCHAR(30)
+        - column:
+            name: GREAT_LAKE_NAME
+            type: VARCHAR(15)
+        - column:
+            name: OCEAN_NAME
+            type: VARCHAR(14)
+        - column:
+            name: NATV_AMERICAN_LAND_NAME
+            type: VARCHAR(256)
+        - column:
+            name: FRS_KEY_IDENTIFIER
+            type: VARCHAR(36)
+        - column:
+            name: STATION_VISITED
+            type: VARCHAR(3)
+        - column:
+            name: STATION_IS_NUMBER
+            type: numeric(12)
+        - column:
+            name: ORGANIZATION_IS_NUMBER
+            type: numeric(20)
+        - column:
+            name: STATION_GROUP_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: SGO_INDICATOR
+            type: VARCHAR(1)
+        - column:
+            name: WELL_NAME
+            type: VARCHAR(255)
+        - column:
+            name: NAICS_CODE
+            type: VARCHAR(30)
+        - column:
+            name: SPRING_TYPE_IMPROVEMENT
+            type: VARCHAR(14)
+        - column:
+            name: SPRING_PERMANENCE
+            type: VARCHAR(12)
+        - column:
+            name: SPRING_USGS_GEOLOGIC_UNIT
+            type: VARCHAR(100)
+        - column:
+            name: SPRING_OTHER_NAME
+            type: VARCHAR(120)
+        - column:
+            name: SPRING_USGS_LITHOLOGIC_UNIT
+            type: VARCHAR(135)
+        - column:
+            name: POINT_NAME
+            type: VARCHAR(30)
+        - column:
+            name: BLOB_TITLE
+            type: VARCHAR(256)
+        - column:
+            name: TSMALP_IS_NUMBER
+            type: numeric(38, 10)
+        - column:
+            name: DESCRIPTION_TEXT
+            type: VARCHAR(4000)
+        - column:
+            name: LAST_USERID
+            type: VARCHAR(100)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: PROJECT_ID
+            type: VARCHAR(8)
+        - column:
+            name: TRIBAL_WATER_QUALITY_MEASURE
+            type: VARCHAR(1)
+        - column:
+            name: HORIZONTAL_ACCURACY
+            type: VARCHAR(256)
+        - column:
+            name: FK_DB_CAT
+            type: numeric(12)
+        - column:
+            name: FK_GEN_DB_CAT
+            type: numeric(12)
+        - column:
+            name: FK_GEO_STATE
+            type: numeric(12)
+        - column:
+            name: FK_GEO_COUNTY
+            type: numeric(12)
+        - column:
+            name: FK_MAD_HMETHOD
+            type: numeric(12)
+        - column:
+            name: FK_MAD_HDATUM
+            type: numeric(12)
+        - column:
+            name: FK_MAD_VMETHOD
+            type: numeric(12)
+        - column:
+            name: FK_MAD_VDATUM
+            type: numeric(12)
+        - column:
+            name: STD_LATITUDE
+            type: numeric(9, 7)
+        - column:
+            name: STD_LONGITUDE
+            type: numeric(10, 7)
+        - column:
+            name: FK_STD_HDATUM
+            type: numeric(12)
+        - column:
+            name: FK_ORG
+            type: numeric(12)
+        - column:
+            name: FK_STATN_TYPES
+            type: numeric(12)
+        - column:
+            name: FK_ESTRY_PRIMARY
+            type: numeric(12)
+        - column:
+            name: FK_ESTRY_SECONDARY
+            type: numeric(12)
+        - column:
+            name: BLOB_ID
+            type: VARCHAR(25)
+        - column:
+            name: FK_PRIMARY_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: FK_SECONDARY_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: FK_HORIZONTAL_DATUM
+            type: VARCHAR(254)
+        - column:
+            name: FK_GEOPOSITIONING_METHOD
+            type: VARCHAR(254)
+        - column:
+            name: FK_ELEVATION_DATUM
+            type: VARCHAR(254)
+        - column:
+            name: FK_ELEVATION_METHOD
+            type: VARCHAR(254)
+        - column:
+            name: FK_PRIMARY_ESTUARY
+            type: VARCHAR(30)
+        - column:
+            name: FK_SECONDARY_ESTUARY
+            type: VARCHAR(30)
+        - column:
+            name: FK_COUNTRY_CODE
+            type: VARCHAR(2)
+        - column:
+            name: FK_STATE_POSTAL_CODE
+            type: VARCHAR(2)
+        - column:
+            name: SOURCE_SYSTEM
+            type: VARCHAR(256)
+        - column:
+            name: SOURCE_UID
+            type: numeric(20)
+        - column:
+            name: WELL_TYPE_NAME
+            type: VARCHAR(256)
+        - column:
+            name: WELL_FORMATION_TYPE
+            type: VARCHAR(256)
+        - column:
+            name: WELL_HOLE_DEPTH
+            type: VARCHAR(256)
+        - column:
+            name: WELL_AQUIFER_NAME
+            type: VARCHAR(256)
+        - column:
+            name: PK_ISN
+            type: numeric(38)
+        - column:
+            name: OBJECTID
+            type: numeric(38)
+        - column:
+            name: FK_GEN_GEO_STATE
+            type: numeric(12)
+        - column:
+            name: FK_GEN_GEO_COUNTY
+            type: numeric(12)
+        - column:
+            name: ELEVATION_UNIT
+            type: VARCHAR(15)
+        - column:
+            name: GEN_HUCTWELVEDIGITCODE
+            type: VARCHAR(12)
+        - column:
+            name: WGS84_LATITUDE
+            type: numeric(9, 7)
+        - column:
+            name: WGS84_LONGITUDE
+            type: numeric(10, 7)
+        - column:
+            name: FK_WGS84_HDATUM
+            type: numeric(12)
+        - column:
+            name: LAST_TRANSACTION_ID
+            type: VARCHAR(100)
+        - column:
+            name: FK_DATE_LC
+            type: numeric(12)
+        - column:
+            name: PROGRAM_INDICATOR
+            type: VARCHAR(256)
+        - column:
+            name: ELEVATION_BK
+            type: VARCHAR(15)
+        - column:
+            name: FK_GEO_COUNTY_BK
+            type: numeric(12)
+        - column:
+            name: FK_GEO_STATE_BK
+            type: numeric(12)
+        - column:
+            name: WELL_HOLE_DEPTH_UNIT
+            type: VARCHAR(256)
+        - column:
+            name: TRIBAL_LAND_INDICATOR
+            type: VARCHAR(1)
+        - column:
+            name: HUCTWELVEDIGITCODE
+            type: VARCHAR(12)
+        tableName: FA_STATION
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-14
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: FK_PROJECT
+            type: numeric(12)
+        - column:
+            name: FK_RESULT
+            type: numeric(12)
+        tableName: HABITAT_RESULT_PROJECT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-15
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ID_CODE
+            type: VARCHAR(12)
+        - column:
+            name: HORIZONTAL_DATUM
+            type: VARCHAR(254)
+        tableName: LU_MAD_HDATUM
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-16
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ID_CODE
+            type: VARCHAR(12)
+        - column:
+            name: GEOPOSITIONING_METHOD
+            type: VARCHAR(254)
+        tableName: LU_MAD_HMETHOD
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-17
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ID_CODE
+            type: VARCHAR(12)
+        - column:
+            name: ELEVATION_DATUM
+            type: VARCHAR(254)
+        tableName: LU_MAD_VDATUM
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-18
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: PK_ISN
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: ID_CODE
+            type: VARCHAR(12)
+        - column:
+            name: ELEVATION_METHOD
+            type: VARCHAR(254)
+        tableName: LU_MAD_VMETHOD
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-19
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: FK_PROJECT
+            type: numeric(12)
+        - column:
+            constraints:
+              nullable: false
+            name: FK_RESULT
+            type: numeric(12)
+        tableName: METRIC_RESULT_PROJECT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-20
+    author: drsteini (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: FK_PROJECT
+            type: numeric(12)
+        - column:
+            name: FK_RESULT
+            type: numeric(12)
+        tableName: REGULAR_RESULT_PROJECT
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1571742777994-21
+    author: drsteini (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PK_ISN
+        - column:
+            name: FK_GEO_STATE
+        indexName: DI_GEO_COUNTY_DI_GEO_COUNTY_UK_FOR_AWSDMS
+        tableName: DI_GEO_COUNTY
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+        unique: true
+- changeSet:
+    id: 1571742777994-22
+    author: drsteini (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PK_ISN
+        - column:
+            name: FIPS_STATE_CODE
+        indexName: DI_GEO_STATE_DI_GEO_STATE_UK_FOR_AWSDMS
+        tableName: DI_GEO_STATE
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+        unique: true
+- changeSet:
+    id: 1571742777994-23
+    author: drsteini (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: TSMBLOB_IS_NUMBER
+        - column:
+            name: TSMBLOB_ORG_ID
+        - column:
+            name: TABLE_NAME
+        indexName: FA_BLOB_FA_BLOB_UK_FOR_AWSDMS
+        tableName: FA_BLOB
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+        unique: true
+- changeSet:
+    id: 1571742777994-24
+    author: drsteini (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: PK_ISN
+        - column:
+            name: STATION_ID
+        indexName: FA_STATION_FA_STATION_UK_FOR_AWSDMS
+        tableName: FA_STATION
+        schemaName: ${STORETW_DUMP_SCHEMA_NAME}
+        unique: true
+

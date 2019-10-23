@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+      - type: postgresql
+      
+  - changeSet:
+      author: ayan
+      id: "create.table.${STORETW_SCHEMA_NAME}.project_data_no_source"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - not:
+          - tableExists:
+              schemaName: ${STORETW_SCHEMA_NAME}
+              tableName: project_data_no_source
+      changes:
+        - sqlFile:
+            path: projectDataNoSource.sql
+            relativeToChangelogFile: true
+        - rollback: drop table if exists ${STORETW_SCHEMA_NAME}.project_data_no_source cascade;

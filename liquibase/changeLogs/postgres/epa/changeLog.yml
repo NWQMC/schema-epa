@@ -53,6 +53,19 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.project.schema_${STORETW_DUMP_SCHEMA_NAME}"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+            expectedResult: 0
+            sql: select count(*) from pg_namespace where nspname = '${STORETW_DUMP_SCHEMA_NAME}';
+      changes:
+        - sql: create schema ${STORETW_DUMP_SCHEMA_NAME} authorization ${EPA_SCHEMA_OWNER_USERNAME};
+        - rollback: drop schema if exists ${STORETW_DUMP_SCHEMA_NAME} cascade;
+
+  - changeSet:
+      author: drsteini
       id: "grant.usage.${NWIS_SCHEMA_NAME}.to.${EPA_SCHEMA_OWNER_USERNAME}"
       preConditions:
         - onFail: MARK_RAN

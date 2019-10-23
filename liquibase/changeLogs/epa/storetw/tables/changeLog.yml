@@ -10,6 +10,14 @@ databaseChangeLog:
       relativeToChangelogFile: true
 
   - include:
+      file: "orgDataNoSource/changeLog.yml"
+      relativeToChangelogFile: true
+
+  - include:
+      file: "projectDataNoSource/changeLog.yml"
+      relativeToChangelogFile: true
+
+  - include:
       file: "resultNoSource/changeLog.yml"
       relativeToChangelogFile: true
 
