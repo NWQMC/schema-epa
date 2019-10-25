@@ -29,7 +29,10 @@ EPA_SCHEMA_OWNER_USERNAME=<epa_owner>
 EPA_SCHEMA_OWNER_PASSWORD=<changeMe>
 
 WQX_SCHEMA_NAME=<wqx>
+WQX_DUMP_SCHEMA_NAME=<wqx_dump>
+
 STORETW_SCHEMA_NAME=<storetw>
+STORETW_DUMP_SCHEMA_NAME=<storetw_dump>
 
 NWIS_SCHEMA_NAME=<nwis>
 
@@ -46,6 +49,7 @@ LIQUIBASE_IPV4=<172.25.0.11>
 LIQUIBASE_VERSION=<3.6.3>
 JDBC_JAR=<postgresql-42.2.5.jar>
 
+CONTEXTS=ci
 ```
 #### Environment variable definitions
 
@@ -60,7 +64,10 @@ JDBC_JAR=<postgresql-42.2.5.jar>
 * **EPA_SCHEMA_OWNER_PASSWORD** - Password for the **EPA_SCHEMA_OWNER_USERNAME** role.
 
 * **WQX_SCHEMA_NAME** - Name of the schema to create for holding WQX objects.
+* **WQX_DUMP_SCHEMA_NAME** - Name of the schema to create for holding WQX_DUMP objects.
+
 * **STORETW_SCHEMA_NAME** - Name of the schema to create for holding STORETW objects.
+* **STORETW_DUMP_SCHEMA_NAME** - Name of the schema to create for holding STORETW_DUMP objects.
 
 * **NWIS_SCHEMA_NAME** - Name of the schema to create for holding NWIS objects.
 
@@ -69,12 +76,15 @@ JDBC_JAR=<postgresql-42.2.5.jar>
 * **WQP_SCHEMA_OWNER_PASSWORD** - Password for the **WQP_SCHEMA_OWNER_USERNAME** role.
 
 * **LOCAL_NETWORK_NAME** - The name of the local Docker Network you have created for using these images/containers.
+
 * **DB_IPV4** - The IP address in your Docker Network you would like assigned to the database container used for testing the Liquibase scripts.
 * **DB_PORT** - The localhost port on which to expose the script testing database container.
 * **LIQUIBASE_IPV4** - The IP address you would like assigned to the Liquibase runner container.
 
 * **LIQUIBASE_VERSION** - The version of Liquibase to install.
 * **JDBC_JAR** - The jdbc driver to install.
+
+* **CONTEXTS** - use "ci" to create a continuous integration database, otherwise leave empty.
 
 ### Testing Liquibase scripts
 The Liquibase scripts can be tested locally by spinning up the generic database (db) and the liquibase container.

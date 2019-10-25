@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: postgresql
+
+  - changeSet:
+      author: drsteini
+      id: "create.function.${STORETW_DUMP_SCHEMA_NAME}.drop_tables"
+      changes:
+        - sqlFile:
+            path: droptables.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+        - rollback: drop function if exists ${STORETW_DUMP_SCHEMA_NAME}.drop_tables();
+
+  - changeSet:
+      author: drsteini
+      id: "create.function.${STORETW_DUMP_SCHEMA_NAME}.grant_table_privs"
+      changes:
+        - sqlFile:
+            path: grantTablePrivs.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+        - rollback: drop function if exists ${STORETW_DUMP_SCHEMA_NAME}.grant_table_privs();
