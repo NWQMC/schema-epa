@@ -1,4 +1,10 @@
 #!/bin/bash
+#!/bin/bash
+# The set -e tells bash to exit immediately if a simple command fails.
+# The set -o pipefail tells bash to set pipeline's return status to status of the last (rightmost) command.
+# Both should be used in scripts meant to be called by Jenkins or another job runner.
+set -e
+set -o pipefail
 
 # postgres to postgres db scripts
 ${LIQUIBASE_HOME}/liquibase \
