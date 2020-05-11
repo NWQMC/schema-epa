@@ -1,24 +1,18 @@
 databaseChangeLog:
 - objectQuotingStrategy: QUOTE_ALL_OBJECTS
 - changeSet:
-    id: 1560431414947-1
-    author: drsteini (generated)
+    id: 1588947947664-1
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACMED_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_UID
             type: INTEGER
         - column:
@@ -43,8 +37,6 @@ databaseChangeLog:
             name: MSUNT_UID_DEPTH_HEIGHT_BOTTOM
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
@@ -57,36 +49,32 @@ databaseChangeLog:
             name: TMZONE_UID_END_TIME
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ACT_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
             name: ACT_COMMENTS
             type: VARCHAR(4000)
         - column:
-            constraints:
-              nullable: false
             name: ACT_START_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ACT_START_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ACT_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ACT_END_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ACT_DEPTH_HEIGHT
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_DEPTH_HEIGHT_TOP
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_DEPTH_HEIGHT_BOTTOM
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_DEPTH_ALTITUDE_REF_POINT
             type: VARCHAR(125)
@@ -96,9 +84,6 @@ databaseChangeLog:
         - column:
             name: ACT_LOC_LONGITUDE
             type: numeric(38, 10)
-        - column:
-            name: ACT_LOC_SOURCE_MAP_SCALE
-            type: INTEGER
         - column:
             name: CONCOL_UID
             type: INTEGER
@@ -185,76 +170,108 @@ databaseChangeLog:
             type: INTEGER
         - column:
             name: ACT_BOAT_SPEED
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_COLLECTION_DURATION
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_CURRENT_SPEED
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_HORIZONTAL_ACCURACY
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_NET_MESH_SIZE
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_NET_SURFACE_AREA
-            type: VARCHAR(12)
-        - column:
-            name: ACT_PASS_COUNT
-            type: INTEGER
+            type: VARCHAR(60)
         - column:
             name: ACT_REACH_LENGTH
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_REACH_WIDTH
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: ACT_SAM_COMPNT_NAME
-            type: VARCHAR(15)
+            type: VARCHAR(120)
         - column:
-            name: ACT_SAM_COMPNT_PLACE_IN_SERIES
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
             name: ACT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: ACT_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: ACT_COLLECTION_EFFORT
+            type: VARCHAR(60)
+        - column:
+            name: GPUNT_UID
+            type: INTEGER
+        - column:
+            name: ACT_COLLECTION_AREA
+            type: VARCHAR(60)
+        - column:
+            name: MSUNT_UID_COLLECTION_AREA
+            type: INTEGER
+        - column:
+            name: HYDCND_UID
+            type: INTEGER
+        - column:
+            name: HYDEV_UID
+            type: INTEGER
+        - column:
+            name: HSM_UID
+            type: INTEGER
+        - column:
+            name: ACT_LOC_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_ID_USER_SUPPLIED
+            type: VARCHAR(55)
+        - column:
+            name: ACT_COLLECTION_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_CONTAINER_LABEL_NAME
+            type: VARCHAR(60)
+        - column:
+            name: SCMTH_UID
+            type: INTEGER
+        - column:
+            name: SPMTH_UID
+            type: INTEGER
+        - column:
+            name: ACT_LOC_SOURCE_MAP_SCALE
+            type: VARCHAR(60)
+        - column:
+            name: ACT_SAM_COMPNT_PLACE_IN_SERIES
+            type: VARCHAR(60)
+        - column:
+            name: ACT_PASS_COUNT
+            type: VARCHAR(60)
         tableName: ACTIVITY
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-2
-    author: drsteini (generated)
+    id: 1588947947664-2
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACORG_NAME
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: ACORG_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -264,39 +281,29 @@ databaseChangeLog:
         tableName: ACTIVITY_CONDUCTING_ORG
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-3
-    author: drsteini (generated)
+    id: 1588947947664-3
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACTGRP_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: AGTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACTGRP_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
             name: ACTGRP_NAME
-            type: VARCHAR(50)
+            type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: ACTGRP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -305,38 +312,30 @@ databaseChangeLog:
             type: VARCHAR(100)
         - column:
             name: ACTGRP_START_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ACTGRP_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: ACTIVITY_GROUP
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-4
-    author: drsteini (generated)
+    id: 1588947947664-4
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACTGRP_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: AGDET_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -346,60 +345,44 @@ databaseChangeLog:
         tableName: ACTIVITY_GROUP_DETAIL
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-5
-    author: drsteini (generated)
+    id: 1588947947664-5
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: AGTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: AGTYP_NAME
             type: VARCHAR(50)
         - column:
             name: AGTYP_DESC
             type: VARCHAR(500)
         - column:
-            constraints:
-              nullable: false
             name: AGTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ACTIVITY_GROUP_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-6
-    author: drsteini (generated)
+    id: 1588947947664-6
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACMED_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ACMED_NAME
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: ACMED_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -408,29 +391,21 @@ databaseChangeLog:
         tableName: ACTIVITY_MEDIA
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-7
-    author: drsteini (generated)
+    id: 1588947947664-7
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: AMSUB_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: AMSUB_NAME
-            type: VARCHAR(45)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: AMSUB_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -439,84 +414,67 @@ databaseChangeLog:
         tableName: ACTIVITY_MEDIA_SUBDIVISION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-8
-    author: drsteini (generated)
+    id: 1588947947664-8
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACTMET_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: METTYP_UID
             type: INTEGER
         - column:
             name: MSUNT_UID_VALUE
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
             name: ACTMET_COMMENT
             type: VARCHAR(4000)
         - column:
-            constraints:
-              nullable: false
             name: ACTMET_SCORE
-            type: VARCHAR(10)
+            type: VARCHAR(60)
         - column:
             name: ACTMET_VALUE
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: ACTMET_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: ACTMET_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: ACTMET_SAM_PT_PLACE_IN_SERIES
+            type: VARCHAR(60)
         tableName: ACTIVITY_METRIC
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-9
-    author: drsteini (generated)
+    id: 1588947947664-9
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACTMET_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: BHIDX_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: AMIDX_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -526,31 +484,23 @@ databaseChangeLog:
         tableName: ACTIVITY_METRIC_INDEX
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-10
-    author: drsteini (generated)
+    id: 1588947947664-10
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: PRJ_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACTPRJ_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -560,139 +510,101 @@ databaseChangeLog:
         tableName: ACTIVITY_PROJECT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-11
-    author: drsteini (generated)
+    id: 1588947947664-11
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_CD
             type: VARCHAR(70)
         - column:
             name: ACTYP_DESC
             type: VARCHAR(400)
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_ANL_MTH_REQ_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_MON_LOC_REQ_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: ACTYP_ABBREV
             type: VARCHAR(6)
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ACTIVITY_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-12
-    author: drsteini (generated)
+    id: 1588947947664-12
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ADDTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ADDTYP_NAME
             type: VARCHAR(8)
         - column:
             name: ADDTYP_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: ADDTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ADDRESS_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-13
-    author: drsteini (generated)
+    id: 1588947947664-13
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ALSTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ALSTYP_NAME
             type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: ALSTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ALIAS_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-14
-    author: drsteini (generated)
+    id: 1588947947664-14
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ANLMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: AMCTX_UID
             type: INTEGER
         - column:
             name: ORG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ANLMTH_ID
-            type: VARCHAR(20)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: ANLMTH_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(250)
         - column:
             name: ANLMTH_DESC
             type: VARCHAR(4000)
@@ -700,90 +612,155 @@ databaseChangeLog:
             name: ANLMTH_QUAL_TYPE
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: ANLMTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ANLMTH_URL
             type: VARCHAR(256)
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ANALYTICAL_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-15
-    author: drsteini (generated)
+    id: 1588947947664-15
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: AMCTX_UID
             type: INTEGER
         - column:
             name: ORG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: AMCTX_CD
-            type: VARCHAR(30)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: AMCTX_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
-            constraints:
-              nullable: false
             name: AMCTX_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
+        - column:
+            name: AMCTX_DESC
+            type: VARCHAR(200)
         tableName: ANALYTICAL_METHOD_CONTEXT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-16
-    author: drsteini (generated)
+    id: 1588947947664-16
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: AQFR_UID
+            type: INTEGER
+        - column:
+            name: AQFRCTX_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            name: AQFR_CD
+            type: VARCHAR(120)
+        - column:
+            name: AQFR_NAME
+            type: VARCHAR(255)
+        - column:
+            name: AQFR_DESC
+            type: VARCHAR(512)
+        - column:
+            name: AQFR_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: AQUIFER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-17
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: AQFRCTX_UID
+            type: INTEGER
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            name: AQFRCTX_CD
+            type: VARCHAR(35)
+        - column:
+            name: AQFRCTX_NAME
+            type: VARCHAR(120)
+        - column:
+            name: AQFRCTX_DESC
+            type: VARCHAR(200)
+        - column:
+            name: AQFRCTX_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: AQUIFER_CONTEXT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-18
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: AQFRTYP_UID
+            type: INTEGER
+        - column:
+            name: AQFRTYP_NAME
+            type: VARCHAR(255)
+        - column:
+            name: AQFRTYP_DESC
+            type: VARCHAR(512)
+        - column:
+            name: AQFRTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: AQUIFER_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-19
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: ASMBLG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ASMBLG_NAME
             type: VARCHAR(50)
         - column:
             name: ASMBLG_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: ASMBLG_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ASSEMBLAGE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-17
-    author: drsteini (generated)
+    id: 1588947947664-20
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
@@ -794,7 +771,6 @@ databaseChangeLog:
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
             name: REF_UID
             type: numeric(20)
         - column:
@@ -802,16 +778,16 @@ databaseChangeLog:
             type: INTEGER
         - column:
             name: ATOBJ_FILE_NAME
-            type: VARCHAR(256)
+            type: VARCHAR(255)
         - column:
             name: ATOBJ_TYPE
             type: VARCHAR(6)
         - column:
             name: ATOBJ_CONTENT
-            type: bytea
+            type: BYTEA
         - column:
             name: ATOBJ_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -829,85 +805,91 @@ databaseChangeLog:
             type: VARCHAR(1)
         - column:
             name: ATOBJ_CREATE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_CREATE
             type: INTEGER
         tableName: ATTACHED_OBJECT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-18
-    author: drsteini (generated)
+    id: 1588947947664-21
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: AOFLD_UID
+            type: numeric(12)
+        - column:
+            name: AOFLD_UID_PARENT
+            type: numeric(12)
+        - column:
+            name: AOFLD_NAME
+            type: VARCHAR(35)
+        - column:
+            name: AOFLD_RELATIVE_PATH
+            type: VARCHAR(256)
+        - column:
+            name: AOFLD_LEVEL
+            type: SMALLINT
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        tableName: ATTACHED_OBJECT_FOLDER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-22
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: AUDTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: AUDTYP_NAME
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: AUDTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: AUDIT_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-19
-    author: drsteini (generated)
+    id: 1588947947664-23
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: BHIDX_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: IDXTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MLOC_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: BHIDX_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
             name: BHIDX_CALCULATED_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: BHIDX_COMMENT
             type: VARCHAR(4000)
         - column:
             name: BHIDX_QUALIFIER_CD
-            type: VARCHAR(5)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: BHIDX_SCORE
-            type: VARCHAR(10)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: BHIDX_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -917,29 +899,21 @@ databaseChangeLog:
         tableName: BIOLOGICAL_HABITAT_INDEX
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-20
-    author: drsteini (generated)
+    id: 1588947947664-24
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: BIOINT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: BIOINT_NAME
             type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: BIOINT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -948,83 +922,63 @@ databaseChangeLog:
         tableName: BIOLOGICAL_INTENT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-21
-    author: drsteini (generated)
+    id: 1588947947664-25
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CELFRM_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CELFRM_NAME
             type: VARCHAR(11)
         - column:
             name: CELFRM_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: CELFRM_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CELL_FORM
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-22
-    author: drsteini (generated)
+    id: 1588947947664-26
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CELSHP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CELSHP_NAME
             type: VARCHAR(18)
         - column:
             name: CELSHP_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: CELSHP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CELL_SHAPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-23
-    author: drsteini (generated)
+    id: 1588947947664-27
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CHR_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: CHR_SRS_ID
             type: numeric(12)
@@ -1032,29 +986,21 @@ databaseChangeLog:
             name: CHR_STORET_ID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: CHR_SAMPLE_FRACTION_REQ_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: CHR_PICK_LIST_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: CHR_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: CHR_CAS_NUMBER
             type: VARCHAR(12)
         - column:
             name: CHR_DESCRIPTION
-            type: VARCHAR(256)
+            type: VARCHAR(400)
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -1063,235 +1009,225 @@ databaseChangeLog:
         - column:
             name: DVSTA_UID
             type: INTEGER
+        - column:
+            name: CHR_METHOD_SPECIATION_REQ_YN
+            type: VARCHAR(1)
+        - column:
+            name: CHR_ANALYTICAL_METHOD_REQ_YN
+            type: VARCHAR(1)
+        - column:
+            name: CHR_NAME_CLEAN
+            type: VARCHAR(255)
         tableName: CHARACTERISTIC
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-24
-    author: drsteini (generated)
+    id: 1588947947664-28
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHRALS_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ALSTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CHRALS_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
-            type: INTEGER
-        - column:
-            name: DVSTA_UID
             type: INTEGER
         - column:
             name: CHRALS_DESCRIPTION
             type: VARCHAR(400)
         - column:
-            constraints:
-              nullable: false
             name: CHRALS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CHARACTERISTIC_ALIAS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-25
-    author: drsteini (generated)
+    id: 1588947947664-29
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHRGRP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CHRGRP_NAME
-            type: VARCHAR(35)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: CHRGRP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
+        - column:
+            name: CHRGRP_DESC
+            type: VARCHAR(1000)
         tableName: CHARACTERISTIC_GROUP
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-26
-    author: drsteini (generated)
+    id: 1588947947664-30
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CPLVAL_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CPLVAL_CD
             type: VARCHAR(12)
         - column:
             name: CPLVAL_DESC
             type: VARCHAR(256)
         - column:
-            constraints:
-              nullable: false
             name: CPLVAL_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CHARACTERISTIC_PICK_LIST_VALUE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-27
-    author: drsteini (generated)
+    id: 1588947947664-31
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ANLMTH_UID
             type: INTEGER
+        - column:
+            name: CHR_COUNT
+            type: numeric(12)
+        - column:
+            name: RESULTS
+            type: numeric(12)
         tableName: CHAR_ANALYTICAL_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-28
-    author: drsteini (generated)
+    id: 1588947947664-32
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: DQLTYP_UID
             type: INTEGER
+        - column:
+            name: CHR_COUNT
+            type: numeric(12)
+        - column:
+            name: RESULTS
+            type: numeric(12)
         tableName: CHAR_DETECT_QUANT_LIMIT_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-29
-    author: drsteini (generated)
+    id: 1588947947664-33
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MSUNT_UID
             type: INTEGER
+        - column:
+            name: CHR_COUNT
+            type: numeric(12)
+        - column:
+            name: RESULTS
+            type: numeric(12)
+        - column:
+            name: ORG_UID
+            type: INTEGER
+        - column:
+            name: LOWERVALUE
+            type: numeric(36, 12)
+        - column:
+            name: UPPERVALUE
+            type: numeric(36, 12)
         tableName: CHAR_MEASUREMENT_UNIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-30
-    author: drsteini (generated)
+    id: 1588947947664-34
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MTHSPC_UID
             type: INTEGER
+        - column:
+            name: CHR_COUNT
+            type: numeric(12)
+        - column:
+            name: RESULTS
+            type: numeric(12)
         tableName: CHAR_METH_SPECIATION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-31
-    author: drsteini (generated)
+    id: 1588947947664-35
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SMFRC_UID
             type: INTEGER
+        - column:
+            name: CHR_COUNT
+            type: numeric(12)
+        - column:
+            name: RESULTS
+            type: numeric(12)
         tableName: CHAR_SAMPLE_FRACTION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-32
-    author: drsteini (generated)
+    id: 1588947947664-36
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CITATN_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: CITATN_ID
             type: VARCHAR(255)
         - column:
             name: CITATN_CREATOR
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: CITATN_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: CITATN_PUBLISHER
             type: VARCHAR(60)
@@ -1299,285 +1235,229 @@ databaseChangeLog:
             name: CITATN_SUBJECT
             type: VARCHAR(4000)
         - column:
-            constraints:
-              nullable: false
             name: CITATN_TITLE
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: CITATN_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CITATION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-33
-    author: drsteini (generated)
+    id: 1588947947664-37
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CFG_CD
             type: VARCHAR(50)
         - column:
             name: CFG_DESC
             type: VARCHAR(250)
         - column:
-            constraints:
-              nullable: false
             name: CFG_VALUE
             type: VARCHAR(2000)
         - column:
-            constraints:
-              nullable: false
             name: CFG_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: CFG_CONTEXT
             type: VARCHAR(100)
         tableName: CONFIG
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-34
-    author: drsteini (generated)
+    id: 1588947947664-38
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CONCOL_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CONCOL_NAME
-            type: VARCHAR(15)
+            type: VARCHAR(60)
         - column:
             name: CONCOL_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: CONCOL_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CONTAINER_COLOR
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-35
-    author: drsteini (generated)
+    id: 1588947947664-39
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CONTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CONTYP_NAME
-            type: VARCHAR(35)
+            type: VARCHAR(60)
         - column:
             name: CONTYP_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: CONTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: CONTAINER_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-36
-    author: drsteini (generated)
+    id: 1588947947664-40
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CNTRY_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CNTRY_CD
             type: VARCHAR(2)
         - column:
-            constraints:
-              nullable: false
             name: CNTRY_NAME
             type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: CNTRY_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: COUNTRY
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-37
-    author: drsteini (generated)
+    id: 1588947947664-41
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: CNTY_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ST_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CNTY_NAME
             type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: CNTY_FIPS_CD
             type: VARCHAR(3)
         - column:
-            constraints:
-              nullable: false
             name: CNTY_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: COUNTY
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-38
-    author: drsteini (generated)
+    id: 1588947947664-42
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: DQLTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: DQLTYP_NAME
             type: VARCHAR(35)
         - column:
             name: DQLTYP_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: DQLTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: DETECTION_QUANT_LIMIT_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-39
-    author: drsteini (generated)
+    id: 1588947947664-43
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: DVSTA_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: DVSTA_NAME
             type: VARCHAR(35)
+        - column:
+            name: DVSTA_DESC
+            type: VARCHAR(200)
+        - column:
+            name: DVSTA_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
         tableName: DOMAIN_VALUE_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-40
-    author: drsteini (generated)
+    id: 1588947947664-44
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: EATYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: EATYP_NAME
             type: VARCHAR(20)
         - column:
             name: EATYP_DESC
             type: VARCHAR(500)
         - column:
-            constraints:
-              nullable: false
             name: EATYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: ELECTRONIC_ADDRESS_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-41
-    author: drsteini (generated)
+    id: 1588947947664-45
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: EVSTA_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: EVSTA_NAME
-            type: VARCHAR(35)
+            type: VARCHAR(120)
+        - column:
+            name: EVSTA_DESC
+            type: VARCHAR(500)
+        - column:
+            name: EVSTA_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
         tableName: ELEMENT_VALUE_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-42
-    author: drsteini (generated)
+    id: 1588947947664-46
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
@@ -1585,109 +1465,81 @@ databaseChangeLog:
             name: ER_UID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: ER_CD
             type: VARCHAR(2)
         - column:
-            constraints:
-              nullable: false
             name: ER_NAME
             type: VARCHAR(256)
         tableName: EPA_REGION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-43
-    author: drsteini (generated)
+    id: 1588947947664-47
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: PK_ISN
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MAPPING_NAME
             type: VARCHAR(100)
         - column:
-            constraints:
-              nullable: false
             name: ETL_MAPPING_STATUS
             type: VARCHAR(30)
         - column:
             name: ETL_ID
             type: VARCHAR(256)
         - column:
-            constraints:
-              nullable: false
             name: START_ETL_RUN_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: END_ETL_RUN_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: LAST_ETL_START_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: LAST_ETL_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: OVERRIDE_LOAD_FLAG
             type: VARCHAR(1)
         - column:
             name: OVERRIDE_LOAD_FROM_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: OVERRIDE_LOAD_TO_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: ETL_EXECUTION_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-44
-    author: drsteini (generated)
+    id: 1588947947664-48
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TABLE_NAME
             type: VARCHAR(100)
         - column:
-            constraints:
-              nullable: false
             name: PK_UID
             type: numeric(20)
         - column:
             name: PARENT_PK_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: ETL_MANUAL_LOAD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-45
-    author: drsteini (generated)
+    id: 1588947947664-49
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
@@ -1700,110 +1552,101 @@ databaseChangeLog:
             name: PRJ_ID
             type: VARCHAR(256)
         - column:
-            constraints:
-              nullable: false
             name: REFRESH_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: ETL_PRJ_TRIP_STG
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-46
-    author: drsteini (generated)
+    id: 1588947947664-50
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: FCDSC_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: FCTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: FCDSC_NAME
             type: VARCHAR(50)
         - column:
             name: FCDSC_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: FCDSC_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: FREQUENCY_CLASS_DESCRIPTOR
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-47
-    author: drsteini (generated)
+    id: 1588947947664-51
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: FCTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: FCTYP_NAME
             type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: FCTYP_UNIT_REQUIRED_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: FCTYP_BOUNDS_REQUIRED_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: FCTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: FREQUENCY_CLASS_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-48
-    author: drsteini (generated)
+    id: 1588947947664-52
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: GPUNT_UID
+            type: INTEGER
+        - column:
+            name: GPUNT_NAME
+            type: VARCHAR(35)
+        - column:
+            name: GPUNT_DESC
+            type: VARCHAR(512)
+        - column:
+            name: GPUNT_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: GEAR_PROCEDURE_UNIT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-53
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: HABIT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: HABIT_NAME
             type: VARCHAR(15)
         - column:
-            constraints:
-              nullable: false
             name: HABIT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -1812,78 +1655,127 @@ databaseChangeLog:
         tableName: HABIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-49
-    author: drsteini (generated)
+    id: 1588947947664-54
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: HSM_UID
+            type: INTEGER
+        - column:
+            name: HSM_NAME
+            type: VARCHAR(35)
+        - column:
+            name: HSM_DESC
+            type: VARCHAR(512)
+        - column:
+            name: HSM_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: HABITAT_SELECTION_METHOD
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-55
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: HCMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: HCMTH_NAME
             type: VARCHAR(70)
         - column:
             name: HCMTH_DESC
             type: VARCHAR(150)
         - column:
-            constraints:
-              nullable: false
             name: HCMTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: HORIZONTAL_COLLECTION_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-50
-    author: drsteini (generated)
+    id: 1588947947664-56
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: HRDAT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: HRDAT_NAME
             type: VARCHAR(6)
         - column:
-            constraints:
-              nullable: false
             name: HRDAT_DESC
             type: VARCHAR(45)
         - column:
-            constraints:
-              nullable: false
             name: HRDAT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: HORIZONTAL_REFERENCE_DATUM
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-51
-    author: drsteini (generated)
+    id: 1588947947664-57
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: HYDCND_UID
+            type: INTEGER
+        - column:
+            name: HYDCND_NAME
+            type: VARCHAR(60)
+        - column:
+            name: HYDCND_DESC
+            type: VARCHAR(400)
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: HYDCND_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: HYDROLOGIC_CONDITION
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-58
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: HYDEV_UID
+            type: INTEGER
+        - column:
+            name: HYDEV_NAME
+            type: VARCHAR(60)
+        - column:
+            name: HYDEV_DESC
+            type: VARCHAR(400)
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: HYDEV_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: HYDROLOGIC_EVENT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-59
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: IDXTYP_UID
             type: INTEGER
         - column:
@@ -1893,364 +1785,46 @@ databaseChangeLog:
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: IDXTYP_ID
-            type: VARCHAR(35)
+            type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: IDXTYP_CONTEXT
             type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: IDXTYP_NAME
-            type: VARCHAR(50)
+            type: VARCHAR(100)
         - column:
             name: IDXTYP_SCALE
             type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: IDXTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: INDEX_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-52
-    author: drsteini (generated)
+    id: 1588947947664-60
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
-            name: CHRALS_UID
-            type: INTEGER
-        - column:
-            name: CHRALS_NAME
-            type: VARCHAR(120)
-        - column:
-            name: CHR_UID
-            type: INTEGER
-        - column:
-            name: SMFRC_UID
-            type: INTEGER
-        - column:
-            name: MTHSPC_UID
-            type: INTEGER
-        - column:
-            name: ANLMTH_UID
-            type: INTEGER
-        - column:
-            name: RDQLMT_UID
-            type: numeric(20)
-        - column:
-            name: RESSTA_UID
-            type: INTEGER
-        - column:
-            name: CHRALS_FROMTO
-            type: VARCHAR(256)
-        - column:
-            name: CHRTAXGRP_UID
-            type: INTEGER
-        - column:
-            name: CHRTAXALSTYP_UID
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
-            name: CHRALS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            constraints:
-              nullable: false
-            name: USR_UID_LAST_CHANGE
-            type: INTEGER
-        tableName: KEVIN_CHARTAXON_ALIAS
-        schemaName: ${WQX_DUMP_SCHEMA_NAME}
-- changeSet:
-    id: 1560431414947-53
-    author: drsteini (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            constraints:
-              nullable: false
-            name: CHRTAXALSTYP_UID
-            type: INTEGER
-        - column:
-            name: CHRTAXALSTYP_NAME
-            type: VARCHAR(60)
-        - column:
-            name: CHRTAXALSTYP_DESCRIPTION
-            type: VARCHAR(256)
-        - column:
-            name: CHRTAXALSTYP_STATUS
-            type: VARCHAR(20)
-        tableName: KEVIN_CHARTAXON_ALIAS_TYPE
-        schemaName: ${WQX_DUMP_SCHEMA_NAME}
-- changeSet:
-    id: 1560431414947-54
-    author: drsteini (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            constraints:
-              nullable: false
-            name: CHRTAXGRP_UID
-            type: INTEGER
-        - column:
-            name: CHRTAXGRP_NAME
-            type: VARCHAR(60)
-        - column:
-            name: CHRTAXGRP_DESCRIPTION
-            type: VARCHAR(256)
-        - column:
-            name: CHRTAXGRP_CONTEXT
-            type: VARCHAR(20)
-        tableName: KEVIN_CHARTAXON_GROUP
-        schemaName: ${WQX_DUMP_SCHEMA_NAME}
-- changeSet:
-    id: 1560431414947-55
-    author: drsteini (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            constraints:
-              nullable: false
-            name: TAX_UID
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
-            name: TXRNK_UID
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
-            name: TAX_NAME
-            type: VARCHAR(120)
-        - column:
-            name: TAX_EXTRNL_ID
-            type: numeric(12)
-        - column:
-            name: TAX_STORET_ID
-            type: numeric(12)
-        - column:
-            name: TAX_SRS_ID
-            type: numeric(12)
-        - column:
-            name: TAX_RETIRED_NAME
-            type: VARCHAR(120)
-        - column:
-            name: TAX_RETIRED_EXTRNL_ID
-            type: numeric(12)
-        - column:
-            constraints:
-              nullable: false
-            name: TAX_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            name: TAX_DESCRIPTION
-            type: VARCHAR(1000)
-        - column:
-            name: TAX_EXTRNL_ID_PARENT
-            type: numeric(12)
-        - column:
-            name: TAX_UID_KINGDOM
-            type: INTEGER
-        - column:
-            name: TAX_UID_NAME
-            type: VARCHAR(120)
-        - column:
-            constraints:
-              nullable: false
-            name: USR_UID_LAST_CHANGE
-            type: INTEGER
-        - column:
-            name: TAXGRP_UID
-            type: INTEGER
-        - column:
-            name: DVSTA_UID
-            type: INTEGER
-        - column:
-            name: PHYLUM
-            type: VARCHAR(120)
-        - column:
-            name: SUBPHYLUM
-            type: VARCHAR(120)
-        - column:
-            name: DIVISION
-            type: VARCHAR(120)
-        - column:
-            name: SUPERCLASS
-            type: VARCHAR(120)
-        - column:
-            name: CLASS
-            type: VARCHAR(120)
-        - column:
-            name: SUBCLASS
-            type: VARCHAR(120)
-        - column:
-            name: INFRACLASS
-            type: VARCHAR(120)
-        - column:
-            name: SUPERORDER
-            type: VARCHAR(120)
-        - column:
-            name: INFRAORDER
-            type: VARCHAR(120)
-        - column:
-            name: SUPERFAMILY
-            type: VARCHAR(120)
-        - column:
-            name: FAMILY
-            type: VARCHAR(120)
-        - column:
-            name: SUBFAMILY
-            type: VARCHAR(120)
-        - column:
-            name: TRIBE
-            type: VARCHAR(120)
-        - column:
-            name: GENUS
-            type: VARCHAR(120)
-        - column:
-            name: SECTION
-            type: VARCHAR(120)
-        - column:
-            name: SPECIES
-            type: VARCHAR(120)
-        - column:
-            name: SUBSPECIES
-            type: VARCHAR(120)
-        - column:
-            name: VARIETY
-            type: VARCHAR(120)
-        - column:
-            name: FORM
-            type: VARCHAR(120)
-        - column:
-            name: INFRAPHYLUM
-            type: VARCHAR(120)
-        - column:
-            name: SUPERDIVISION
-            type: VARCHAR(120)
-        - column:
-            name: SUBDIVISION
-            type: VARCHAR(120)
-        - column:
-            name: INFRADIVISION
-            type: VARCHAR(120)
-        - column:
-            name: PARVDIVISION
-            type: VARCHAR(120)
-        - column:
-            name: SUBORDER
-            type: VARCHAR(120)
-        - column:
-            name: SUBSECTION
-            type: VARCHAR(120)
-        - column:
-            name: SUBTRIBE
-            type: VARCHAR(120)
-        - column:
-            name: SUBGENUS
-            type: VARCHAR(120)
-        - column:
-            name: SUBVARIETY
-            type: VARCHAR(120)
-        tableName: KEVIN_TAXONCHAR
-        schemaName: ${WQX_DUMP_SCHEMA_NAME}
-- changeSet:
-    id: 1560431414947-56
-    author: drsteini (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            constraints:
-              nullable: false
-            name: TAXALS_UID
-            type: INTEGER
-        - column:
-            name: TAXALS_NAME
-            type: VARCHAR(120)
-        - column:
-            name: TAX_UID
-            type: INTEGER
-        - column:
-            name: BIOINT_UID
-            type: INTEGER
-        - column:
-            name: ASMBLG_UID
-            type: INTEGER
-        - column:
-            name: RESSTA_UID
-            type: INTEGER
-        - column:
-            name: TAXALS_FROMTO
-            type: VARCHAR(256)
-        - column:
-            name: CHRTAXGRP_UID
-            type: INTEGER
-        - column:
-            name: CHRTAXALSTYP_UID
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
-            name: TAXALS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            constraints:
-              nullable: false
-            name: USR_UID_LAST_CHANGE
-            type: INTEGER
-        tableName: KEVIN_TAXONCHAR_ALIAS
-        schemaName: ${WQX_DUMP_SCHEMA_NAME}
-- changeSet:
-    id: 1560431414947-57
-    author: drsteini (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            constraints:
-              primaryKey: true
-              primaryKeyName: LAB_SAMPLE_PREPARATION_METHOD_pkey
             name: LSPMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: LSPMTH_ID
-            type: VARCHAR(20)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: LSPMTH_CONTEXT
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: LSPMTH_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(250)
         - column:
             name: LSPMTH_DESC
             type: VARCHAR(4000)
@@ -2258,74 +1832,52 @@ databaseChangeLog:
             name: LSPMTH_QUAL_TYPE
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: LSPMTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: LAB_SAMPLE_PREPARATION_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-58
-    author: drsteini (generated)
+    id: 1588947947664-61
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: LTAUD_UID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: AUDTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TBL_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: REF_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: REF_ID
-            type: VARCHAR(200)
+            type: VARCHAR(255)
         - column:
-            constraints:
-              nullable: false
             name: LTAUD_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: LOOKUP_TABLE_AUDIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-59
-    author: drsteini (generated)
+    id: 1588947947664-62
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: LTAUDET_UID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: LTAUD_UID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: LTAUDET_COL_NAME
             type: VARCHAR(30)
         - column:
@@ -2337,32 +1889,24 @@ databaseChangeLog:
         tableName: LOOKUP_TABLE_AUDIT_UPD_DETAIL
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-60
-    author: drsteini (generated)
+    id: 1588947947664-63
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MSUNT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MSUNT_CD
             type: VARCHAR(12)
         - column:
             name: MSUNT_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: MSUNT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -2374,27 +1918,85 @@ databaseChangeLog:
         tableName: MEASUREMENT_UNIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-61
-    author: drsteini (generated)
+    id: 1588947947664-64
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: MSRQLF_UID
+            type: INTEGER
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: MSRQLF_CD
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_DESC
+            type: VARCHAR(300)
+        - column:
+            name: MSRQLF_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: MSRQLF_DEPRECATED
+            type: VARCHAR(1)
+        tableName: MEASURE_QUALIFIER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-65
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: RMQLF_CD_OLD
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_CD1
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_CD2
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_CD3
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_CD4
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_CD5
+            type: VARCHAR(5)
+        - column:
+            name: MSRQLF_CD6
+            type: VARCHAR(5)
+        - column:
+            name: RMQLF_DESC
+            type: VARCHAR(300)
+        - column:
+            name: RMQLF_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: RMQLF_UID
+            type: INTEGER
+        tableName: MEASURE_QUALIFIER_LEGACY
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-66
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: MTHSPC_UID
             type: INTEGER
         - column:
             name: MTHSPC_NAME
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: MTHSPC_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -2403,100 +2005,82 @@ databaseChangeLog:
         tableName: METHOD_SPECIATION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-62
-    author: drsteini (generated)
+    id: 1588947947664-67
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: METTYP_UID
             type: INTEGER
         - column:
             name: CITATN_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MTCTX_UID
             type: INTEGER
         - column:
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: METTYP_ID
-            type: VARCHAR(35)
+            type: VARCHAR(50)
         - column:
             name: METTYP_FORMULA_DESC
-            type: VARCHAR(50)
+            type: VARCHAR(4000)
         - column:
-            constraints:
-              nullable: false
             name: METTYP_NAME
-            type: VARCHAR(50)
+            type: VARCHAR(100)
         - column:
             name: METTYP_SCALE
             type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: METTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
+        - column:
+            name: METTYP_CONTEXT
+            type: VARCHAR(50)
         tableName: METRIC_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-63
-    author: drsteini (generated)
+    id: 1588947947664-68
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MTCTX_UID
             type: INTEGER
         - column:
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: MTCTX_CD
             type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: MTCTX_NAME
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: MTCTX_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
+        - column:
+            name: MTCTX_DESC
+            type: VARCHAR(200)
         tableName: METRIC_TYPE_CONTEXT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-64
-    author: drsteini (generated)
+    id: 1588947947664-69
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MLOC_UID
             type: numeric(20)
         - column:
@@ -2506,26 +2090,18 @@ databaseChangeLog:
             name: CNTRY_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: HCMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: HRDAT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MLTYP_UID
             type: INTEGER
         - column:
             name: MSUNT_UID_VERTICAL_MEASURE
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
@@ -2538,13 +2114,9 @@ databaseChangeLog:
             name: VRDAT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MLOC_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
-            constraints:
-              nullable: false
             name: MLOC_NAME
             type: VARCHAR(255)
         - column:
@@ -2557,77 +2129,79 @@ databaseChangeLog:
             name: MLOC_HUC_12
             type: VARCHAR(12)
         - column:
-            constraints:
-              nullable: false
             name: MLOC_LATITUDE
             type: numeric(38, 10)
         - column:
-            constraints:
-              nullable: false
             name: MLOC_LONGITUDE
             type: numeric(38, 10)
-        - column:
-            name: MLOC_SOURCE_MAP_SCALE
-            type: INTEGER
         - column:
             name: MLOC_TRIBAL_LAND_YN
             type: VARCHAR(1)
         - column:
             name: MLOC_TRIBAL_LAND_NAME
-            type: VARCHAR(200)
+            type: VARCHAR(512)
         - column:
             name: MLOC_VERTICAL_MEASURE
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: MSUNT_UID_HORIZONTAL_ACCURACY
             type: INTEGER
         - column:
             name: MLOC_HORIZONTAL_ACCURACY
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: MLOC_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: MLOC_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: MLOC_DRAINAGE_AREA
+            type: VARCHAR(60)
+        - column:
+            name: MSUNT_UID_DRAINAGE_AREA
+            type: INTEGER
+        - column:
+            name: MLOC_CONTRIB_DRAINAGE_AREA
+            type: VARCHAR(60)
+        - column:
+            name: MSUNT_UID_CONTRB_DRAINAGE_AREA
+            type: INTEGER
+        - column:
+            name: MLOC_VERTICAL_ACCURACY
+            type: VARCHAR(60)
+        - column:
+            name: MSUNT_UID_VERTICAL_ACCURACY
+            type: INTEGER
+        - column:
+            name: MLOC_SOURCE_MAP_SCALE
+            type: VARCHAR(60)
         tableName: MONITORING_LOCATION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-65
-    author: drsteini (generated)
+    id: 1588947947664-70
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MLOC_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: MLALT_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
-            constraints:
-              nullable: false
             name: MLALT_CONTEXT
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: MLALT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -2637,29 +2211,21 @@ databaseChangeLog:
         tableName: MONITORING_LOCATION_ALTERNATE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-66
-    author: drsteini (generated)
+    id: 1588947947664-71
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MLTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MLTYP_NAME
             type: VARCHAR(45)
         - column:
-            constraints:
-              nullable: false
             name: MLTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -2668,32 +2234,24 @@ databaseChangeLog:
         tableName: MONITORING_LOCATION_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-67
-    author: drsteini (generated)
+    id: 1588947947664-72
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MLOC_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: PRJ_UID
             type: numeric(20)
         - column:
             name: CITATN_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MSUNT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
@@ -2707,10 +2265,10 @@ databaseChangeLog:
             type: VARCHAR(4000)
         - column:
             name: MLWT_REF_LOC_START_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: MLWT_REF_LOC_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: MLWT_STATUS
             type: VARCHAR(15)
@@ -2718,15 +2276,11 @@ databaseChangeLog:
             name: MLWT_STRATUM
             type: VARCHAR(15)
         - column:
-            constraints:
-              nullable: false
             name: MLWT_WEIGHTING_FACTOR
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: MLWT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -2736,34 +2290,53 @@ databaseChangeLog:
         tableName: MONITORING_LOCATION_WEIGHT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-68
-    author: drsteini (generated)
+    id: 1588947947664-73
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: NATAQFR_UID
+            type: INTEGER
+        - column:
+            name: NATAQFR_CD
+            type: VARCHAR(120)
+        - column:
+            name: NATAQFR_NAME
+            type: VARCHAR(255)
+        - column:
+            name: NATAQFR_DESC
+            type: VARCHAR(512)
+        - column:
+            name: NATAQFR_STATE_NAME
+            type: VARCHAR(4000)
+        - column:
+            name: NATAQFR_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: NATIONAL_AQUIFER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-74
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: NETTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SCETYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: NETTYP_NAME
-            type: VARCHAR(30)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: NETTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -2772,24 +2345,20 @@ databaseChangeLog:
         tableName: NET_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-69
-    author: drsteini (generated)
+    id: 1588947947664-75
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MAPPING_ID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: MAPPING_NAME
             type: VARCHAR(100)
         - column:
             name: LAST_ETL_RUN_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ETL_MAPPING_STATUS
             type: VARCHAR(30)
@@ -2798,44 +2367,36 @@ databaseChangeLog:
             type: VARCHAR(256)
         - column:
             name: END_ETL_RUN_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: LAST_ETL_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: OLD_ETL_EXECUTION_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-70
-    author: drsteini (generated)
+    id: 1588947947664-76
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
             name: TRB_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_ID
-            type: VARCHAR(30)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: ORG_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: ORG_DESC
             type: VARCHAR(500)
         - column:
-            constraints:
-              nullable: false
             name: ORG_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ORG_TYPE
             type: VARCHAR(30)
@@ -2851,30 +2412,35 @@ databaseChangeLog:
         tableName: ORGANIZATION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-71
-    author: drsteini (generated)
+    id: 1588947947664-77
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
             name: ORG_TYPE
             type: VARCHAR(30)
+        - column:
+            name: ORGTYP_DESC
+            type: VARCHAR(200)
+        - column:
+            name: ORGTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
         tableName: ORGANIZATION_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-72
-    author: drsteini (generated)
+    id: 1588947947664-78
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ORGADD_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ADDTYP_UID
             type: INTEGER
         - column:
@@ -2884,16 +2450,12 @@ databaseChangeLog:
             name: CNTY_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
             name: ST_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORGADD_ADDRESS
             type: VARCHAR(50)
         - column:
@@ -2906,10 +2468,8 @@ databaseChangeLog:
             name: ORGADD_POSTAL_CD
             type: VARCHAR(10)
         - column:
-            constraints:
-              nullable: false
             name: ORGADD_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -2919,36 +2479,26 @@ databaseChangeLog:
         tableName: ORG_ADDRESS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-73
-    author: drsteini (generated)
+    id: 1588947947664-79
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ORGEA_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: EATYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORGEA_TEXT
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: ORGEA_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -2958,39 +2508,29 @@ databaseChangeLog:
         tableName: ORG_ELECTRONIC_ADDRESS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-74
-    author: drsteini (generated)
+    id: 1588947947664-80
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ORGPH_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: PHTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORGPH_NUM
             type: VARCHAR(15)
         - column:
             name: ORGPH_EXT
             type: VARCHAR(6)
         - column:
-            constraints:
-              nullable: false
             name: ORGPH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -3000,8 +2540,8 @@ databaseChangeLog:
         tableName: ORG_PHONE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-75
-    author: drsteini (generated)
+    id: 1588947947664-81
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
@@ -3014,62 +2554,46 @@ databaseChangeLog:
         tableName: OW_APPLICATION_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-76
-    author: drsteini (generated)
+    id: 1588947947664-82
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: PHTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: PHTYP_NAME
             type: VARCHAR(6)
         - column:
             name: PHTYP_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: PHTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: PHONE_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-77
-    author: drsteini (generated)
+    id: 1588947947664-83
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: PRJ_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: PRJ_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
-            constraints:
-              nullable: false
             name: PRJ_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(512)
         - column:
             name: PRJ_DESC
             type: VARCHAR(4000)
@@ -3083,10 +2607,8 @@ databaseChangeLog:
             name: PRJ_QAPP_APPROVED_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: PRJ_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -3096,27 +2618,21 @@ databaseChangeLog:
         tableName: PROJECT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-78
-    author: drsteini (generated)
+    id: 1588947947664-84
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RLTYP_UID
             type: INTEGER
         - column:
             name: RLTYP_CD
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: RLTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -3125,63 +2641,47 @@ databaseChangeLog:
         tableName: REFERENCE_LOCATION_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-79
-    author: drsteini (generated)
+    id: 1588947947664-85
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RELDPTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RELDPTH_NAME
-            type: VARCHAR(15)
+            type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: RELDPTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: RELDPTH_DESC
             type: VARCHAR(500)
         - column:
-            constraints:
-              nullable: false
             name: RELDPTH_ABBREV
             type: VARCHAR(3)
         tableName: RELATIVE_DEPTH
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-80
-    author: drsteini (generated)
+    id: 1588947947664-86
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RES_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ACT_UID
             type: numeric(20)
         - column:
             name: ANLMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CHR_UID
             type: INTEGER
         - column:
@@ -3194,16 +2694,12 @@ databaseChangeLog:
             name: MSUNT_UID_MEASURE
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
             name: RDCND_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RESSTA_UID
             type: INTEGER
         - column:
@@ -3241,25 +2737,25 @@ databaseChangeLog:
             type: VARCHAR(4000)
         - column:
             name: RES_DATA_LOGGER_LINE
-            type: VARCHAR(15)
+            type: VARCHAR(60)
         - column:
             name: RES_DEPTH_HEIGHT
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: RES_DEPTH_ALTITUDE_REF_POINT
             type: VARCHAR(125)
         - column:
             name: RES_LAB_ANALYSIS_START_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RES_LAB_ANALYSIS_START_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RES_LAB_ANALYSIS_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RES_LAB_ANALYSIS_END_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RES_LAB_NAME
             type: VARCHAR(60)
@@ -3271,16 +2767,16 @@ databaseChangeLog:
             type: VARCHAR(60)
         - column:
             name: RES_MEASURE_CONF_INTERVAL
-            type: VARCHAR(15)
+            type: VARCHAR(60)
         - column:
             name: RES_MEASURE_PRECISION
             type: VARCHAR(60)
         - column:
             name: RES_MEASURE_LOWER_CONF_LIMIT
-            type: VARCHAR(15)
+            type: VARCHAR(60)
         - column:
             name: RES_MEASURE_UPPER_CONF_LIMIT
-            type: VARCHAR(15)
+            type: VARCHAR(60)
         - column:
             name: RES_PARTICLE_SIZE_BASIS
             type: VARCHAR(40)
@@ -3301,7 +2797,7 @@ databaseChangeLog:
             type: INTEGER
         - column:
             name: RES_BIO_INDIVIDUAL_ID
-            type: VARCHAR(4)
+            type: VARCHAR(60)
         - column:
             name: RES_LAB_ACCRED_AUTHORITY
             type: VARCHAR(20)
@@ -3310,13 +2806,13 @@ databaseChangeLog:
             type: VARCHAR(1)
         - column:
             name: RES_GROUP_SUMMARY_CT_WT
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
             name: RES_SAMPLING_POINT_NAME
-            type: VARCHAR(12)
+            type: VARCHAR(120)
         - column:
             name: RES_SPECIES_ID
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: RES_TAXONOMIST_ACCRED_AUTHORTY
             type: VARCHAR(20)
@@ -3324,39 +2820,80 @@ databaseChangeLog:
             name: RES_TAXONOMIST_ACCRED_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: RES_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RES_CHR_NAME_USER_SUPPLIED
+            type: VARCHAR(255)
+        - column:
+            name: RES_TAX_NAME_USER_SUPPLIED
+            type: VARCHAR(255)
+        - column:
+            name: RES_TAX_NAME_USER_SUPPLIED_REF
+            type: VARCHAR(255)
+        - column:
+            name: RES_SAMPLING_POINT_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            name: RES_GROUP_SUMMARY_CT
+            type: VARCHAR(60)
+        - column:
+            name: ANLMTH_UID_COMPARABLE
+            type: INTEGER
+        - column:
+            name: RES_ANLMTH_COMPARE_MODIFICATN
+            type: VARCHAR(4000)
+        - column:
+            name: RES_MEASURE_CONVERTED
+            type: VARCHAR(60)
+        - column:
+            name: MSUNT_UID_MEASURE_CONVERTED
+            type: INTEGER
+        - column:
+            name: RTC_UID
+            type: INTEGER
+        - column:
+            name: RES_PROPORTION_SMPL_PROCESSED
+            type: numeric(38, 10)
+        - column:
+            name: RES_RECORD_ID_USR_SUPPLIED
+            type: VARCHAR(60)
+        - column:
+            name: RSPTYP_UID
+            type: INTEGER
+        - column:
+            name: RES_SAM_POINT_PLACE_IN_SERIES
+            type: VARCHAR(60)
+        - column:
+            name: RES_LABORATORY_COMMENT
+            type: VARCHAR(4000)
+        - column:
+            name: RES_LAB_SAMPLE_SPLIT_RATIO
+            type: VARCHAR(60)
+        - column:
+            name: RES_STATISTIC_N_VALUE
             type: INTEGER
         tableName: RESULT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-81
-    author: drsteini (generated)
+    id: 1588947947664-87
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RDCND_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RDCND_NAME
             type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: RDCND_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -3365,14 +2902,12 @@ databaseChangeLog:
         tableName: RESULT_DETECTION_CONDITION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-82
-    author: drsteini (generated)
+    id: 1588947947664-88
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RDQLMT_UID
             type: numeric(20)
         - column:
@@ -3382,129 +2917,102 @@ databaseChangeLog:
             name: MSUNT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: RES_UID
             type: numeric(20)
         - column:
             name: RDQLMT_MEASURE
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: RDQLMT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: RTDET_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: RDQLMT_COMMENT
+            type: VARCHAR(4000)
         tableName: RESULT_DETECT_QUANT_LIMIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-83
-    author: drsteini (generated)
+    id: 1588947947664-89
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RFCLS_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: FCDSC_UID
             type: INTEGER
         - column:
             name: MSUNT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: RES_UID
             type: numeric(20)
         - column:
-            name: FCDSC_LOWER_BOUND
-            type: INTEGER
-        - column:
-            name: FCDSC_UPPER_BOUND
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
             name: RFCLS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: RFCLS_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: FCDSC_LOWER_BOUND
+            type: VARCHAR(60)
+        - column:
+            name: FCDSC_UPPER_BOUND
+            type: VARCHAR(60)
         tableName: RESULT_FREQUENCY_CLASS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-84
-    author: drsteini (generated)
+    id: 1588947947664-90
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RLCOM_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RLCOM_CD
             type: VARCHAR(3)
         - column:
             name: RLCOM_DESC
             type: VARCHAR(100)
         - column:
-            constraints:
-              nullable: false
             name: RLCOM_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_LAB_COMMENT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-85
-    author: drsteini (generated)
+    id: 1588947947664-91
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RLSPRP_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: RES_UID
             type: numeric(20)
         - column:
@@ -3514,18 +3022,12 @@ databaseChangeLog:
             name: TMZONE_UID_END_TIME
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RLSPRP_METHOD_ID
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: RLSPRP_METHOD_CONTEXT
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: RLSPRP_METHOD_NAME
             type: VARCHAR(120)
         - column:
@@ -3536,134 +3038,146 @@ databaseChangeLog:
             type: VARCHAR(25)
         - column:
             name: RLSPRP_START_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RLSPRP_START_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RLSPRP_END_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RLSPRP_END_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: RLSPRP_DILUTION_FACTOR
-            type: VARCHAR(10)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: RLSPRP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: RLSPRP_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: LSPMTH_UID
+            type: INTEGER
         tableName: RESULT_LAB_SAMPLE_PREP
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-86
-    author: drsteini (generated)
+    id: 1588947947664-92
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
-            name: RMQLF_UID
-            type: INTEGER
+            name: RES_UID
+            type: numeric(12)
         - column:
-            constraints:
-              nullable: false
-            name: RMQLF_CD
-            type: VARCHAR(5)
-        - column:
-            name: RMQLF_DESC
-            type: VARCHAR(300)
-        - column:
-            constraints:
-              nullable: false
-            name: RMQLF_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
-        - column:
-            constraints:
-              nullable: false
-            name: USR_UID_LAST_CHANGE
+            name: MSRQLF_UID
             type: INTEGER
         tableName: RESULT_MEASURE_QUALIFIER
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-87
-    author: drsteini (generated)
+    id: 1588947947664-93
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: RSPTYP_UID
+            type: INTEGER
+        - column:
+            name: RSPTYP_NAME
+            type: VARCHAR(60)
+        - column:
+            name: RSPTYP_DESC
+            type: VARCHAR(400)
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RSPTYP_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: RESULT_SAMPLING_POINT_TYPE
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-94
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: RSBAS_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RSBAS_CD
             type: VARCHAR(25)
         - column:
             name: RSBAS_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: RSBAS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_STATISTICAL_BASE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-88
-    author: drsteini (generated)
+    id: 1588947947664-95
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RESSTA_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RESSTA_NAME
             type: VARCHAR(12)
         - column:
             name: RESSTA_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: RESSTA_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-89
-    author: drsteini (generated)
+    id: 1588947947664-96
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: RTC_UID
+            type: INTEGER
+        - column:
+            name: RTC_NAME
+            type: VARCHAR(35)
+        - column:
+            name: RTC_DESC
+            type: VARCHAR(400)
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        - column:
+            name: RTC_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: RESULT_TARGET_COUNT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-97
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: RES_UID
             type: numeric(20)
         - column:
@@ -3676,8 +3190,6 @@ databaseChangeLog:
             name: CITATN_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
@@ -3685,18 +3197,16 @@ databaseChangeLog:
             type: INTEGER
         - column:
             name: RTDET_POLLUTION_TOLERANCE
-            type: VARCHAR(4)
+            type: VARCHAR(30)
         - column:
             name: RTDET_POLLUTION_TOLERNCE_SCALE
             type: VARCHAR(50)
         - column:
             name: RTDET_TROPHIC_LEVEL
-            type: VARCHAR(4)
+            type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: RTDET_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -3706,31 +3216,23 @@ databaseChangeLog:
         tableName: RESULT_TAXON_DETAIL
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-90
-    author: drsteini (generated)
+    id: 1588947947664-98
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RES_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: RTFGRP_FUNCTIONAL_FEEDING_GRP
-            type: VARCHAR(6)
+            type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: RTFGRP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -3740,31 +3242,23 @@ databaseChangeLog:
         tableName: RESULT_TAXON_FEEDING_GROUP
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-91
-    author: drsteini (generated)
+    id: 1588947947664-99
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RES_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: HABIT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: RTHAB_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
@@ -3774,158 +3268,116 @@ databaseChangeLog:
         tableName: RESULT_TAXON_HABIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-92
-    author: drsteini (generated)
+    id: 1588947947664-100
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RTMPB_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RTMPB_NAME
             type: VARCHAR(12)
         - column:
             name: RTMPB_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: RTMPB_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_TEMPERATURE_BASIS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-93
-    author: drsteini (generated)
+    id: 1588947947664-101
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RTIMB_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RTIMB_NAME
             type: VARCHAR(12)
         - column:
             name: RTIMB_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: RTIMB_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_TIME_BASIS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-94
-    author: drsteini (generated)
+    id: 1588947947664-102
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RVTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RVTYP_NAME
             type: VARCHAR(20)
         - column:
             name: RVTYP_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: RVTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_VALUE_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-95
-    author: drsteini (generated)
+    id: 1588947947664-103
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: RWBAS_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: RWBAS_NAME
-            type: VARCHAR(15)
+            type: VARCHAR(60)
         - column:
             name: RWBAS_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: RWBAS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: RESULT_WEIGHT_BASIS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-96
-    author: drsteini (generated)
+    id: 1588947947664-104
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: SCEQP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SCETYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SCEQP_NAME
-            type: VARCHAR(40)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: SCEQP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -3937,29 +3389,21 @@ databaseChangeLog:
         tableName: SAMPLE_COLLECTION_EQUIP
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-97
-    author: drsteini (generated)
+    id: 1588947947664-105
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: SCETYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SCETYP_NAME
-            type: VARCHAR(30)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: SCETYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -3968,37 +3412,26 @@ databaseChangeLog:
         tableName: SAMPLE_COLLECTION_EQUIP_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-98
-    author: drsteini (generated)
+    id: 1588947947664-106
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              primaryKey: true
-              primaryKeyName: SAMPLE_COLLECTION_METHOD_pkey
             name: SCMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SCMTH_ID
-            type: VARCHAR(20)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: SCMTH_CONTEXT
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: SCMTH_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(250)
         - column:
             name: SCMTH_DESC
             type: VARCHAR(4000)
@@ -4006,80 +3439,57 @@ databaseChangeLog:
             name: SCMTH_QUAL_TYPE
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: SCMTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: SAMPLE_COLLECTION_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-99
-    author: drsteini (generated)
+    id: 1588947947664-107
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: SMFRC_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SMFRC_NAME
             type: VARCHAR(25)
         - column:
             name: SMFRC_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: SMFRC_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: SAMPLE_FRACTION
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-100
-    author: drsteini (generated)
+    id: 1588947947664-108
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              primaryKey: true
-              primaryKeyName: SAMPLE_PREPARATION_METHOD_pkey
             name: SPMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SPMTH_ID
-            type: VARCHAR(20)
+            type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: SPMTH_CONTEXT
             type: VARCHAR(120)
         - column:
-            constraints:
-              nullable: false
             name: SPMTH_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(250)
         - column:
             name: SPMTH_DESC
             type: VARCHAR(4000)
@@ -4087,41 +3497,29 @@ databaseChangeLog:
             name: SPMTH_QUAL_TYPE
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: SPMTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: SAMPLE_PREPARATION_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-101
-    author: drsteini (generated)
+    id: 1588947947664-109
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: STANT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: STANT_NAME
-            type: VARCHAR(30)
+            type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: STANT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -4130,29 +3528,21 @@ databaseChangeLog:
         tableName: SAMPLE_TISSUE_ANATOMY
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-102
-    author: drsteini (generated)
+    id: 1588947947664-110
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: SDTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: SDTYP_CD
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: SDTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -4161,68 +3551,50 @@ databaseChangeLog:
         tableName: SAMPLING_DESIGN_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-103
-    author: drsteini (generated)
+    id: 1588947947664-111
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: ST_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: CNTRY_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ST_CD
             type: VARCHAR(2)
         - column:
-            constraints:
-              nullable: false
             name: ST_NAME
             type: VARCHAR(35)
         - column:
             name: ST_FIPS_CD
             type: SMALLINT
         - column:
-            constraints:
-              nullable: false
             name: ST_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: ER_UID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: STATE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-104
-    author: drsteini (generated)
+    id: 1588947947664-112
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TBL_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TBL_NAME
             type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: TBLTYP_UID
             type: INTEGER
         - column:
@@ -4231,44 +3603,34 @@ databaseChangeLog:
         tableName: TABLE_LIST
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-105
-    author: drsteini (generated)
+    id: 1588947947664-113
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TBLTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TBLTYP_NAME
             type: VARCHAR(35)
         tableName: TABLE_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-106
-    author: drsteini (generated)
+    id: 1588947947664-114
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TAX_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TXRNK_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TAX_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: TAX_EXTRNL_ID
             type: numeric(12)
@@ -4280,15 +3642,13 @@ databaseChangeLog:
             type: numeric(12)
         - column:
             name: TAX_RETIRED_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: TAX_RETIRED_EXTRNL_ID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: TAX_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: TAX_DESCRIPTION
             type: VARCHAR(1000)
@@ -4300,10 +3660,8 @@ databaseChangeLog:
             type: INTEGER
         - column:
             name: TAX_UID_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -4315,180 +3673,608 @@ databaseChangeLog:
         tableName: TAXON
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-107
-    author: drsteini (generated)
+    id: 1588947947664-115
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TAXALS_UID
-            type: INTEGER
+            type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: ALSTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TAXALS_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
-            constraints:
-              nullable: false
             name: TAX_UID
             type: INTEGER
         - column:
-            name: DVSTA_UID
-            type: INTEGER
-        - column:
             name: TAXALS_DESCRIPTION
-            type: VARCHAR(400)
+            type: VARCHAR(1000)
         - column:
             name: TAXALS_UID_PARENT
-            type: INTEGER
+            type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: TAXALS_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TAXON_ALIAS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-108
-    author: drsteini (generated)
+    id: 1588947947664-116
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TAXGRP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TAXGRP_NAME
             type: VARCHAR(35)
         - column:
-            constraints:
-              nullable: false
             name: TAXGRP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
+        - column:
+            name: TAXGRP_DESC
+            type: VARCHAR(1000)
         tableName: TAXON_GROUP
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-109
-    author: drsteini (generated)
+    id: 1588947947664-117
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            name: RANK_NAME
+            type: VARCHAR(20)
+        - column:
+            name: TAX_NAME
+            type: VARCHAR(255)
+        - column:
+            name: TAX_EXTRNL_ID
+            type: numeric(12)
+        - column:
+            name: TAX_EXTRNL_ID_PARENT
+            type: numeric(12)
+        - column:
+            name: KINGDOM_NAME
+            type: VARCHAR(120)
+        - column:
+            name: HIERARCHY_STRING
+            type: VARCHAR(300)
+        - column:
+            name: HLEVEL
+            type: numeric(38)
+        - column:
+            name: PHYLUM_TSN
+            type: numeric(12)
+        - column:
+            name: PHYLUM
+            type: VARCHAR(120)
+        - column:
+            name: SUBPHYLUM_TSN
+            type: numeric(12)
+        - column:
+            name: SUBPHYLUM
+            type: VARCHAR(120)
+        - column:
+            name: INFRAPHYLUM_TSN
+            type: numeric(12)
+        - column:
+            name: INFRAPHYLUM
+            type: VARCHAR(120)
+        - column:
+            name: SUPERDIVISION_TSN
+            type: numeric(12)
+        - column:
+            name: SUPERDIVISION
+            type: VARCHAR(120)
+        - column:
+            name: DIVISION_TSN
+            type: numeric(12)
+        - column:
+            name: DIVISION
+            type: VARCHAR(120)
+        - column:
+            name: SUBDIVISION_TSN
+            type: numeric(12)
+        - column:
+            name: SUBDIVISION
+            type: VARCHAR(120)
+        - column:
+            name: INFRADIVISION_TSN
+            type: numeric(12)
+        - column:
+            name: INFRADIVISION
+            type: VARCHAR(120)
+        - column:
+            name: PARVDIVISION_TSN
+            type: numeric(12)
+        - column:
+            name: PARVDIVISION
+            type: VARCHAR(120)
+        - column:
+            name: SUPERCLASS_TSN
+            type: numeric(12)
+        - column:
+            name: SUPERCLASS
+            type: VARCHAR(120)
+        - column:
+            name: CLASS_TSN
+            type: numeric(12)
+        - column:
+            name: CLASS
+            type: VARCHAR(120)
+        - column:
+            name: SUBCLASS_TSN
+            type: numeric(12)
+        - column:
+            name: SUBCLASS
+            type: VARCHAR(120)
+        - column:
+            name: INFRACLASS_TSN
+            type: numeric(12)
+        - column:
+            name: INFRACLASS
+            type: VARCHAR(120)
+        - column:
+            name: SUPERORDER_TSN
+            type: numeric(12)
+        - column:
+            name: SUPERORDER
+            type: VARCHAR(120)
+        - column:
+            name: ORDERR_TSN
+            type: numeric(12)
+        - column:
+            name: ORDERR
+            type: VARCHAR(120)
+        - column:
+            name: SUBORDER_TSN
+            type: numeric(12)
+        - column:
+            name: SUBORDER
+            type: VARCHAR(120)
+        - column:
+            name: INFRAORDER_TSN
+            type: numeric(12)
+        - column:
+            name: INFRAORDER
+            type: VARCHAR(120)
+        - column:
+            name: SUPERFAMILY_TSN
+            type: numeric(12)
+        - column:
+            name: SUPERFAMILY
+            type: VARCHAR(120)
+        - column:
+            name: FAMILY_TSN
+            type: numeric(12)
+        - column:
+            name: FAMILY
+            type: VARCHAR(120)
+        - column:
+            name: SUBFAMILY_TSN
+            type: numeric(12)
+        - column:
+            name: SUBFAMILY
+            type: VARCHAR(120)
+        - column:
+            name: TRIBE_TSN
+            type: numeric(12)
+        - column:
+            name: TRIBE
+            type: VARCHAR(120)
+        - column:
+            name: SUBTRIBE_TSN
+            type: numeric(12)
+        - column:
+            name: SUBTRIBE
+            type: VARCHAR(120)
+        - column:
+            name: GENUS_TSN
+            type: numeric(12)
+        - column:
+            name: GENUS
+            type: VARCHAR(120)
+        - column:
+            name: SUBGENUS_TSN
+            type: numeric(12)
+        - column:
+            name: SUBGENUS
+            type: VARCHAR(120)
+        - column:
+            name: SECTION_TSN
+            type: numeric(12)
+        - column:
+            name: SECTION
+            type: VARCHAR(120)
+        - column:
+            name: SUBSECTION_TSN
+            type: numeric(12)
+        - column:
+            name: SUBSECTION
+            type: VARCHAR(120)
+        - column:
+            name: SPECIES_TSN
+            type: numeric(12)
+        - column:
+            name: SPECIES
+            type: VARCHAR(120)
+        - column:
+            name: SUBSPECIES_TSN
+            type: numeric(12)
+        - column:
+            name: SUBSPECIES
+            type: VARCHAR(120)
+        - column:
+            name: VARIETY_TSN
+            type: numeric(12)
+        - column:
+            name: VARIETY
+            type: VARCHAR(120)
+        - column:
+            name: SUBVARIETY_TSN
+            type: numeric(12)
+        - column:
+            name: SUBVARIETY
+            type: VARCHAR(120)
+        - column:
+            name: FORM_TSN
+            type: numeric(12)
+        - column:
+            name: FORM
+            type: VARCHAR(120)
+        - column:
             name: TXRNK_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
+            name: TAXPAR_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TAXON_PARENT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-118
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TXRNK_UID
+            type: INTEGER
+        - column:
             name: TXRNK_NAME
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: TXRNK_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TAXON_RANK
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-110
-    author: drsteini (generated)
+    id: 1588947947664-119
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: RLSPRP_METHOD_ID
+            type: VARCHAR(20)
+        - column:
+            name: RLSPRP_METHOD_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: RLSPRP_METHOD_NAME
+            type: VARCHAR(120)
+        - column:
+            name: RLSPRP_METHOD_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: RLSPRP_METHOD_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: RLSPRP_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: ROWNUMBER
+            type: numeric(38, 10)
+        tableName: TEMP_DISTINCT_LAB_SAM_PREP_MET
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-120
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ACT_SAM_COLLECT_METH_ID
+            type: VARCHAR(20)
+        - column:
+            name: ACT_SAM_COLLECT_METH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_COLLECT_METH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_COLLECT_METH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_COLLECT_METH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: ROWNUMBER
+            type: numeric(38, 10)
+        tableName: TEMP_DISTINCT_SAM_COLL_MET
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-121
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ACT_SAM_PREP_METH_ID
+            type: VARCHAR(20)
+        - column:
+            name: ACT_SAM_PREP_METH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_PREP_METH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_PREP_METH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_PREP_METH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: ROWNUMBER
+            type: numeric(38, 10)
+        tableName: TEMP_DISTINCT_SAM_PREP_MET
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-122
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: RLSPRP_METHOD_ID
+            type: VARCHAR(20)
+        - column:
+            name: RLSPRP_METHOD_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: RLSPRP_METHOD_NAME
+            type: VARCHAR(120)
+        - column:
+            name: RLSPRP_METHOD_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: RLSPRP_METHOD_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: RLSPRP_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: TEMP_FULL_LAB_SAM_PREP_MET
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-123
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ACT_SAM_COLLECT_METH_ID
+            type: VARCHAR(20)
+        - column:
+            name: ACT_SAM_COLLECT_METH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_COLLECT_METH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_COLLECT_METH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_COLLECT_METH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: TEMP_FULL_SAM_COLL_MET
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-124
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ORG_UID
+            type: numeric(20)
+        - column:
+            name: ACT_SAM_PREP_METH_ID
+            type: VARCHAR(20)
+        - column:
+            name: ACT_SAM_PREP_METH_CONTEXT
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_PREP_METH_NAME
+            type: VARCHAR(120)
+        - column:
+            name: ACT_SAM_PREP_METH_DESC
+            type: VARCHAR(4000)
+        - column:
+            name: ACT_SAM_PREP_METH_QUAL_TYPE
+            type: VARCHAR(25)
+        - column:
+            name: LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        tableName: TEMP_FULL_SAM_PREP_MET
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-125
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: RMQLF_UID
+            type: INTEGER
+        - column:
+            name: RMQLF_CD
+            type: VARCHAR(5)
+        - column:
+            name: RMQLF_DESC
+            type: VARCHAR(300)
+        - column:
+            name: RMQLF_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TEMP_RESULT_MEASURE_QUALIFIER
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-126
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
             name: THPRSV_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: THPRSV_NAME
-            type: VARCHAR(25)
+            type: VARCHAR(250)
         - column:
             name: THPRSV_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: THPRSV_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: THERMAL_PRESERVATIVE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-111
-    author: drsteini (generated)
+    id: 1588947947664-127
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TMZONE_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TMZONE_CD
             type: VARCHAR(5)
         - column:
-            constraints:
-              nullable: false
             name: TMZONE_NAME
             type: VARCHAR(80)
         - column:
-            constraints:
-              nullable: false
             name: TMZONE_OFFSET
             type: numeric(4, 2)
         - column:
-            constraints:
-              nullable: false
             name: TMZONE_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: TIME_ZONE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-112
-    author: drsteini (generated)
+    id: 1588947947664-128
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: ACTMET_UID
+            type: numeric(12)
+        - column:
+            name: METTYP_UID_OLD
+            type: numeric(12)
+        - column:
+            name: METTYP_UID_NEW
+            type: numeric(12)
+        tableName: TMP_ACTMET_METTYP
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-129
+    author: eorosz (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TAXALS_UID
+            type: numeric(12)
+        - column:
+            name: ALSTYP_UID
+            type: INTEGER
+        - column:
+            name: TAXALS_NAME
+            type: VARCHAR(120)
+        - column:
+            name: TAX_UID
+            type: INTEGER
+        - column:
+            name: TAXALS_DESCRIPTION
+            type: VARCHAR(1000)
+        - column:
+            name: TAXALS_UID_PARENT
+            type: numeric(12)
+        - column:
+            name: TAXALS_LAST_CHANGE_DATE
+            type: TIMESTAMP without time zone
+        - column:
+            name: USR_UID_LAST_CHANGE
+            type: INTEGER
+        tableName: TMP_TAXON_ALIAS
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-130
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
@@ -4500,54 +4286,43 @@ databaseChangeLog:
             type: VARCHAR(3)
         - column:
             name: TRB_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: TRB_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
-            name: TRB_EXTRNL_ID
+            name: TRB_EPA_NAME
+            type: VARCHAR(512)
+        - column:
+            name: TRB_EPA_ID
             type: numeric(12)
         - column:
-            name: TRB_STATE_CD
-            type: VARCHAR(3)
+            name: ST_CD
+            type: VARCHAR(2)
         - column:
-            name: TRB_STATE_NAME
-            type: VARCHAR(60)
-        - column:
-            name: TRB_REGIONNUM
-            type: INTEGER
-        - column:
-            name: TRB_REGION_NAME
-            type: VARCHAR(60)
+            name: ER_CD
+            type: VARCHAR(2)
         tableName: TMP_TRIBE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-113
-    author: drsteini (generated)
+    id: 1588947947664-131
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TTTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TTTYP_NAME
-            type: VARCHAR(15)
+            type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: TTTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -4556,84 +4331,62 @@ databaseChangeLog:
         tableName: TOXICITY_TEST_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-114
-    author: drsteini (generated)
+    id: 1588947947664-132
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
             name: TRHEAD_ID
             type: VARCHAR(40)
         - column:
-            constraints:
-              nullable: false
             name: TRHEAD_AUTHOR
             type: VARCHAR(100)
         - column:
             name: TRHEAD_COMMENT
             type: VARCHAR(1000)
         - column:
-            constraints:
-              nullable: false
             name: TRHEAD_CONTACT_INFO
             type: VARCHAR(300)
         - column:
-            constraints:
-              nullable: false
             name: TRHEAD_CREATION_TIME
             type: VARCHAR(37)
         - column:
-            constraints:
-              nullable: false
             name: TRHEAD_OPERATION
             type: VARCHAR(20)
         - column:
-            constraints:
-              nullable: false
             name: TRHEAD_ORG_NAME
             type: VARCHAR(100)
         - column:
             name: TRHEAD_SCHEMA_REF
             type: VARCHAR(40)
         - column:
-            constraints:
-              nullable: false
             name: TRHEAD_TITLE
             type: VARCHAR(100)
         tableName: TRANSACTION_HEADER
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-115
-    author: drsteini (generated)
+    id: 1588947947664-133
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_UID
             type: numeric(12)
         - column:
             name: ORG_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRSTA_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRTYP_UID
             type: INTEGER
         - column:
@@ -4643,21 +4396,17 @@ databaseChangeLog:
             name: TRLOG_TRANS_ID
             type: VARCHAR(40)
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_RECEIVED_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: TRLOG_START_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: TRLOG_END_TIME
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: TRLOG_PERCENT_COMPLETE
             type: numeric(5, 2)
@@ -4676,19 +4425,15 @@ databaseChangeLog:
         tableName: TRANSACTION_LOG
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-116
-    author: drsteini (generated)
+    id: 1588947947664-134
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TLAUD_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: AUDTYP_UID
             type: INTEGER
         - column:
@@ -4698,83 +4443,61 @@ databaseChangeLog:
             name: REF_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: TBL_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_UID
             type: numeric(20)
         - column:
             name: REF_ID
-            type: VARCHAR(35)
+            type: VARCHAR(55)
         - column:
-            constraints:
-              nullable: false
             name: TLAUD_SUCCESS_YN
             type: VARCHAR(1)
         tableName: TRANSACTION_LOG_AUDIT
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-117
-    author: drsteini (generated)
+    id: 1588947947664-135
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: AUDTYP_UID
             type: INTEGER
         - column:
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: TBL_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: TLASUM_SUCCESS_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: TLASUM_COUNT
             type: numeric(10)
         tableName: TRANSACTION_LOG_AUDIT_SUMMARY
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-118
-    author: drsteini (generated)
+    id: 1588947947664-136
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TLDET_UID
             type: numeric(20)
         - column:
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: TLDTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRLOG_UID
             type: numeric(20)
         - column:
@@ -4789,110 +4512,97 @@ databaseChangeLog:
         tableName: TRANSACTION_LOG_DETAIL
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-119
-    author: drsteini (generated)
+    id: 1588947947664-137
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TLDTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TLDTYP_NAME
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: TLDTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: TRANSACTION_LOG_DETAIL_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-120
-    author: drsteini (generated)
+    id: 1588947947664-138
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TRSTA_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRSTA_NAME
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: TRSTA_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: TRANSACTION_STATUS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-121
-    author: drsteini (generated)
+    id: 1588947947664-139
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TRTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRTYP_NAME
             type: VARCHAR(30)
         - column:
-            constraints:
-              nullable: false
             name: TRTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         tableName: TRANSACTION_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-122
-    author: drsteini (generated)
+    id: 1588947947664-140
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: TRB_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: TRB_CD
             type: VARCHAR(3)
         - column:
-            constraints:
-              nullable: false
             name: TRB_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(512)
         - column:
-            constraints:
-              nullable: false
             name: TRB_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
+        - column:
+            name: TRB_EPA_NAME
+            type: VARCHAR(512)
+        - column:
+            name: TRB_EPA_ID
+            type: numeric(12)
+        - column:
+            name: TRB_ST_CD
+            type: VARCHAR(60)
+        - column:
+            name: TRB_ER_CD
+            type: VARCHAR(2)
+        - column:
+            name: TRB_DESC
+            type: VARCHAR(4000)
         tableName: TRIBE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-123
-    author: drsteini (generated)
+    id: 1588947947664-141
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
@@ -4915,8 +4625,6 @@ databaseChangeLog:
             name: REF_UID
             type: numeric(12)
         - column:
-            constraints:
-              nullable: false
             name: UATYP_UID
             type: INTEGER
         - column:
@@ -4925,44 +4633,36 @@ databaseChangeLog:
         tableName: USER_ACCESS
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-124
-    author: drsteini (generated)
+    id: 1588947947664-142
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: UADOM_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: UADOM_NAME
             type: VARCHAR(30)
         tableName: USER_ACCESS_DOMAIN
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-125
-    author: drsteini (generated)
+    id: 1588947947664-143
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: UATYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: UATYP_NAME
             type: VARCHAR(50)
         tableName: USER_ACCESS_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-126
-    author: drsteini (generated)
+    id: 1588947947664-144
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
@@ -4981,42 +4681,30 @@ databaseChangeLog:
         tableName: USER_ACCESS_TYPE_BY_DOMAIN
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-127
-    author: drsteini (generated)
+    id: 1588947947664-145
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: USR_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: USR_NAAS_ID
             type: VARCHAR(100)
         - column:
-            constraints:
-              nullable: false
             name: USR_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_ACTIVE_YN
             type: VARCHAR(1)
         - column:
-            constraints:
-              nullable: false
             name: USR_LOGIN_NAME
             type: VARCHAR(35)
         - column:
             name: USR_PASSWORD
             type: VARCHAR(25)
         - column:
-            constraints:
-              nullable: false
             name: USR_FULL_NAME
             type: VARCHAR(40)
         - column:
@@ -5045,7 +4733,7 @@ databaseChangeLog:
             type: VARCHAR(50)
         - column:
             name: USR_LAST_LOGIN_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_LAST_LOGIN_IP_ADDRESS
             type: VARCHAR(40)
@@ -5054,7 +4742,7 @@ databaseChangeLog:
             type: VARCHAR(100)
         - column:
             name: USR_LAST_SESSION_EXPIRE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_IN_SYNC_WITH_TEST_YN
             type: VARCHAR(1)
@@ -5064,29 +4752,21 @@ databaseChangeLog:
         tableName: USER_LIST
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-128
-    author: drsteini (generated)
+    id: 1588947947664-146
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: VCMTH_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: VCMTH_NAME
             type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: VCMTH_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -5095,91 +4775,67 @@ databaseChangeLog:
         tableName: VERTICAL_COLLECTION_METHOD
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-129
-    author: drsteini (generated)
+    id: 1588947947664-147
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: VRDAT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: VRDAT_NAME
             type: VARCHAR(10)
         - column:
-            constraints:
-              nullable: false
             name: VRDAT_DESC
             type: VARCHAR(45)
         - column:
-            constraints:
-              nullable: false
             name: VRDAT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: VERTICAL_REFERENCE_DATUM
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-130
-    author: drsteini (generated)
+    id: 1588947947664-148
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: VOLT_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: VOLT_NAME
             type: VARCHAR(25)
         - column:
             name: VOLT_DESC
             type: VARCHAR(200)
         - column:
-            constraints:
-              nullable: false
             name: VOLT_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         tableName: VOLTINISM
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-131
-    author: drsteini (generated)
+    id: 1588947947664-149
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: MLOC_UID
             type: numeric(20)
         - column:
             name: MSUNT_UID_HOLE_DEPTH
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: ORG_UID
             type: numeric(20)
         - column:
-            constraints:
-              nullable: false
             name: WELTYP_UID
             type: INTEGER
         - column:
@@ -5187,47 +4843,55 @@ databaseChangeLog:
             type: INTEGER
         - column:
             name: WELL_AQUIFER_NAME
-            type: VARCHAR(120)
+            type: VARCHAR(255)
         - column:
             name: WELL_HOLE_DEPTH
-            type: VARCHAR(12)
+            type: VARCHAR(60)
         - column:
-            constraints:
-              nullable: false
             name: WELL_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
             name: WELL_TRANS_ID
             type: VARCHAR(100)
+        - column:
+            name: AQFRTYP_UID
+            type: INTEGER
+        - column:
+            name: NATAQFR_UID
+            type: INTEGER
+        - column:
+            name: AQFR_UID
+            type: INTEGER
+        - column:
+            name: WELL_DEPTH
+            type: VARCHAR(60)
+        - column:
+            name: MSUNT_UID_WELL_DEPTH
+            type: INTEGER
+        - column:
+            name: WELL_CONSTRUCTION_DATE
+            type: TIMESTAMP without time zone
         tableName: WELL
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-132
-    author: drsteini (generated)
+    id: 1588947947664-150
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: WFTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: WFTYP_NAME
             type: VARCHAR(50)
         - column:
-            constraints:
-              nullable: false
             name: WFTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -5236,29 +4900,21 @@ databaseChangeLog:
         tableName: WELL_FORMATION_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
 - changeSet:
-    id: 1560431414947-133
-    author: drsteini (generated)
+    id: 1588947947664-151
+    author: eorosz (generated)
     changes:
     - createTable:
         columns:
         - column:
-            constraints:
-              nullable: false
             name: WELTYP_UID
             type: INTEGER
         - column:
-            constraints:
-              nullable: false
             name: WELTYP_NAME
             type: VARCHAR(255)
         - column:
-            constraints:
-              nullable: false
             name: WELTYP_LAST_CHANGE_DATE
-            type: TIMESTAMP WITHOUT TIME ZONE
+            type: TIMESTAMP without time zone
         - column:
-            constraints:
-              nullable: false
             name: USR_UID_LAST_CHANGE
             type: INTEGER
         - column:
@@ -5266,3 +4922,24 @@ databaseChangeLog:
             type: VARCHAR(500)
         tableName: WELL_TYPE
         schemaName: ${WQX_DUMP_SCHEMA_NAME}
+- changeSet:
+    id: 1588947947664-152
+    author: eorosz (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: ATOBJ_UID
+        - column:
+            name: ORG_UID
+        - column:
+            name: REF_UID
+        - column:
+            name: TBL_UID
+        - column:
+            name: AOFLD_UID
+        indexName: ATTACHED_OBJECT_ATTACHED_OBJECT_UK_FOR_AWSDMS
+        tableName: ATTACHED_OBJECT
+        schemaName: ${WQX_DUMP_SCHEMA_NAME}
+        unique: true
+
