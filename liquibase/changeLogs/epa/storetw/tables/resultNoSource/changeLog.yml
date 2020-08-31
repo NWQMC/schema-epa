@@ -19,3 +19,20 @@ databaseChangeLog:
             relativeToChangelogFile: true
         - rollback: drop table if exists ${STORETW_SCHEMA_NAME}.result_no_source cascade;
 
+  - changeSet:
+      author: eorosz
+      id: "alter.table.${STORETW_SCHEMA_NAME}.result_no_source.set.logged"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+          - sql: "SELECT count(*) from pg_catalog.pg_class AS c
+                      join pg_catalog.pg_namespace AS ns
+                      on c.relnamespace = ns.oid
+                  WHERE nspname = '${STORETW_SCHEMA_NAME}' and relname = 'result_no_source'
+                     and relkind = 'r' and relpersistence = 'u'"
+          - expectedResult: "1"
+      changes:
+        - sql: alter table if exists ${STORETW_SCHEMA_NAME}.result_no_source set logged
+        - rollback: alter table if exists ${STORETW_SCHEMA_NAME}.result_no_source set unlogged
+

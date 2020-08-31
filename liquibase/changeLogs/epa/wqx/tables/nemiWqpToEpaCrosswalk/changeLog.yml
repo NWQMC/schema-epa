@@ -19,3 +19,20 @@ databaseChangeLog:
             relativeToChangelogFile: true
         - rollback: drop table if exists ${WQX_SCHEMA_NAME}.nemi_wqp_to_epa_crosswalk cascade;
 
+  - changeSet:
+      author: eorosz
+      id: "alter.table.${WQX_SCHEMA_NAME}.nemi_wqp_to_epa_crosswalk.set.logged"
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - sqlCheck:
+          - sql: "SELECT count(*) from pg_catalog.pg_class AS c
+                      join pg_catalog.pg_namespace AS ns
+                      on c.relnamespace = ns.oid
+                  WHERE nspname = '${WQX_SCHEMA_NAME}' and relname = 'nemi_wqp_to_epa_crosswalk'
+                     and relkind = 'r' and relpersistence = 'u'"
+          - expectedResult: "1"
+      changes:
+        - sql: alter table if exists ${WQX_SCHEMA_NAME}.nemi_wqp_to_epa_crosswalk set logged
+        - rollback: alter table if exists ${WQX_SCHEMA_NAME}.nemi_wqp_to_epa_crosswalk set unlogged
+
