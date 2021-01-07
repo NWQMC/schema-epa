@@ -75,7 +75,7 @@ pipeline {
           env.EPA_SCHEMA_OWNER_USERNAME = secretsJson.EPA_SCHEMA_OWNER_USERNAME
           env.EPA_SCHEMA_OWNER_PASSWORD = secretsJson.EPA_SCHEMA_OWNER_PASSWORD
           env.WQX_SCHEMA_NAME = secretsJson.WQX_SCHEMA_NAME
-          env.WQX_DUMP_SCHEMA_NAME = secretsJson.WQX_SCHEMA_NAME
+          env.WQX_DUMP_SCHEMA_NAME = secretsJson.WQX_DUMP_SCHEMA_NAME
           env.STORETW_SCHEMA_NAME = secretsJson.STORETW_SCHEMA_NAME
           env.STORETW_DUMP_SCHEMA_NAME = secretsJson.STORETW_DUMP_SCHEMA_NAME
           env.NWIS_SCHEMA_NAME = secretsJson.NWIS_SCHEMA_NAME
